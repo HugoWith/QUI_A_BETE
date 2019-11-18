@@ -39,8 +39,45 @@ marine = User.create!(
   email: "marine@marine.com",
   password: "azerty")
 
+lea = User.create!(
+  nickname: "belze",
+  first_name: "lea",
+  last_name: "bzs",
+  email: "lea@lea.com",
+  password: "azerty")
+
+evan = User.create!(
+  nickname: "schlarz",
+  first_name: "evan",
+  last_name: "wichlarz",
+  email: "evan@evan.com",
+  password: "azerty")
+
+simon = User.create!(
+  nickname: "geekquest",
+  first_name: "simon",
+  last_name: "stef",
+  email: "simon@simon.com",
+  password: "azerty")
+
+joseph = User.create!(
+  nickname: "jojo",
+  first_name: "joseph",
+  last_name: "blanchard",
+  email: "jojo@jojo.com",
+  password: "azerty")
+
+kev = User.create!(
+  nickname: "kevcha",
+  first_name: "kevin",
+  last_name: "chavanne",
+  email: "kev@kev.com",
+  password: "azerty")
+
 batch = Group.create!(
-  name: "Batch 308"
+  name: "Batch 308",
+  user: joseph,
+  user: kev
   )
 
 love = Group.create!(
@@ -51,3 +88,4 @@ frero = Group.create!(
 
 family = Group.create!(
   name: "Familia")
+
