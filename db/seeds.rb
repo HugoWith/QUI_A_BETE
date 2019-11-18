@@ -8,6 +8,8 @@
 
 Usergroup.destroy_all
 puts "usergroups destroyed"
+Bet.destroy_all
+puts "bets destroyed"
 User.destroy_all
 puts "Users destroyed"
 Group.destroy_all
@@ -158,3 +160,14 @@ ug12 = Usergroup.create!(
 ug13 = Usergroup.create!(
   user: marin,
   group: family)
+
+bet = Bet.create!(
+  description:"John va perdre 4-0 à Fifa",
+  end_date: Date.new(2019,12,15),
+  creator_id: marin.id,
+  beter_id: john.id,
+  group_id: family.id,
+  stake: "une pinte",
+  difficulty: 3,
+  target_id: john.id
+)
