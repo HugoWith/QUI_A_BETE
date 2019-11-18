@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Usergroup.destroy_all
+puts "usergroups destroyed"
 User.destroy_all
 puts "Users destroyed"
 Group.destroy_all
@@ -60,7 +62,7 @@ simon = User.create!(
   email: "simon@simon.com",
   password: "azerty")
 
-joseph = User.create!(
+jojo = User.create!(
   nickname: "jojo",
   first_name: "joseph",
   last_name: "blanchard",
@@ -74,10 +76,22 @@ kev = User.create!(
   email: "kev@kev.com",
   password: "azerty")
 
+john = User.create!(
+  nickname: "la frite",
+  first_name: "john",
+  last_name: "jomard",
+  email: "john@john.com",
+  password: "azerty")
+
+haris = User.create!(
+  nickname: "pain moelleux",
+  first_name: "haris",
+  last_name: "haris",
+  email: "haris@haris.com",
+  password: "azerty")
+
 batch = Group.create!(
-  name: "Batch 308",
-  user: joseph,
-  user: kev
+  name: "Batch 308"
   )
 
 love = Group.create!(
@@ -89,3 +103,58 @@ frero = Group.create!(
 family = Group.create!(
   name: "Familia")
 
+ug1 = Usergroup.create!(
+  user: marin,
+  group: batch)
+
+ug2 = Usergroup.create!(
+  user: hugo,
+  group: batch)
+
+ug3 = Usergroup.create!(
+  user: alex,
+  group: batch)
+
+ug4 = Usergroup.create!(
+  user: marine,
+  group: batch)
+
+ug5 = Usergroup.create!(
+  user: lea,
+  group: batch)
+
+ug6 = Usergroup.create!(
+  user: simon,
+  group: batch)
+
+ugx = Usergroup.create!(
+  user: evan,
+  group: batch)
+
+ug7 = Usergroup.create!(
+  user: jojo,
+  group: love)
+
+ug8 = Usergroup.create!(
+  user: kev,
+  group: love)
+
+ug9 = Usergroup.create!(
+  user: alex,
+  group: frero)
+
+ug10 = Usergroup.create!(
+  user: evan,
+  group: frero)
+
+ug11 = Usergroup.create!(
+  user: john,
+  group: family)
+
+ug12 = Usergroup.create!(
+  user: haris,
+  group: family)
+
+ug13 = Usergroup.create!(
+  user: marin,
+  group: family)
