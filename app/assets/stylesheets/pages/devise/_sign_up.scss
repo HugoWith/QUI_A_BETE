@@ -1,0 +1,44 @@
+.sign-up-body {
+    background-color: $main-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .container-signup {
+        width: 50%;
+        margin: 0 auto;
+        background-color: $second-color;
+        border-radius: 7px;
+    }
+    h2 {
+        font-family: $main-font;
+        font-size: 50px;
+        text-align: center;
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+    .boutons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        background-color: $fourth-color;
+        margin-top: 0px;
+        padding: 7px 7px;
+        margin-left: 60px;
+        border-radius: 5px;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    .btn {
+        background-color: $fourth-color;
+        border-radius: 5px;
+    }
+    .form-group {
+        opacity: 60%;
+    }
+}
