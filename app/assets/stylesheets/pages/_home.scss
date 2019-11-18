@@ -1,1 +1,49 @@
 // Specific CSS for your home-page
+
+.container-home{
+  background-color: white;
+  height: 100vh;
+}
+
+#card-left-up {
+  height: 50vh;
+
+
+}
+
+#card-left-down {
+  height: 50vh;
+  background-color: $fifth-color;
+}
+
+#card-right {
+background-color: $second-color;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: $second-color;
+}
+
+h1{
+
+  font-family: 'Modak';
+  color: $second-color;
+  font-size: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50vh;
+}
+
+h2 {
+font-family: 'roboto';
+font-size: 50px;
+color: white;
+font-weight: bold;
+text-align: center;
+ vertical-align: middle;
+  line-height: 50vh;
+}
