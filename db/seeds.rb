@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+puts "Users destroyed"
+Group.destroy_all
+puts "Groups destroyed"
+
 marin = User.create!(
   nickname: "jr",
   first_name: "Marin",
@@ -33,3 +38,16 @@ marine = User.create!(
   last_name: "Diot",
   email: "marine@marine.com",
   password: "azerty")
+
+batch = Group.create!(
+  name: "Batch 308"
+  )
+
+love = Group.create!(
+  name: "Bae <3")
+
+frero = Group.create!(
+  name: "Les frérots")
+
+family = Group.create!(
+  name: "Familia")
