@@ -1,7 +1,10 @@
 .cards-home {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
   grid-gap: 0px;
+  margin: 0 30px;
+  padding: 30px;
 }
 
 // Smallest device
@@ -37,4 +40,15 @@
   .cards-home {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.card-category-home{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
 }
