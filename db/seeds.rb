@@ -179,6 +179,5 @@ bet2 = Bet.create!(
   beter_id: kev.id,
   group_id: love.id,
   stake: "une pinte",
-  difficulty: 3,
-  target_id: jojo.id
+  difficulty: 3
 )
