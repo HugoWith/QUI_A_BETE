@@ -171,3 +171,14 @@ bet = Bet.create!(
   difficulty: 3,
   target_id: john.id
 )
+
+bet2 = Bet.create!(
+  description:"Le batch 308 élira Toto comme meilleur prof",
+  end_date: Date.new(2019,12,15),
+  creator_id: jojo.id,
+  beter_id: kev.id,
+  group_id: love.id,
+  stake: "une pinte",
+  difficulty: 3,
+  target_id: jojo.id
+)
