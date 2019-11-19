@@ -1,0 +1,9 @@
+<%= simple_form_for @group do |f| %>
+    <%= f.input :name, placeholder: 'Place le nom' %>
+    <%= f.input :photo, label: 'Mettez une photo de votre van' %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <div class="d-flex justify-content-center">
+        <%= f.button :submit, class: "button_new", value: 'Crée ton crew' %>
+    <%# <button type="button" class="create-button"><%= link_to "Retour au dashboard", dashboards_path%>
+    </div>
+    <% end %>
