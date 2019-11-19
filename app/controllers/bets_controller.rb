@@ -6,9 +6,13 @@ class BetsController < ApplicationController
   end
 
   def new
+    @bet = Bet.new
+    @group = Group.find(paramas[:group_id])
   end
 
   def create
+    @bet = Bet.new
+    @bet.creator = current_user
   end
 
   def edit
