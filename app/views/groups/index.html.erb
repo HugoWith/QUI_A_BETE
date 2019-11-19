@@ -10,7 +10,7 @@
                     <div class="card-product">
                         <div class= "d-flex justify-content-between">
                             <img class="" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> 
-                            <p><%= group.name %></p>
+                            <%= link_to group.name, group_path(group), class: 'link'%>
                             <i class="fas fa-cog"></i>
                             
                         </div> 

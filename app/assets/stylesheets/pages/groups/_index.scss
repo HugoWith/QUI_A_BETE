@@ -22,6 +22,7 @@
         align-items: center;
         border-radius: 8px;
         margin-bottom: 18px;
+        opacity: 70%;
     }
     .card-product img {
         height: 100%;
@@ -49,8 +50,20 @@
         color: $main-color;
         font-size: 30px;
     }
-    .fas {}
+    .fas {
+        margin: 3px 3px;
+    }
     .inline-block {
         display: inline-block !important;
+    }
+    .link {
+        color: $main-color;
+        font-size: 30px;
+        transition: 0.8s ease-in-out;
+    }
+    .link:hover {
+        text-decoration: none;
+        color: $second-color;
+        transition: 0.8s ease-in-out;
     }
 }
