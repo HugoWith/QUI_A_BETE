@@ -92,6 +92,7 @@ haris = User.create!(
   email: "haris@haris.com",
   password: "azerty")
 
+
  p batch = Group.create!(
   name: "Batch 308",
   # remote_photo_url: "https://images.unsplash.com/photo-1551623063-6adb5b1f487f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
