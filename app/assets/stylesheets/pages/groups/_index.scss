@@ -1,6 +1,6 @@
 .index-group {
     .container {
-        max-width: 50%;
+        max-width: 35%;
         margin: 0 auto;
     }
     h2 {
@@ -37,5 +37,10 @@
     .card-product .card-product-infos {
         padding: 16px;
         display: flex;
+    }
+    .card-product p {
+        font-family: $second-font;
+        color: $main-color;
+        font-size: 30px;
     }
 }

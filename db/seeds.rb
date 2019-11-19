@@ -93,8 +93,7 @@ haris = User.create!(
   password: "azerty")
 
 batch = Group.create!(
-  name: "Batch 308"
-  )
+  name: "Batch 308")
 
 love = Group.create!(
   name: "Bae <3")
