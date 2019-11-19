@@ -17,6 +17,14 @@
     color: $second-color;
   }
 
+
+  h2{
+    font-family: $second-font;
+    font-size: 30px;
+    font-weight: bold;
+    color: $fourth-color;
+  }
+
 }
 
 .img-logoweb{
@@ -27,8 +35,8 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 30%;
-  height: 30%;
+  width: 28%;
+  height: 28%;
 }
 
 .container-second {
