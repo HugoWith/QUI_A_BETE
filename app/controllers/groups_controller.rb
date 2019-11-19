@@ -14,9 +14,8 @@ class GroupsController < ApplicationController
 
     def create
       @group = Group.new(groups_params)
-      @group.usergroups = current_user
-      p @group.usergroups
-      if @group.save!
+      @user_group = Usergroup.new(user_groups_params)
+      if @group.save! && @user_group.save!
         redirect_to groups_path()
       else
         render :new
@@ -40,6 +39,10 @@ class GroupsController < ApplicationController
 
   def groups_params
     params.require(:group).permit(:name, :photo, :photo_cache)
+  end
+
+  def user_groups_params
+    params.require(:usergroup).permit(:user_id, :group_id, :score)
   end
 
 end
