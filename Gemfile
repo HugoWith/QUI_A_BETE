@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'omniauth-facebook'
+gem "omniauth-rails_csrf_protection"
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
