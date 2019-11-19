@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12 col-md-12 sign-up-body">
-      <div class="container-edit-registration">
-        <h2>Modifie ton compte</h2>
+      <div class="mt-4 container-edit-registration">
+        <h2 class= "mb-3">Modifie ton compte</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: root_path, html: { method: :get }) do |f| %>
             <%= f.error_notification %>
@@ -24,12 +24,10 @@
             <div class="boutons">
               <div class="form-actions">
                 <%= f.button :submit, "Valider" %>
+                <%= link_to "Retour", :back, class: "btn"%>
               </div>
             </div>
           <% end %>
-          <div class="boutons">
-            <%= link_to "Retour", :back %>
-          </div>
       </div>
     </div>
 </div>
