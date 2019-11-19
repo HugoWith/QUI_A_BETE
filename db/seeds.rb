@@ -15,26 +15,36 @@ puts "Users destroyed"
 Group.destroy_all
 puts "Groups destroyed"
 
+
 marin = User.create!(
   nickname: "jr",
   first_name: "Marin",
   last_name: "Vanthier",
   email: "marin@marin.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/marin.jpg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185422/fvlozunaiuzuoi8fphpx.jpg")
+  )
 
 hugo = User.create!(
   nickname: "hugoxxx",
   first_name: "Hugo",
   last_name: "Valla",
   email: "hugo@hugo.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/hugo.jpeg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185423/alpwntqhsjyfux6oazus.jpg")
+)
 
 alex = User.create!(
   nickname: "dadalex",
   first_name: "Alex",
   last_name: "Viretti",
   email: "alex@alex.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/alex.jpeg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185424/rq03wkinuqqedrcfgj4g.jpg")
+  )
 
 marine = User.create!(
   nickname: "marineX3",
@@ -69,14 +79,20 @@ jojo = User.create!(
   first_name: "joseph",
   last_name: "blanchard",
   email: "jojo@jojo.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/jojo.jpg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185425/az1uuiwvuothal4ewmps.jpg")
+  )
 
 kev = User.create!(
   nickname: "kevcha",
   first_name: "kevin",
   last_name: "chavanne",
   email: "kev@kev.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/kevin.jpeg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185427/dbid7sn4vajnxb0sjjuz.jpg")
+)
 
 john = User.create!(
   nickname: "la frite",
