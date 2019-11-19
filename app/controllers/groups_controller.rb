@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
+    @owner_group = current_user.groups
   end
 
   def show
@@ -20,4 +21,9 @@ class GroupsController < ApplicationController
 
   def destroy
   end
+
+  def owner_group
+    @owner_group = current_user.groups
+  end
+
 end
