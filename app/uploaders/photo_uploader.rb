@@ -1,5 +1,17 @@
 class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
+  IDENTIFIERS = [
+    "image/upload/v1574170892/ngpxxxoop8a9l11wybbp.jpg",
+    "image/upload/v1574171309/rslj5flsvsfxuefoscdz.jpg",
+    "image/upload/v1574171419/id07hchdsbsplsxvf2cw.jpg",
+    "image/upload/v1574172284/itxcuoo0boiwhepb9zzm.jpg"
+  ]
+
+  def remove!
+    # ap self.identifier
+    # ap IDENTIFIERS
+    super unless IDENTIFIERS.map { |id| id.split('/').last }.include?(self.identifier.split('/').last)
+  end
 
   # Remove everything else
 end
