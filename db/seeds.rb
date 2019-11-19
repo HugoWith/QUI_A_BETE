@@ -92,6 +92,13 @@ haris = User.create!(
   email: "haris@haris.com",
   password: "azerty")
 
+axel = User.create!(
+  nickname: "arthur",
+  first_name: "axel",
+  last_name: "axel",
+  email: "axel@axel.com",
+  password: "azerty")
+
 batch = Group.create!(
   name: "Batch 308"
   )
@@ -161,6 +168,10 @@ ug13 = Usergroup.create!(
   user: marin,
   group: family)
 
+ug13 = Usergroup.create!(
+  user: axel,
+  group: batch)
+
 bet = Bet.create!(
   description:"John va perdre 4-0 à Fifa",
   end_date: Date.new(2019,12,15),
@@ -181,3 +192,17 @@ bet2 = Bet.create!(
   stake: "une pinte",
   difficulty: 3
 )
+
+bet2 = Bet.create!(
+  description:"Arthur dira j'ai tout compris",
+  end_date: Date.new(2019,12,15),
+  creator_id: hugo.id,
+  beter_id: alex.id,
+  group_id: batch.id,
+  target_id: axel.id,
+  stake: "un beret des Peaky Blinders",
+  difficulty: 3
+)
+
+
+
