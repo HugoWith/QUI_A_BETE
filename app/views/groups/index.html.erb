@@ -1,2 +1,13 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+
+
+
+<div class="row">
+    <div class="col-12 col-md-12 index-group">
+        <h2>Espace Bet</h2>
+            <div class="d-flex justify-content-between">
+            <% @groups.each do |group| %>
+            <li><%= group.name %></li>
+            <% end %>
+            </div>
+    </div>
+</div>
