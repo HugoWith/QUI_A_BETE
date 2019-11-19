@@ -1,21 +1,23 @@
-<div class="container-first">
+<div class="container-index">
   <div class="card-product">
     <div class= "d-flex justify-content-between">
-      <%= cl_image_tag  group.photo, width: 400, crop: :fill %>
-      <%= link_to group.name, group_path(group), class: 'link'%>
+      <%= cl_image_tag  @group.photo, width: 400, crop: :fill %>
+      <%= link_to @group.name, group_path(@group), class: 'link'%>
       <i class="fas fa-cog"></i>
     </div>
   </div>
   <h1>Crée un bet !</h1>
   <h3>Avec qui tu paries ?</h4>
-    <div class="d-flex">
-      <% @group.members.each do |member| %>
-      <%=  member.photo %>
+    <div class="d-flex justify-content-between">
+      <% @group.users.each do |member| %>
+      <div>
+        <%= cl_image_tag  member.photo, class: "avatar-xl" %>
+      </div>
       <% end %>
     </div>
-    <div class="d-flex">
-      <h4>Est ce que le pari porte sur un beteur du groupe ?</h4>
+    <div class="d-flex align-items-center">
+      <h4 class= "p-3 mr-3">Est ce que le pari porte sur un beteur du groupe ?</h4>
       <input type="radio">
     </div>
-  </div>
+</div>
 

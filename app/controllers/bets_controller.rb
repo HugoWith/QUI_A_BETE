@@ -7,7 +7,7 @@ class BetsController < ApplicationController
 
   def new
     @bet = Bet.new
-    @group = Group.find(paramas[:group_id])
+    @group = Group.find(params[:group_id])
   end
 
   def create
