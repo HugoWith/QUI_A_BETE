@@ -1,1 +1,73 @@
 // Specific CSS for your home-page
+
+.container-home{
+  background-color: white;
+  height: 100vh;
+}
+
+
+#card-left-up {
+  height: 50vh;
+
+  h1{
+
+  font-family: 'Modak';
+  color: $second-color;
+  font-size: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50vh;
+}
+
+}
+#card-left-up:hover{
+  background-color: $second-color;
+  transition: 0.8s ease-in-out;
+  color: white;
+  h1:hover {
+    color:white;
+  }
+}
+
+#card-left-down {
+  height: 50vh;
+  background-color: $fifth-color;
+
+  h2 {
+  font-family: 'roboto';
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50vh;
+}
+
+h2:hover {
+  color: $main-color;
+  font-size: 47px;
+  transition: 0.8s ease-in-out;
+}
+}
+
+#card-right {
+  background-color: $main-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#card-right:hover {
+  background-color: $fifth-color;
+  transition: 0.8s ease-in-out;
+}
+
+
+a {
+  text-decoration: none;
+  color: $second-color;
+}
+
+
+
+

@@ -1,0 +1,22 @@
+.btn-home {
+  color: white;
+  border: 3px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.btn-home:hover {
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+  color: white;
+  border: 1px solid white;
+
+}
