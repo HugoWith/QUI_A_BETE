@@ -9,10 +9,10 @@ class User < ApplicationRecord
   has_many :bets, foreign_key: :creator_id
   has_many :bets, foreign_key: :beter_id
   has_many :bets, foreign_key: :target_id
-  validates :nickname, presence: true
+
   validates :first_name, presence: true
   validates :last_name, presence: true
-  
+
   mount_uploader :photo, PhotoUploader
 
   def self.find_for_facebook_oauth(auth)
@@ -34,7 +34,6 @@ class User < ApplicationRecord
       end
 
       return user
-      # redirect_to root_path
     end
 
 
