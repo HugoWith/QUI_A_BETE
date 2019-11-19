@@ -92,16 +92,12 @@ haris = User.create!(
   email: "haris@haris.com",
   password: "azerty")
 
-<<<<<<< HEAD
-batch = Group.create!(
-  name: "Batch 308")
-=======
+
  p batch = Group.create!(
   name: "Batch 308",
   # remote_photo_url: "https://images.unsplash.com/photo-1551623063-6adb5b1f487f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
   photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574172284/itxcuoo0boiwhepb9zzm.jpg")
   )
->>>>>>> 02de287dea5aef2e8f687d0e2fcf52f68642c354
 
 p love = Group.create!(
   name: "Bae <3",
