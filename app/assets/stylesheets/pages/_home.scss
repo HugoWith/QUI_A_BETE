@@ -43,19 +43,19 @@
 
   width: 100%;
   background-color: $main-color;
-  height: 80vh;
+  height: 100vh;
 
   h2{
 
     font-family: 'Raleway';
     font-weight: bold;
-    padding: 30px;
+    padding: 40px;
   }
 }
 
 .card-category-home{
   h4 {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 
@@ -64,6 +64,16 @@ a {
   color: $second-color;
 }
 
+.cards-category-title{
+  background-color: white;
+}
+
+
+.img-card-category {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 
 
