@@ -5,13 +5,11 @@
         width: 70%;
         margin: 0 auto;
         opacity: 100%;
-        margin-top: -30px;
     }
     h2 {
         font-family: $headers-font;
         font-size: 70px;
         text-align: center;
-        margin-bottom: -20px;
     }
     .form {
         display: flex;
@@ -52,5 +50,8 @@
     }
     .form-group {
         // opacity: 50%;
+    }
+    p {
+        margin-top: 35px;
     }
 }

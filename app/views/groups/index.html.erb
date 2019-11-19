@@ -1,2 +1,34 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+
+
+
+<div class="row">
+    <div class="col-12 col-md-12 index-group">
+        <div class="container-index">
+        <h2>Espace Bet</h2>
+            <div class="">
+                <% @groups.each do |group| %>
+                    <div class="card-product">
+                        <div class= "d-flex justify-content-between">
+                            <img class="" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> 
+                            <%= link_to group.name, group_path(group), class: 'link'%>
+                            <i class="fas fa-cog"></i>
+                            
+                        </div> 
+                          
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+  <%# <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div> %>
