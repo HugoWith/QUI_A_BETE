@@ -1,10 +1,13 @@
 class GroupsController < ApplicationController
+  before_action :set_group, only: [:show]
+
   def index
     @groups = Group.all
     owner_group
   end
 
   def show
+    @bets = @group.bets
   end
 
   def new
@@ -39,6 +42,10 @@ class GroupsController < ApplicationController
 
   def groups_params
     params.require(:group).permit(:name, :photo, :photo_cache)
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 
 end

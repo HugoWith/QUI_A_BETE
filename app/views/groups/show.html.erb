@@ -1,2 +1,14 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+<div class="row">
+    <div class="col-12 col-md-12 index-group">
+    <div class="d-flex justify-content-start recap">
+        <h3>Welcome back <%= current_user.nickname %></h3>
+    </div>
+    <div><p> Check ton group et les bets en cour</p></div>
+        <div class="container-index">
+        <h2><%= @group.name  %></h2>
+        <%= @bets.each do |bet|%>
+        <%=bet["descritpion"]%>
+        <% end %>
+        </div>
+    </div>
+</div>
