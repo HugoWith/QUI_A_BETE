@@ -93,10 +93,20 @@ haris = User.create!(
   password: "azerty")
 
 
+axel = User.create!(
+  nickname: "arthur",
+  first_name: "axel",
+  last_name: "axel",
+  email: "axel@axel.com",
+  password: "azerty")
+
+
+
  p batch = Group.create!(
   name: "Batch 308",
   # remote_photo_url: "https://images.unsplash.com/photo-1551623063-6adb5b1f487f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
   photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574172284/itxcuoo0boiwhepb9zzm.jpg")
+
   )
 
 p love = Group.create!(
@@ -176,6 +186,10 @@ ug13 = Usergroup.create!(
   user: marin,
   group: family)
 
+ug13 = Usergroup.create!(
+  user: axel,
+  group: batch)
+
 bet = Bet.create!(
   description:"John va perdre 4-0 à Fifa",
   end_date: Date.new(2019,12,15),
@@ -196,3 +210,17 @@ bet2 = Bet.create!(
   stake: "une pinte",
   difficulty: 3
 )
+
+bet2 = Bet.create!(
+  description:"Arthur dira j'ai tout compris",
+  end_date: Date.new(2019,12,15),
+  creator_id: hugo.id,
+  beter_id: alex.id,
+  group_id: batch.id,
+  target_id: axel.id,
+  stake: "un beret des Peaky Blinders",
+  difficulty: 3
+)
+
+
+
