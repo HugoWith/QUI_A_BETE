@@ -18,18 +18,14 @@ ActiveRecord::Schema.define(version: 2019_11_18_175528) do
   create_table "bets", force: :cascade do |t|
     t.string "description"
     t.date "end_date"
-    t.bigint "target_id"
-    t.bigint "creator_id"
-    t.bigint "beter_id"
-    t.bigint "group_id", null: false
+    t.bigint "users_id", null: false
+    t.bigint "groups_id", null: false
     t.string "stake"
     t.integer "difficulty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["beter_id"], name: "index_bets_on_beter_id"
-    t.index ["creator_id"], name: "index_bets_on_creator_id"
-    t.index ["group_id"], name: "index_bets_on_group_id"
-    t.index ["target_id"], name: "index_bets_on_target_id"
+    t.index ["groups_id"], name: "index_bets_on_groups_id"
+    t.index ["users_id"], name: "index_bets_on_users_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -70,10 +66,8 @@ ActiveRecord::Schema.define(version: 2019_11_18_175528) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bets", "groups"
-  add_foreign_key "bets", "users", column: "beter_id"
-  add_foreign_key "bets", "users", column: "creator_id"
-  add_foreign_key "bets", "users", column: "target_id"
+  add_foreign_key "bets", "groups", column: "groups_id"
+  add_foreign_key "bets", "users", column: "users_id"
   add_foreign_key "usergroups", "groups"
   add_foreign_key "usergroups", "users"
 end
