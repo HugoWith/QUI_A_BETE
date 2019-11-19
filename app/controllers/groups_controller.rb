@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
-    @owner_group = current_user.groups
+    owner_group
   end
 
   def show
@@ -14,8 +14,8 @@ class GroupsController < ApplicationController
 
     def create
       @group = Group.new(groups_params)
-      @user_group = Usergroup.new(user_groups_params)
-      if @group.save! && @user_group.save!
+      if @group.save
+        Usergroup.create!(user_id: current_user.id, group_id: @group.id)
         redirect_to groups_path()
       else
         render :new
@@ -39,10 +39,6 @@ class GroupsController < ApplicationController
 
   def groups_params
     params.require(:group).permit(:name, :photo, :photo_cache)
-  end
-
-  def user_groups_params
-    params.require(:usergroup).permit(:user_id, :group_id, :score)
   end
 
 end

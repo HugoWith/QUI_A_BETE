@@ -1,70 +1,66 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.user_card {
-    height-bottom: 500px;
-    width: 350px;
-    margin-top: auto;
-    margin-bottom: auto;
-    background: #70D6FF;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
-    padding-bottom: 40px;
-}
-
-.brand_logo_container {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    background: white;
-    padding: 10px;
-    text-align: center;
-    background-image: url(Logoqabweb.png);
-    background-size: cover;
-    border: 4px solid #F0C808;
-}
-
-.form_container {
-    margin-top: 100px;
-}
-
-.login_btn {
-    width: 100%;
-    background: #F0C808;
-    color: white;
-}
-
-.login_btn:focus {
-    box-shadow: none;
-    outline: 0px;
-}
-
-.login_container {
-    padding: 0 2rem;
-}
-
-.input-group-text {
-    background-color: #F0C808 !important;
-    border: 0;
-    border-radius: 0.25rem 0 0 0.25rem;
-}
-
-.input_user,
-.input_pass:focus {
-    box-shadow: none;
-    outline: 0px;
-}
-
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #c0392b;
+}
+
+body {
+    .user_card {
+        height-bottom: 500px;
+        width: 350px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: #70D6FF;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        padding-bottom: 70px;
+    }
+    .brand_logo_container {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        background: white;
+        padding: 10px;
+        text-align: center;
+        background-image: url(Logoqabweb.png);
+        background-size: cover;
+        border: 4px solid #F0C808;
+    }
+    .form-actions {
+        text-align: center;
+        width: 30%;
+        background: #F0C808;
+        color: white;
+        margin: 0 auto;
+    }
+    .form-actions:focus {
+        box-shadow: none;
+        outline: 0px;
+    }
+    .login_container {
+        padding: 0 2rem;
+    }
+    .input-group-text {
+        background-color: #F0C808 !important;
+        border: 0;
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
+    .input_user,
+    .input_pass:focus {
+        box-shadow: none;
+        outline: 0px;
+    }
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+        background-color: #c0392b;
+    }
+    .fas {
+        color: white;
+    }
+    .input-group-append {
+        height: 10px;
+    }
 }
