@@ -3,11 +3,30 @@
 
 <div class="row">
     <div class="col-12 col-md-12 index-group">
+        <div class="container">
         <h2>Espace Bet</h2>
-            <div class="d-flex justify-content-between">
-            <% @groups.each do |group| %>
-            <li><%= group.name %></li>
-            <% end %>
+            <div class="">
+                <% @groups.each do |group| %>
+                    <div class="card-product">
+                        <div class="d-flex justify-content-start">
+                        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> <p><%= group.name %></p>
+                        </div>   
+                            <div class= "d-flex align-items-center">
+                            </div>
+                    </div>
+                <% end %>
             </div>
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
+  <%# <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div> %>
