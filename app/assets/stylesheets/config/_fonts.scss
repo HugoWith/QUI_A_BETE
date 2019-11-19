@@ -1,6 +1,8 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 @import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto|Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
 // Define fonts for body and headers
 $body-font: "Open Sans",
 "Helvetica",
@@ -8,9 +10,9 @@ $body-font: "Open Sans",
 $headers-font: "Raleway",
 "Helvetica",
 "sans-serif";
-$main-font: 'Raleway';
+$main-font: 'Modak';
 $second-font: 'Roboto';
-$third-font: 'Staatliches';
+$third-font: 'Raleway';
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";

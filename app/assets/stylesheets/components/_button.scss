@@ -1,0 +1,22 @@
+.btn-home {
+  color: $main-color;
+  border: 3px solid $main-color;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 1;
+  transition: 0.3s ease;
+  width: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.btn-home:hover {
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+  color: $main-color;
+  border: 1px solid $main-color;
+
+}
