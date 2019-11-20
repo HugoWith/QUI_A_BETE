@@ -3,6 +3,7 @@ class BetsController < ApplicationController
   end
 
   def show
+    @bet = Bet.find(params[:id])
   end
 
   def new
@@ -12,7 +13,6 @@ class BetsController < ApplicationController
 
   def create
     @bet = Bet.new
-    @bet.creator = current_user
   end
 
   def edit

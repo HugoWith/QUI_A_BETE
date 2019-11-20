@@ -1,2 +1,51 @@
-<h1>Bets#show</h1>
-<p>Find me in app/views/bets/show.html.erb</p>
+<h2 class="A-1">Batch 308</h2>
+
+<body>
+
+  <div class="B-1">
+    <p>Créateur du pari: <strong> <%= @bet.creator.nickname %></strong></p>
+  </div>
+  <div class="B-2">
+    <p><strong> Betteurs </strong>
+      </p>
+      <div class="avatarcont justify-content-between">
+        <div class="I-1">
+          <%= cl_image_tag @bet.creator.pick_photo, height: 300, width: 400, crop: :fill, class:"avatar"%>
+          <br/>
+          <%= @bet.creator.nickname %>
+        </div>
+        <div class="I-2">
+          <%= cl_image_tag @bet.beter.pick_photo, height: 300, width: 400, crop: :fill, class:"avatar"%>
+          <br/>
+          <%= @bet.beter.nickname %>
+        </div>
+      </div>
+  </div>
+  <% if @bet.target.present? %>
+  <div class="B-3">
+    <p>La Target: <%= @bet.target.nickname %></p>
+  </div>
+  <% end %>
+  <div class="D-1">
+
+  </div>
+  <div class="D-2">
+
+  </div>
+  <div class="D-3">
+
+  </div>
+
+  <div class="B-4">
+    <div class="C-1">
+      <p><strong>Description:</strong> <br/><br/><%= @bet.description %></p>
+    </div>
+    <div class="C-2">
+      <p><strong>Enjeux:</strong> <br/><br/><%= @bet.stake %></p>
+    </div>
+    <div class="C-3">
+      <p><strong>Difficulté:</strong> <br/><br/><%= @bet.difficulty %></p>
+    </div>
+  </div>
+
+</body>
