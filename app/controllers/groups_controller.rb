@@ -37,14 +37,8 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    @usergroup = Usergroup.
-    p @usergroup
-    if current_user.id == @usergroup.user_id
     @group.destroy
     redirect_to groups_path, notice: 'Crew was successfully destroyed.'
-    else
-      redirect_to groups_path, notice: 'as pas les droits'
-    end
   end
 
   private
