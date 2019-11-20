@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show]
 
+
   def index
     @groups = Group.all
     owner_group

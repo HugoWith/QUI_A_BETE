@@ -229,7 +229,7 @@ bet2 = Bet.create!(
   difficulty: 3
 )
 
-bet2 = Bet.create!(
+bet3 = Bet.create!(
   description:"Arthur dira j'ai tout compris",
   end_date: Date.new(2019,12,15),
   creator_id: hugo.id,
