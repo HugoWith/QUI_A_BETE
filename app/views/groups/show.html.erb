@@ -1,19 +1,30 @@
 <div class="row">
     <div class="col-12 col-md-12 index-group">
-    <div class="d-flex justify-content-start recap">
+    <div class="d-flex justify-content-end recap">
+        <%= link_to "Voir ton classement", class:"button_new"%>
+        <%= link_to "Voir les paris en cours", class:"button_new"%>
+        <%= link_to "Voir les paris terminés", class:"button_new"%>
         <h3>Welcome back <%= current_user.nickname %></h3>
+
+
+
     </div>
-    <div><p> Check ton group et les bets en cour</p></div>
+    <div>
         <div class="container-index">
         <h2><%= @group.name  %></h2>
+        <div d-flex justify-content-start>
         <% @bets.each do |bet|%>
         <%=bet.description%>
         <%=bet.end_date%>
-        <%=bet.difficulty%>
+        <%=bet.difficulty%>/10
         <%=bet.stake%>
         <%= bet.creator.nickname %>
         <%= bet.beter.nickname %>
+        <%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
         <% end %>
+        </div>
         </div>
     </div>
 </div>
