@@ -51,28 +51,40 @@ marine = User.create!(
   first_name: "marine",
   last_name: "Diot",
   email: "marine@marine.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/profil2.jpg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271534/jwz6hdwrozu8rjwycaam.jpg")
+  )
 
 lea = User.create!(
   nickname: "belze",
   first_name: "lea",
   last_name: "bzs",
   email: "lea@lea.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/lea.png")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271535/lekgu29n86puqbwjbxa5.png")
+  )
 
 evan = User.create!(
   nickname: "schlarz",
   first_name: "evan",
   last_name: "wichlarz",
   email: "evan@evan.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/evan.png")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271536/u4malxrdyoprfosonx8o.png")
+  )
 
 simon = User.create!(
   nickname: "geekquest",
   first_name: "simon",
   last_name: "stef",
   email: "simon@simon.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/simon.png")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271537/y3if8gcvatlmtgsmyp1y.png")
+  )
 
 jojo = User.create!(
   nickname: "jojo",
@@ -99,7 +111,10 @@ john = User.create!(
   first_name: "john",
   last_name: "jomard",
   email: "john@john.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/john.jpeg"),
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271538/ln4p2snia2t1bd5czjfa.jpg")
+  )
 
 haris = User.create!(
   nickname: "pain moelleux",
@@ -114,7 +129,10 @@ axel = User.create!(
   first_name: "axel",
   last_name: "axel",
   email: "axel@axel.com",
-  password: "azerty")
+  password: "azerty",
+  # photo: File.open("app/assets/images/axel.jpeg"),
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271539/vzrhcflzxkwfutvb6qau.jpg")
+  )
 
 
 

@@ -16,10 +16,12 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <div class="main-container">
     <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
 
     <%= javascript_pack_tag 'application' %>
 
-    <%= render 'shared/footer' %>
   </body>
 </html>
