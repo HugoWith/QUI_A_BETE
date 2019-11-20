@@ -3,7 +3,9 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.all
-    owner_group
+    owner_groups
+    @owner_user_groups = Usergroup.where(is_owner: true)
+    @groups = @owner_user_groups.map { |ug| ug.group }
   end
 
   def show
@@ -21,7 +23,7 @@ class GroupsController < ApplicationController
     def create
       @group = Group.new(groups_params)
       if @group.save
-        Usergroup.create!(user_id: current_user.id, group_id: @group.id)
+        Usergroup.create!(user_id: current_user.id, group_id: @group.id, is_owner: true)
         redirect_to groups_path()
       else
         render :new
@@ -35,14 +37,20 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    @usergroup = Usergroup.
+    p @usergroup
+    if current_user.id == @usergroup.user_id
     @group.destroy
     redirect_to groups_path, notice: 'Crew was successfully destroyed.'
+    else
+      redirect_to groups_path, notice: 'as pas les droits'
+    end
   end
 
   private
 
-  def owner_group
-    @owner_group = current_user.groups
+  def owner_groups
+    @owner_groups = current_user.groups
   end
 
   def groups_params
