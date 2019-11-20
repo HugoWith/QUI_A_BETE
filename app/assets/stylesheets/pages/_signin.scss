@@ -32,7 +32,7 @@ body {
     }
     .form-actions {
         text-align: center;
-        width: 30%;
+        width: 40%;
         background: #F0C808;
         color: white;
         margin: 0 auto;
@@ -57,9 +57,9 @@ body {
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
         background-color: #c0392b;
     }
-    .fas {
-        color: white;
-    }
+    // .fas {
+    //     color: white;
+    // }
     .input-group-append {
         height: 10px;
     }

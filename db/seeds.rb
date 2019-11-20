@@ -158,7 +158,8 @@ ug2 = Usergroup.create!(
 
 ug3 = Usergroup.create!(
   user: alex,
-  group: batch)
+  group: batch,
+  is_owner: true)
 
 ug4 = Usergroup.create!(
   user: marine,
@@ -229,7 +230,7 @@ bet2 = Bet.create!(
   difficulty: 3
 )
 
-bet2 = Bet.create!(
+bet3 = Bet.create!(
   description:"Arthur dira j'ai tout compris",
   end_date: Date.new(2019,12,15),
   creator_id: hugo.id,
@@ -238,6 +239,16 @@ bet2 = Bet.create!(
   target_id: axel.id,
   stake: "un beret des Peaky Blinders",
   difficulty: 3
+)
+
+bet3 = Bet.create!(
+  description:"Shlarz ne dira aucune insulte pendant une journée",
+  end_date: Date.new(2019,12,15),
+  creator_id: lea.id,
+  beter_id: marine.id,
+  group_id: batch.id,
+  stake: "une pizza",
+  difficulty: 6
 )
 
 

@@ -10,7 +10,7 @@
 <body>
   <div class="container h-100">
     <div class="d-flex justify-content-center h-100">
-      <div class="user_card">
+      <div class="user_card mt-3">
         <div class="d-flex justify-content-center">
           <div class="brand_logo_container">
             <img src="" class="brand_logo" alt="">
@@ -24,13 +24,16 @@
             autofocus: true,
             input_html: { autocomplete: "email" } %>
             <%= f.input :password,
+            label: "Mot de passe",
             required: false,
             input_html: { autocomplete: "current-password" } %>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+            <%= f.input :remember_me, as: :boolean,
+            label: "Rester connecté"
+             %>
           </div>
         </div>
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Se connecter" %>
         </div>
         <% end %>
 
@@ -40,6 +43,9 @@
           </div>
           <div class="d-flex justify-content-center links">
             <%= link_to "Mot de passe oublié?", new_user_password_path %>
+          </div>
+          <div class="d-flex justify-content-center links">
+            <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>
