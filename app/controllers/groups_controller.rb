@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :destroy]
 
+
   def index
     owner_groups
     @owner_user_groups = Usergroup.where(is_owner: true)
@@ -10,8 +11,10 @@ class GroupsController < ApplicationController
   def show
     @bets = @group.bets
     @user = @group.users
+
     # @all_creator = Bet.all
     # @creator = @all_creator.find()
+
   end
 
   def new
