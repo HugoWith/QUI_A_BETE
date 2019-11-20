@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show]
+  before_action :set_group, only: [:show, :destroy]
 
   def index
     @groups = Group.all
@@ -9,8 +9,8 @@ class GroupsController < ApplicationController
   def show
     @bets = @group.bets
     @user = @group.users
-    @all_creator = Bet.all
-
+    # @all_creator = Bet.all
+    # @creator = @all_creator.find()
   end
 
   def new
@@ -35,6 +35,8 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    # if
+    # @group.destroy
   end
 
   private
