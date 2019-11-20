@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_11_18_175528) do
   end
 
   create_table "usergroups", force: :cascade do |t|
-    t.bigint "user_id", null: falseg
+    t.bigint "user_id", null: false
     t.bigint "group_id", null: false
     t.integer "score", default: 0
     t.datetime "created_at", precision: 6, null: false
