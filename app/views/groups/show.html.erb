@@ -6,14 +6,18 @@
     <div><p> Check ton group et les bets en cour</p></div>
         <div class="container-index">
         <h2><%= @group.name  %></h2>
+        <div d-flex justify-content-start>
         <% @bets.each do |bet|%>
         <%=bet.description%>
         <%=bet.end_date%>
-        <%=bet.difficulty%>
+        <%=bet.difficulty%>/10
         <%=bet.stake%>
         <%= bet.creator.nickname %>
         <%= bet.beter.nickname %>
+        <%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <% end %>
+        </div>
         </div>
     </div>
 </div>

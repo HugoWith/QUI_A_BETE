@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Qui a beté ?</title>
+
     <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/k6g81xj/Logoqabweb.png">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
@@ -17,7 +17,7 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%# <%= javascript_include_tag 'application' %>
+
     <%= javascript_pack_tag 'application' %>
 
     <%= render 'shared/footer' %>
