@@ -3,9 +3,8 @@ class GroupsController < ApplicationController
 
 
   def index
-    @groups = Group.all
     owner_groups
-    @owner_user_groups = Usergroup.where(is_owner: true)
+    @owner_user_groups = Usergroup.where(is_owner: true, user_id: current_user.id)
     @groups = @owner_user_groups.map { |ug| ug.group }
   end
 
