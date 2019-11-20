@@ -154,7 +154,7 @@ ug1 = Usergroup.create!(
 
 ug2 = Usergroup.create!(
   user: hugo,
-  group: batch
+  group: batch,
   is_owner: false)
 
 ug3 = Usergroup.create!(
@@ -176,7 +176,8 @@ ug6 = Usergroup.create!(
 
 ugx = Usergroup.create!(
   user: evan,
-  group: batch)
+  group: batch,
+  is_owner: false)
 
 ug7 = Usergroup.create!(
   user: jojo,
