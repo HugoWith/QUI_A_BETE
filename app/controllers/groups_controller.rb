@@ -35,8 +35,8 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    # if
-    # @group.destroy
+    @group.destroy
+    redirect_to groups_path, notice: 'Crew was successfully destroyed.'
   end
 
   private
