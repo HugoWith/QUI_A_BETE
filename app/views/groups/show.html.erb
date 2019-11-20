@@ -6,8 +6,13 @@
     <div><p> Check ton group et les bets en cour</p></div>
         <div class="container-index">
         <h2><%= @group.name  %></h2>
-        <%= @bets.each do |bet|%>
-        <%=bet["descritpion"]%>
+        <% @bets.each do |bet|%>
+        <%=bet.description%>
+        <%=bet.end_date%>
+        <%=bet.difficulty%>
+        <%=bet.stake%>
+        <%= bet.creator.nickname %>
+        <%= bet.beter.nickname %>
         <% end %>
         </div>
     </div>
