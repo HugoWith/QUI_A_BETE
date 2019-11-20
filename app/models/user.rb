@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]
   has_many :usergroups
   has_many :groups, through: :usergroups
@@ -15,15 +15,18 @@ class User < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  def self.find_for_facebook_oauth(auth)
-      user_params = auth.slice("provider", "uid")
-      user_params.merge! auth.info.slice("email", "first_name", "last_name")
-      user_params[:facebook_picture_url] = auth.info.image
-      user_params[:token] = auth.credentials.token
-      user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
-      user_params = user_params.to_h
+  before_validation :set_default_photo
 
-      user = User.find_by(provider: auth.provider, uid: auth.uid)
+
+  def self.find_for_facebook_oauth(auth)
+    user_params = auth.slice("provider", "uid")
+    user_params.merge! auth.info.slice("email", "first_name", "last_name")
+    user_params[:facebook_picture_url] = auth.info.image
+    user_params[:token] = auth.credentials.token
+    user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
+    user_params = user_params.to_h
+
+    user = User.find_by(provider: auth.provider, uid: auth.uid)
       user ||= User.find_by(email: auth.info.email) # User did a regular sign up in the past.
       if user
         user.update(user_params)
@@ -35,4 +38,19 @@ class User < ApplicationRecord
 
       return user
     end
+
+    def set_default_photo
+      self.default_photo = self.photo.default_url
+    end
+
+    def pick_photo
+      if self.photo.present?
+        photo
+      elsif self.facebook_picture_url.present?
+        facebook_picture_url
+      else
+        default_photo
+      end
+    end
 end
+

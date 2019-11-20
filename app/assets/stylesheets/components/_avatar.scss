@@ -7,8 +7,9 @@
   border-radius: 50%;
 }
 .avatar-xl {
-  width: 70px;
-  border-radius: 50%;
+  width: 70px !important;
+    height: 70px !important;
+  border-radius: 50% !important;
 }
 .avatar-bordered {
   width: 40px;

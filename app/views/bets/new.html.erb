@@ -13,7 +13,7 @@
         <div class="d-flex justify-content-between mb-4">
           <% @group.users.each do |member| %>
           <div>
-            <%= cl_image_tag  member.photo, class: "avatar-xl" %>
+            <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
           </div>
           <% end %>
         </div>

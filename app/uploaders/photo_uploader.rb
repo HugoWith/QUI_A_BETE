@@ -19,15 +19,23 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   # Remove everything else
-end
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  # def default_url(*args)
-  #   # For Rails 3.1+ asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  #
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-  # end
+  def default_url(*args)
+    # For Rails 3.1+ asset pipeline compatibility:
+    # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+    ["https://images.unsplash.com/photo-1569448829586-2e4995a3d607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1277&q=80",
+     "https://images.unsplash.com/photo-1568214379698-8aeb8c6c6ac8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+     "https://images.unsplash.com/photo-1551501825-6214d244e824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80",
+     "https://images.unsplash.com/photo-1566410834486-857b30cff4ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+     "https://images.unsplash.com/photo-1564107628966-daff03746bee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+     "https://images.unsplash.com/photo-1549490349-8643362247b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+     "https://images.unsplash.com/photo-1557841442-d1924a792682?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+     "https://images.unsplash.com/photo-1558244402-286dd748c593?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+     "https://images.unsplash.com/photo-1525622535334-df26d0b648a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"].sample
+    # "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+  end
 
+end
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #
