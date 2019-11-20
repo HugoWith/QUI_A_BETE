@@ -8,6 +8,9 @@ class GroupsController < ApplicationController
 
   def show
     @bets = @group.bets
+    @user = @group.users
+    @all_creator = Bet.all
+
   end
 
   def new
