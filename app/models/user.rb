@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :bets, foreign_key: :creator_id
   has_many :bets, foreign_key: :beter_id
   has_many :bets, foreign_key: :target_id
+  has_many :bets, foreign_key: :winner_id
 
   validates :first_name, presence: true
   validates :last_name, presence: true

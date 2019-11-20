@@ -193,7 +193,8 @@ ug9 = Usergroup.create!(
 
 ug10 = Usergroup.create!(
   user: evan,
-  group: frero)
+  group: frero,
+  is_owner: true)
 
 ug11 = Usergroup.create!(
   user: john,
@@ -210,6 +211,11 @@ ug13 = Usergroup.create!(
 ug13 = Usergroup.create!(
   user: axel,
   group: batch)
+
+ug14= Usergroup.create!(
+  user: evan,
+  group: family,
+  is_owner: false)
 
 bet = Bet.create!(
   description:"John va perdre 4-0 à Fifa",
