@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :destroy]
 
   def index
-    @groups = Group.all
     owner_groups
     @owner_user_groups = Usergroup.where(is_owner: true)
     @groups = @owner_user_groups.map { |ug| ug.group }
