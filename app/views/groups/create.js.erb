@@ -1,12 +1,13 @@
-function displayBet(innerHTML) {
-  const betwip = document.getElementById('bet_in_progress');
+function displayBet {
+  const betwip = document.querySelectorAll('#bet_in_progress');
+  console.log(betwip)
   betwip.addEventListener('click', () => {
     console.log(coucou);
   });
   // betwip.innerHTML = innerHTML;
 }
 
-displayBet('<%= j render "groups/form", restaurant: @restaurant, group: @group %>');
+// displayBet('<%= j render "groups/form", restaurant: @restaurant, group: @group %>');
 
 
 
