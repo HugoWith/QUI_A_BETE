@@ -26,4 +26,11 @@ class UserMailer < ApplicationMailer
     @group = params[:group] # Instance variable => available in view
     mail(to: @user.email, subject: "#{@bet.description} est fini ! Qui a gagné ?")
   end
+
+  def got_present
+    @user = params[:user]
+    @group = params[:group]
+    @bet = params[:bet] # Instance variable => available in view
+    mail(to: @user.email, subject: "Alors, t'as reçu ton dû ?")
+  end
 end

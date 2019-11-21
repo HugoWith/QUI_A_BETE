@@ -1,0 +1,8 @@
+Hello <%= @bet.winner.first_name %>,
+
+<%= @bet.description %> est fini depuis le <%= @bet.end_date %>.
+On espère que t'as reçu ton dû. Sinon, c'est clairement l'heure de le réclamer !
+
+De rien, tu sais qu'on est là pour toi.
+
+<%= link_to "Nouveau bet", new_group_bet_url(@group) %>
