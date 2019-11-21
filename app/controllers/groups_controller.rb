@@ -11,7 +11,8 @@ class GroupsController < ApplicationController
   def show
     @bets = @group.bets
     @user = @group.users
-
+    @usergroup = @group.usergroups
+    # @group_user = @group.usergroups
     # @all_creator = Bet.all
     # @creator = @all_creator.find()
 
