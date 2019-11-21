@@ -53,7 +53,7 @@
         <% user = User.find(usergroup.user_id) %>
         <% score = usergroup.score %>
         <div class = "d-flex justify-content-center">
-        <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= user.nickname %> a <b><%=  score %></b> pts.
+        <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <p><%= user.nickname %> a <b> <%= score %></b> pts.</p>
         </div>
         <% end %>
       </div>
