@@ -1,5 +1,5 @@
 <%= simple_form_for @group do |f| %>
-    <%= f.input :name, placeholder: 'Place le nom' %>
+    <%= f.input :name, label: "Nom du crew", placeholder: 'Place le nom' %>
     <%= f.input :photo, label: 'Choisis une photo' %>
     <%= f.input :photo_cache, as: :hidden %>
     <div class="d-flex justify-content-center">
