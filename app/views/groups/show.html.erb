@@ -36,28 +36,9 @@
 
 
 
-  <div class="container">
-    <h2><%= @group.name  %></h2>
-    <h3>Actuellement <%= @bets.size %> paris en cours</h3>
-    <% @bets.each do |bet|%>
-    <div class="d-flex justify-content-start card_bet">
-      <%=bet.description%>
-      <%=bet.end_date%>
-      <%=bet.difficulty%>/10
-      <%=bet.stake%>
-      <div class="d-flex justify-content-start">
-        <%= bet.creator.nickname %><%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <%= bet.beter.nickname %><%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      </div>
-    </div>
-    <% end %>
-  </div>
 
 
-  <button data-action="click->hello#classement">Click</button>
-  <div data-target="hello.element" class="visible">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi rerum placeat harum hic excepturi. Cumque facilis ipsam quisquam incidunt. Velit illum architecto doloribus, fugiat, officiis adipisci blanditiis quae nobis.
-  </div>
+
 
         <h3>Welcome back <%= current_user.nickname %></h3>
     </div>
