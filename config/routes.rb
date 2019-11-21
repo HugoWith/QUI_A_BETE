@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get 'invitation/new'
+  get 'invitation/post'
+  get 'usergroups/join_crew'
   resources :groups do
+    resources :invitations, only: [:create]
     resources :bets
   end
   get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
