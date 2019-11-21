@@ -1,3 +1,16 @@
-User#welcome
+Hello <%= @user.first_name %>,
 
-<%= @greeting %>, find me in app/views/user_mailer/welcome.text.erb
+Bienvenue chez Qui a beté !
+
+"Tu me devais pas une bière ?" "On avait parié quoi déjà ?" "Mais non, j'avais pas parié ça"
+Tout ça, c'est derrière toi.
+
+Avec Qui a beté ?, tu :
+- crées ton crew
+- invites tes potes
+- crées un pari
+
+Et on se charge de vous rappeler qui doit quoi à qui, sans mauvaise foi possible.
+
+Prêt à béter ?
+ <%= link_to "Crée ton crew", new_group_url %> ou <%= link_to "Rejoins un crew existant"%>
