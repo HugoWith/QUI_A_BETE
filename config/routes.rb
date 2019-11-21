@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :groups do
     resources :bets
   end
-  GET "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
+  get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
 
   devise_for :users,
   controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
