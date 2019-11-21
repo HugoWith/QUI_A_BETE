@@ -23,4 +23,9 @@ class BetsController < ApplicationController
 
   def destroy
   end
+
+  def who_won
+    @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
+  end
 end
