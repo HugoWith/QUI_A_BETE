@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_151611) do
+ActiveRecord::Schema.define(version: 2019_11_21_114503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,12 @@ ActiveRecord::Schema.define(version: 2019_11_20_151611) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "gift_received", default: false
+    t.bigint "winner_id"
     t.index ["beter_id"], name: "index_bets_on_beter_id"
     t.index ["creator_id"], name: "index_bets_on_creator_id"
     t.index ["group_id"], name: "index_bets_on_group_id"
     t.index ["target_id"], name: "index_bets_on_target_id"
+    t.index ["winner_id"], name: "index_bets_on_winner_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_11_20_151611) do
   add_foreign_key "bets", "users", column: "beter_id"
   add_foreign_key "bets", "users", column: "creator_id"
   add_foreign_key "bets", "users", column: "target_id"
+  add_foreign_key "bets", "users", column: "winner_id"
   add_foreign_key "usergroups", "groups"
   add_foreign_key "usergroups", "users"
 end
