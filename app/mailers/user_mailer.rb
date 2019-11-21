@@ -15,4 +15,10 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: "#{current_user.first_name} t'invite à beter dans son crew !")
   end
 
+  def victime
+    @user = params[:user]
+    @group_id = params[:group_id]
+    @bet = params[:bet] # Instance variable => available in view
+    mail(to: @user.email, subject: "Ils t'ont victimisé !")
+  end
 end

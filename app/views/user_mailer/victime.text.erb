@@ -1,0 +1,10 @@
+<%= @user.first_name %>,
+
+Comme on est bon esprit, on s'est dit qu'on se devait de te prévenir.
+<%= @bet.creator.first_name %> et <%= @bet.beter.first_name %> ont parié sur toi.
+
+Ca appellerait pas vengeance, ça ?
+
+Nous, on dit ça, on dit rien.
+
+<%= link_to "TOI AUSSI PARIE SUR EUX", new_group_bet_url(@group_id) %>
