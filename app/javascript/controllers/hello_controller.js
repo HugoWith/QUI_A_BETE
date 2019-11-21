@@ -1,20 +1,19 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output", "element", "donebet" ]
 
-  say_hello() {
-    this.outputTarget.textContent = 'hello world'
-  }
+    static targets = ["output", "element", "donebet"]
 
-  classement() {
-    this.elementTarget.classList.toggle('visible')
-  }
+    say_hello() {
+        this.outputTarget.textContent = 'hello world'
+    }
 
-  donebet() {
-    this.donebetTarget.classList.toggle('visible')
-  }
+    classement() {
+        this.elementTarget.classList.toggle('visible');
+    }
+
+    donebet() {
+        this.donebetTarget.classList.toggle('visible');
+    }
 
 }
-
-

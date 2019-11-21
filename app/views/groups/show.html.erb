@@ -1,9 +1,9 @@
 <div class="row" data-controller="hello">
   <div class="col-12 col-md-12 index-group">
     <div class="d-flex justify-content-end recap">
-
-      <%= link_to "Voir ton classement", group_path, remote: true, id:'#classement'%>
+      <button class="btn-home" data-action="click->hello#classement">Voir le classement</button>
       <%= link_to "Voir les paris en cours", group_path, remote: true, id:"bet_in_progress" %>
+
       <span data-action="click->hello#donebet" class="btn-home">Voir les paris terminés</span>
 
       <h3>Welcome back <%= current_user.nickname %></h3>
@@ -59,8 +59,20 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi rerum placeat harum hic excepturi. Cumque facilis ipsam quisquam incidunt. Velit illum architecto doloribus, fugiat, officiis adipisci blanditiis quae nobis.
   </div>
 
-
-
+        <h3>Welcome back <%= current_user.nickname %></h3>
+    </div>
+    <div class="container">
+      <h2><%= @group.name  %></h2>
+    <div data-target="hello.element" class="visible">
+    <% @usergroup.each do |usergroup| %>
+    <% user = User.find(usergroup.user_id) %>
+    <% score = usergroup.score %>
+    <div class = "d-flex justify-content-center">
+    <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= user.nickname %> a <%= score %>.
+    </div>
+      <% end %>
+    </div>
+    </div>
 
 </div>
 </div>

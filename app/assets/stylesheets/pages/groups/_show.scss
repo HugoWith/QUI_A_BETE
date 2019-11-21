@@ -5,15 +5,14 @@
 }
 
 .slide {
-  display: none;
+    display: none;
 }
 
 .slide.slide--current {
-  display: block;
+    display: block;
 }
-
 
 .visible {
-  display: none;
-  transition: display 0.5s ease-in-out;
+    display: none;
 }
+
