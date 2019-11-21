@@ -2,6 +2,7 @@ class Group < ApplicationRecord
   has_many :bets
   has_many :usergroups, dependent: :destroy
   has_many :users, through: :usergroups
+  has_many :invitations, dependent: :destroy
   validates :name, presence: true
   mount_uploader :photo, PhotoUploader
   #     before_validation :test

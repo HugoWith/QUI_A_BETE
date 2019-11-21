@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_114503) do
+
+ActiveRecord::Schema.define(version: 2019_11_21_131343) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +42,21 @@ ActiveRecord::Schema.define(version: 2019_11_21_114503) do
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_invitations_on_group_id"
+  end
+
+  create_table "invited_users", force: :cascade do |t|
+    t.bigint "invitation_id", null: false
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["invitation_id"], name: "index_invited_users_on_invitation_id"
   end
 
   create_table "usergroups", force: :cascade do |t|
@@ -80,6 +97,10 @@ ActiveRecord::Schema.define(version: 2019_11_21_114503) do
   add_foreign_key "bets", "users", column: "creator_id"
   add_foreign_key "bets", "users", column: "target_id"
   add_foreign_key "bets", "users", column: "winner_id"
+
+  add_foreign_key "invitations", "groups"
+  add_foreign_key "invited_users", "invitations"
+
   add_foreign_key "usergroups", "groups"
   add_foreign_key "usergroups", "users"
 end
