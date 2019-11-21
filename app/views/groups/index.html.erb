@@ -2,38 +2,27 @@
 
 
 <div class="row">
-    <div class="col-12 col-md-12 index-group">
-        <div class="container-index">
-        <h2>Espace Bet</h2>
-            <div class="">
-                <% @owner_groups.each do |group| %>
-                    <div class="card-product">
-                        <div class= "d-flex justify-content-between">
-                            <%= cl_image_tag group.photo, height: 300, width: 400, crop: :fill %>
-                            <%= link_to group.name, group_path(group), class: 'link'%>
-                            <i class="fas fa-cog"></i>
-                            <%if @groups.include?(group) %>
-                                <%= link_to icon("far","trash-alt") , group, method: :delete, data: { confirm: 'Are you sure?' } %>
-                            <% else %>
-                            <% end %>
-                        </div> 
-                    </div>
-                <% end %>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-        <%= link_to "Cree ton crew", new_group_path, class:"button_new" %>
-        </div>
-    </div>
+  <div class="col-12 col-md-12 index-group">
+    <div class="container-index">
+    <h2>Mes teams de Bet</h2>
+
+    <div class="cards-index">
+      <% @owner_groups.each do |group| %>
+      <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path group.photo %>')">
+       <%= link_to group.name, group_path(group), class: 'link'%>
+       <i class="fas fa-cog"></i>
+       <%if @groups.include?(group) %>
+       <%= link_to icon("far","trash-alt") , group, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <% else %>
+       <% end %>
+     </div>
+     <% end %>
+   </div>
+ </div>
+
+ <div class="d-flex justify-content-center">
+  <%= link_to "Cree ton crew", new_group_path, class:"btn-home" %>
 </div>
 
+</div>
 
-
-
-
-
-
-  <%# <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div> %>

@@ -10,11 +10,15 @@ class GroupsController < ApplicationController
   def show
     @bets = @group.bets
     @user = @group.users
+
     @group = Group.find(params[:id])
     # @invitation = Invitation.new
     # @invitation.group =  @group
     @invitation = @group.invitations.build
     @invitation.invited_users.build
+
+    @usergroup = @group.usergroups
+    # @group_user = @group.usergroups
 
     # @all_creator = Bet.all
     # @creator = @all_creator.find()
