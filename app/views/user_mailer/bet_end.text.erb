@@ -1,0 +1,8 @@
+Hello <%= @bet.creator.first_name %> et <%= @bet.beter.first_name %>,
+
+La date fatidique est passée.
+Votre pari <%= @bet.description %> est terminé.
+
+Alors, qui a gagné ?
+
+<%= link_to "DIS NOUS, DIS NOUS !", define_winner_url(@group, @bet) %>

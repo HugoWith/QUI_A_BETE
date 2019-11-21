@@ -266,7 +266,7 @@ bet3 = Bet.create!(
   difficulty: 3
 )
 
-bet3 = Bet.create!(
+bet4 = Bet.create!(
   description:"Shlarz ne dira aucune insulte pendant une journée",
   end_date: Date.new(2019,12,15),
   creator_id: lea.id,

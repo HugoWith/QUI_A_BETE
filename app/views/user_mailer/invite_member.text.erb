@@ -1,0 +1,13 @@
+Hello <%= @user.first_name %>,
+
+<%= current_user.first_name %> t'invite à rejoindre son crew !
+
+Avec Qui a beté ?, tu :
+- crées ton crew
+- invites tes potes
+- crées un pari
+
+Et on se charge de vous rappeler qui doit quoi à qui, sans mauvaise foi possible.
+
+Prêt à béter ?
+<%= link_to "Crée ton compte", new_user_registration_url %> ou <%= link_to "J'ai déjà un compte, rejoindre le crew" %>
