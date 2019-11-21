@@ -1,0 +1,26 @@
+
+
+
+const displayBet = () => {
+  const betwip = document.querySelector('#bet_in_progress');
+  betwip.addEventListener('click', (event) => {
+    const displaytest = document.querySelector('.test');
+  displaytest.insertAdjacentHTML('beforeend', '<h1>coucou ça marche de ouf</h1>')
+  });
+
+  const classement = document.querySelector('#classement');
+  classement.addEventListener('click', (event) => {
+
+    const displaytest = document.querySelector('.test');
+  displaytest.insertAdjacentHTML('beforeend', '<h1>coucou classmenet</h1>')
+
+};
+
+
+
+<% if @groups %>
+  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
+<% else %>
+  addReview('<%= j render "reviews/show", review: @review %>');
+  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
+<% end %>
