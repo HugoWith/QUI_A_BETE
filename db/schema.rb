@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_11_21_131343) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,8 +97,10 @@ ActiveRecord::Schema.define(version: 2019_11_21_131343) do
   add_foreign_key "bets", "users", column: "creator_id"
   add_foreign_key "bets", "users", column: "target_id"
   add_foreign_key "bets", "users", column: "winner_id"
+
   add_foreign_key "invitations", "groups"
   add_foreign_key "invited_users", "invitations"
+
   add_foreign_key "usergroups", "groups"
   add_foreign_key "usergroups", "users"
 end
