@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'usergroups/join_crew'
   resources :groups do
     resources :bets
   end
