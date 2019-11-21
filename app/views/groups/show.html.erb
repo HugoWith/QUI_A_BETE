@@ -1,50 +1,62 @@
-<div class="row">
-    <div class="col-12 col-md-12 index-group">
+<div class="row" data-controller="hello">
+  <div class="col-12 col-md-12 index-group">
     <div class="d-flex justify-content-end recap">
 
-        <%= link_to "Voir ton classement", group_path, remote: true, id:'#classement'%>
-        <%= link_to "Voir les paris en cours", group_path, remote: true, id:"bet_in_progress" %>
-        <%= link_to "Voir les paris terminés", class:"button_new"%>
+      <%= link_to "Voir ton classement", group_path, remote: true, id:'#classement'%>
+      <%= link_to "Voir les paris en cours", group_path, remote: true, id:"bet_in_progress" %>
+      <%= link_to "Voir les paris terminés", class:"button_new"%>
 
-        <h3>Welcome back <%= current_user.nickname %></h3>
+      <h3>Welcome back <%= current_user.nickname %></h3>
     </div>
 
-<button data-action="hello#show"></button>
-<div data-controller="hello">
-  <h1 class="output" data-target="hello.output"></h1>
-</div>
-
-
-<div data-controller="slideshow">
-  <button data-action="slideshow#previous">←</button>
-  <button data-action="slideshow#next">→</button>
-
-  <div data-target="slideshow.slide" class="slide">🐵</div>
-  <div data-target="slideshow.slide" class="slide">🙈</div>
-  <div data-target="slideshow.slide" class="slide">🙉</div>
-  <div data-target="slideshow.slide" class="slide">🙊</div>
-</div>
 
 
 
 
+    <div>
+      <button data-action="click->hello#say_hello">Say Hello ! 🔥</button>
+      <span data-target='hello.output'></span>
+    </div>
 
-        <div class="container">
-            <h2><%= @group.name  %></h2>
-            <div class="test">balabalbal</div>
-            <h3>Actuellement <%= @bets.size %> paris en cours</h3>
-                <% @bets.each do |bet|%>
-                    <div class="d-flex justify-content-start card_bet">
-                    <%=bet.description%>
-                    <%=bet.end_date%>
-                    <%=bet.difficulty%>/10
-                    <%=bet.stake%>
-                        <div class="d-flex justify-content-start">
-                        <%= bet.creator.nickname %><%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                        <%= bet.beter.nickname %><%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                        </div>
-                    </div>
-                    <% end %>
+    <div class="container">
+      <h2><%= @group.name  %></h2>
+      <div class="test">balabalbal</div>
+      <h3>Actuellement <%= @bets.size %> paris en cours</h3>
+      <% @bets.each do |bet|%>
+      <div class="d-flex justify-content-start card_bet">
+        <%=bet.description%>
+        <%=bet.end_date%>
+        <%=bet.difficulty%>/10
+        <%=bet.stake%>
+        <div class="d-flex justify-content-start">
+          <%= bet.creator.nickname %><%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= bet.beter.nickname %><%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         </div>
+      </div>
+      <% end %>
     </div>
+
+
+
+
+
+
+    <button data-action="click->hello#classement">Click</button>
+
+    <div data-target="hello.element" class="content" style="display: none">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi rerum placeat harum hic excepturi. Cumque facilis ipsam quisquam incidunt. Velit illum architecto doloribus, fugiat, officiis adipisci blanditiis quae nobis.
+    </div>
+
+
+
+
+<div data-action="click->hello#donebet">
+  <div data-target="hello.donebet" class="content" style="display: none"></div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi rerum placeat harum hic excepturi. Cumque facilis ipsam quisquam incidunt. Velit illum architecto doloribus, fugiat, officiis adipisci blanditiis quae nobis.
+</div>
+
+
+
+
+  </div>
 </div>
