@@ -10,14 +10,11 @@
 
 import { Controller } from "stimulus"
 export default class extends Controller {
-  static targets = [ "output" ]
-  connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
-  }
-  show() {
-    this.outputTarget.textContent = 'ça marche'
-    this.show.
-  }
+    static targets = ["output"]
+    connect() {
+        this.outputTarget.textContent = 'Hello, Stimulus!'
+    }
+    show() {
+        this.outputTarget.toggle("output_ko")
+    }
 }
-
-
