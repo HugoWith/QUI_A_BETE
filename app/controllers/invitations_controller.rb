@@ -1,5 +1,4 @@
 class InvitationsController < ApplicationController
-
   # def new
   #   @invitation = Invitation.new
   #   @invitation.invited_users.build
@@ -8,11 +7,15 @@ class InvitationsController < ApplicationController
   def create
     @group = Group.find(params[:group_id])
     @invitation = @group.invitations.build(invitation_params)
-     @invitation.save!
+    if @invitation.save
+      @invitation.last.invited_users.each do |user|
+        mail = UserMailer.with(user: user.email).invite_member
+        mail.deliver_now
+      end
       redirect_to group_path(@group)
-
-      flash[notice: 'coucou']
-
+    else
+      flash[notice: "Ouch, on n'a pas pu ajouter de membre à ton crew :/"]
+    end
   end
 
   private

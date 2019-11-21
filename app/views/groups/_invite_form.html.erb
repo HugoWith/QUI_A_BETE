@@ -2,5 +2,12 @@
   <%= f.simple_fields_for :invited_users do |form| %>
     <%= form.input :email %>
   <% end %>
-  <%= f.button :submit, value: "Envoyer les invitations" %>
+  <%= f.simple_fields_for :invited_users do |form| %>
+    <%= form.input :email %>
+  <% end %>
+  <%= f.simple_fields_for :invited_users do |form| %>
+    <%= form.input :email %>
+  <% end %>
+
+  <%= f.button :submit, class: "button_new", value: "Envoyer les invitations" %>
 <% end %>
