@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :destroy]
 
-
   def index
     owner_groups
     @owner_user_groups = Usergroup.where(is_owner: true, user_id: current_user.id)
@@ -11,16 +10,19 @@ class GroupsController < ApplicationController
   def show
     @bets = @group.bets
     @user = @group.users
+    @group = Group.find(params[:id])
+    # @invitation = Invitation.new
+    # @invitation.group =  @group
+    @invitation = @group.invitations.build
+    @invitation.invited_users.build
 
     # @all_creator = Bet.all
     # @creator = @all_creator.find()
-
   end
 
   def new
     @group = Group.new
   end
-
 
     def create
       @group = Group.new(groups_params)
