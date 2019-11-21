@@ -1,6 +1,6 @@
 # ActionMailer::Base.smtp_settings = {
 #   :user_name => 'Quiabete',
-#   :password => "#{SENDGRID_PASSWORD}"
+#   :password => "#{SENDGRID_PASSWORD}",
 #   :domain => 'quiabete.co',
 #   :address => 'smtp.sendgrid.net',
 #   :port => 465,
