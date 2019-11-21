@@ -9,11 +9,11 @@ export default class extends Controller {
     }
 
     classement() {
-        this.elementTarget.classList.toggle('visible')
+        this.elementTarget.classList.toggle('visible');
     }
 
     donebet() {
-        this.donebetTarget.classList.toggle('visible')
+        this.donebetTarget.classList.toggle('visible');
     }
 
 }
