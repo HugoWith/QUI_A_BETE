@@ -1,4 +1,4 @@
-class UserMailer < ApplicationMailer
+class UsersMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -22,8 +22,9 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: "Ils t'ont victimisé !")
   end
 
-  def bet_end(bet, group)
+  def bet_end(user, bet, group)
     @bet = bet
+    @user = user
     @group = group # Instance variable => available in view
     mail(to: @user.email, subject: "#{@bet.description} est fini ! Qui a gagné ?")
   end
