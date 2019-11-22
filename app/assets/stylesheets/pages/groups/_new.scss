@@ -10,3 +10,9 @@
     color: $second-color;
     transition: 0.8s ease-in-out;
 }
+
+.group_photo_1 {
+  // background-image: ("images/group/frog.png");
+  background-image: url("../../../images/frog.png");
+  background-color: red;
+}
