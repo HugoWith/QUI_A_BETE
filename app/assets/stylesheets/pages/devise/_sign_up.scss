@@ -29,6 +29,7 @@
         display: flex;
         // justify-content: center;
         // margin-bottom: 6px;
+        max-width: 180%;
     }
     a {
         text-decoration: none;
@@ -76,4 +77,5 @@
         text-align: center;
         cursor: pointer;
     }
+    .simple_form new_user {}
 }
