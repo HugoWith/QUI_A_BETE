@@ -26,3 +26,31 @@
   border: 2px solid $white;
 
 }
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .btn-home {
+
+      font-size: 9px;
+
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .btn-home {
+
+      font-size: 9px;
+
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .btn-home {
+
+      font-size: 12px;
+
+  }
+}
