@@ -277,5 +277,16 @@ bet4 = Bet.create!(
   difficulty: 6
 )
 
+bet4 = Bet.create!(
+  description:"Le garçon de Alex va naitre le 11 novembre",
+  end_date: Date.new(2019,11,11),
+  creator_id: evan.id,
+  beter_id: alex.id,
+  group_id: frero.id,
+  stake: "une chouffe 🍺",
+  difficulty: 1,
+  over: true
+)
+
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_131343) do
+ActiveRecord::Schema.define(version: 2019_11_21_162225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_131343) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "gift_received", default: false
     t.bigint "winner_id"
+    t.boolean "over", default: false
     t.index ["beter_id"], name: "index_bets_on_beter_id"
     t.index ["creator_id"], name: "index_bets_on_creator_id"
     t.index ["group_id"], name: "index_bets_on_group_id"
