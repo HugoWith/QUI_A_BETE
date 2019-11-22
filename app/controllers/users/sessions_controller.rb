@@ -6,11 +6,15 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   # def new
   #   super
+  #   binding.pry
+  #   redirect_to groups_path
   # end
 
-  # POST /resource/sign_in
+  # # POST /resource/sign_in
   # def create
   #   super
+  #   binding.pry
+  #   redirect_to groups_path
   # end
 
   # DELETE /resource/sign_out

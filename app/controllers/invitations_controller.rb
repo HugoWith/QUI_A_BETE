@@ -6,11 +6,12 @@ class InvitationsController < ApplicationController
 
   def create
     @group = Group.find(params[:group_id])
+    @owner = current_user
     @invitation = @group.invitations.build(invitation_params)
     if @invitation.save
-      @invitation.last.invited_users.each do |user|
-        mail = UserMailer.with(user: user.email).invite_member
-        mail.deliver_now
+      @invitation.invited_users.each do |user|
+        mail = UsersMailer.invite_member(user, @owner)
+        mail.deliver_later
       end
       redirect_to group_path(@group)
     else

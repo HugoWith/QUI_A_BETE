@@ -50,6 +50,20 @@
   </div>
 </div>
 
+  </div>
+
+    <div class="container">
+      <div data-target="hello.element" class="visible">
+        <% @usergroup.each do |usergroup| %>
+        <% user = User.find(usergroup.user_id) %>
+        <% score = usergroup.score %>
+        <div class = "d-flex justify-content-center">
+        <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <p><%= user.nickname %> a <b> <%= score %></b> pts.</p>
+        </div>
+        <% end %>
+      </div>
+
+
 <div class="container">
   <div data-target="hello.element" class="visible">
     <% @usergroup.each do |usergroup| %>
@@ -58,7 +72,13 @@
     <div class = "d-flex justify-content-center">
       <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= user.nickname %> a <b> <%= score %></b> pts.
     </div>
+
     <% end %>
+
+      <div class="d-flex justify-content-center">
+          <%= link_to "Crée vite ton bet", new_group_bet_path(@group), class:"btn-home" %>
+      </div>
+
   </div>
 
 </div>
