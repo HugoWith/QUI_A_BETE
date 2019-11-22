@@ -28,7 +28,7 @@
                 <div class="modal-body">
                   <p><%= member.nickname %></p>
                   <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
-                    <%= form.association :creator %>
+                    <%= form.association :beter, :collection => @users_name %>
                     <%= form.input :description %>
                     <%= form.input :end_date %>
                     <%= form.input :stake %>
