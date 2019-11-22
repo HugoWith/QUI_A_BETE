@@ -1,17 +1,39 @@
-.card_bet {
-    background-color: lightgray;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+
 
 .slide {
-    display: none;
+  display: none;
 }
 
 .slide.slide--current {
-    display: block;
+  display: block;
 }
 
 .visible {
-    display: none;
+  display: none;
+}
+
+
+.card-show-bet {
+ overflow: hidden;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+
+}
+
+.card-bet-infos {
+ background: white;
+ box-shadow: 0 0 20px rgba(245,206,218,0.4);
+ border-radius: 5px;
+ margin-bottom: 20px;
+}
+
+
+.img-group-show{
+  width: 12%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+  margin-right: 5px;
 }
