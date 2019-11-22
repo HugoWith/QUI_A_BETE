@@ -12,7 +12,19 @@ class BetsController < ApplicationController
   end
 
   def create
+    @group = Group.find(params[:group_id])
     @bet = Bet.new
+      if @bet.save
+        respond_to do |format|
+          format.html { redirect_to group_path(@group) }
+          format.js  # <-- will render `app/views/reviews/create.js.erb`
+        end
+      else
+        respond_to do |format|
+          format.html { render 'bets/show' }
+          format.js  # <-- idem
+      end
+    end
   end
 
   def edit
