@@ -12,9 +12,37 @@
       <h3 class = "mb-4">Avec qui tu paries ?</h4>
         <div class="d-flex justify-content-between mb-4">
           <% @group.users.each do |member| %>
-          <div class= "new_bet">
-            <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
-          </div>
+            <div class= "new_bet", data-toggle="modal" data-target="#modal<%= member.id %>">
+              <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal<%= member.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Création du bet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p><%= member.nickname %></p>
+                    <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
+                      <%= form.association :user %>
+                      <%= form.input :description %>
+                      <%= form.input :end_date %>
+                      <%= form.input :stake %>
+                      <%= form.input :difficulty %>
+                    <% end %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% end %>
         </div>
         <div class="d-flex align-items-center mb-4">

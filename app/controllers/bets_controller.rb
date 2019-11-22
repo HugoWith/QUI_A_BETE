@@ -13,18 +13,8 @@ class BetsController < ApplicationController
 
   def create
     @group = Group.find(params[:group_id])
-    @bet = Bet.new
-      if @bet.save
-        respond_to do |format|
-          format.html { redirect_to group_path(@group) }
-          format.js  # <-- will render `app/views/reviews/create.js.erb`
-        end
-      else
-        respond_to do |format|
-          format.html { render 'bets/show' }
-          format.js  # <-- idem
-      end
-    end
+    @bet = Bet.new(bet_params)
+
   end
 
   def edit
@@ -39,5 +29,11 @@ class BetsController < ApplicationController
   def who_won
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
+  end
+
+  private
+
+  def bet_params
+    params.require(:bet).permit(:description, :end_date, :stake, :difficulty)
   end
 end
