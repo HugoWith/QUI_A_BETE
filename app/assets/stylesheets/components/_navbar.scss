@@ -11,3 +11,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.welcome-back{
+margin-top: 15px;
+margin-right: 30px;
+opacity: 0;
+animation:fadeIn 5s ease-out;
+h4 {
+  font-size: 12px;
+
+}
+
+ }
+
+@keyframes fadeIn {
+    from {
+      opacity:1;
+    }
+    to {
+      opacity:0;
+    }
+
+}

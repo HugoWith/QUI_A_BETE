@@ -21,6 +21,7 @@ h2 {
 }
 
 
+
 .cards-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -32,6 +33,8 @@ h2 {
   height: 100%;
   width: 100%;
   text-align: center;
+  background-size: contain;
+  align-items: center;
 }
 
 // Smallest device
@@ -126,9 +129,11 @@ h2 {
   display: inline-block !important;
 }
 .link {
-  color: $main-color;
-  font-size: 30px;
-  transition: 0.8s ease-in-out;
+ vertical-align: middle;
+ font-weight: bold;
+ color: white;
+ font-size: 30px;
+ transition: 0.8s ease-in-out;
 }
 .link:hover {
   text-decoration: none;

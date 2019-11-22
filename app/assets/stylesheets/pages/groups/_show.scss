@@ -1,12 +1,5 @@
 
 
-.slide {
-  display: none;
-}
-
-.slide.slide--current {
-  display: block;
-}
 
 .visible {
   display: none;
@@ -27,13 +20,63 @@
  box-shadow: 0 0 20px rgba(245,206,218,0.4);
  border-radius: 5px;
  margin-bottom: 20px;
+ display: flex;
 }
 
 
 .img-group-show{
-  width: 12%;
+  width: 15%;
   height: 100%;
   object-fit: cover;
   border-radius: 5px 0 0 5px;
   margin-right: 5px;
+
 }
+
+.avatar-bet {
+  position: relative;
+  flex-wrap: wrap;
+   margin: auto 0;
+
+
+}
+
+.nickname-img {
+  opacity: 0;
+  font-weight: bold;
+}
+
+.img-wrap:hover .nickname-img{
+  visibility: visible;
+  font-weight: bold;
+  transition: 1s ease-in-out;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
