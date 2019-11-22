@@ -7,5 +7,5 @@ class Bet < ApplicationRecord
   validates :description, presence: true
   validates :end_date, presence: true
   validates :stake, presence: true
-  validates :difficulty, presence: true, inclusion: { in: (1...10) }
+  validates :difficulty, presence: true, inclusion: { in: (1..10) }
 end
