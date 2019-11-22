@@ -1,6 +1,6 @@
 <%= simple_form_for([ group, bet ], remote: true) do |form| %>
   <%= form.input :description %>
-  <%= form.button :end_date %>
-  <%= form.button :stake %>
-  <%= form.button :difficulty %>
+  <%= form.input :end_date %>
+  <%= form.input :stake %>
+  <%= form.input :difficulty %>
 <% end %>
