@@ -33,11 +33,12 @@
                     <%= form.input :end_date %>
                     <%= form.input :stake %>
                     <%= form.input :difficulty %>
-                  <% end %>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <%= form.button :submit, class: "btn btn-prmary" %>
+                  <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+                  <% end %>
                 </div>
               </div>
             </div>

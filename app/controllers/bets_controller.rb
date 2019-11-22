@@ -18,6 +18,11 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @bet = Bet.new(bet_params)
 
+    if @bet.save!
+      redirect_to group_path(@group)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -37,6 +42,6 @@ class BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:description, :end_date, :stake, :difficulty)
+    params.require(:bet).permit(:description, :end_date, :stake, :difficulty, :group_id, :creator_id, :beter_id)
   end
 end
