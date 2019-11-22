@@ -10,13 +10,14 @@ class BetsController < ApplicationController
     @bet = Bet.new
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
-    @users_name = @users.map(&:nickname)
     # @users.map { |user| user.nickname }
   end
 
   def create
     @group = Group.find(params[:group_id])
     @bet = Bet.new(bet_params)
+    @bet.group = @group
+    @bet.creator = current_user
 
     if @bet.save!
       redirect_to group_path(@group)
