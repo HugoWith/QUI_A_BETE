@@ -25,6 +25,7 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @images_samples = Group::IMAGES_SAMPLES_URL
     @group = Group.new
   end
 
