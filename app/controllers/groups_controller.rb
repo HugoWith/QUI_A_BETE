@@ -31,6 +31,7 @@ class GroupsController < ApplicationController
 
     def create
       @group = Group.new(groups_params)
+      @group.temp_photo = params["group"]["photo"]
       if @group.save
         Usergroup.create!(user_id: current_user.id, group_id: @group.id, is_owner: true)
         redirect_to groups_path()

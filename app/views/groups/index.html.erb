@@ -8,7 +8,7 @@
 
     <div class="cards-index">
       <% @owner_groups.each do |group| %>
-      <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path group.photo %>')">
+      <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path group.photo if group.photo.present? %>')">
        <%= link_to group.name, group_path(group), class: 'link'%>
        <i class="fas fa-cog"></i>
        <%if @groups.include?(group) %>
