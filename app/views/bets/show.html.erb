@@ -6,8 +6,7 @@
     <p>Créateur du pari: <strong> <%= @bet.creator.nickname %></strong></p>
   </div>
   <div class="B-2">
-    <p><strong> Beteurs </strong>
-      </p>
+    <p><strong> Beteurs </strong></p>
       <div class="avatarcont justify-content-between">
         <div class="I-1">
           <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-xl"%>

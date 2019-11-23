@@ -38,6 +38,7 @@ class BetsController < ApplicationController
   def who_won
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
+    @bet.is_over
   end
 
   private

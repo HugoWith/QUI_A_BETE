@@ -263,7 +263,7 @@ bet3 = Bet.create!(
   beter_id: alex.id,
   group_id: batch.id,
   target_id: axel.id,
-  stake: "un beret des Peaky Blinders",
+  stake: "un béret des Peaky Blinders",
   difficulty: 3
 )
 
