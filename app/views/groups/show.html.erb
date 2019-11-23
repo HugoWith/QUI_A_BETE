@@ -1,8 +1,9 @@
 <div class="row" data-controller="hello">
   <div class="col-12 col-md-12 index-group container-index" >
     <div class="d-flex justify-content-end recap">
+      <%= link_to "Retourne voir tes crews", groups_path, class: 'btn-home mt-2' %>
       <button class="btn-home mt-2" data-action="click->hello#classement">Voir le classement</button>
-<!--       <button class="btn-home mt-2" data-action="click->hello#inprogress">Voir les paris en cours</button> -->
+      <button class="btn-home mt-2" data-action="click->hello#inprogress">Voir les paris en cours</button>
       <span data-action="click->hello#donebet" class="btn-home mt-2">Voir les paris terminés</span>
 
 
