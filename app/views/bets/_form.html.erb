@@ -1,6 +1,6 @@
 <%= simple_form_for([ group, bet ], remote: true) do |form| %>
-  <%= form.input :description %>
-  <%= form.input :end_date %>
-  <%= form.input :stake %>
-  <%= form.input :difficulty %>
+  <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
+  <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
+  <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
+  <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
 <% end %>
