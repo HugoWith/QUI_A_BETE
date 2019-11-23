@@ -1,21 +1,27 @@
 <div class="container-index justify-content-center align-items-center">
-  <h2> "<%= @bet.description %>" est terminé ! </h2>
-  <h3 class = "text-center mb-4">Alors, qui a gagné <%= @bet.stake %>? </h3>
-  <div class="d-flex align-items-center justify-content-center">
-    <div class="w-50">
-      <div class="d-flex justify-content-between mt-3">
-        <div class="I-1">
-          <%= cl_image_tag @bet.creator.pick_photo, class:"avatar-xl"%>
-          <br/>
-          <%= @bet.creator.nickname %>
-        </div>
-        <div class="I-2">
-          <%= cl_image_tag @bet.beter.pick_photo, class:"avatar-xl"%>
-          <br/>
-          <%= @bet.beter.nickname %>
+  <div class="mt-4">
+    <h2> "<%= @bet.description %>" est terminé ! </h2>
+    <h3 class = "text-center mb-4">Alors, qui a gagné <%= @bet.stake %>? </h3>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="w-50">
+        <div class="d-flex justify-content-between mt-3">
+          <div class="I-1">
+            <%= cl_image_tag @bet.creator.pick_photo, class:"avatar-xl"%>
+            <br/>
+            <%= @bet.creator.nickname %>
+          </div>
+          <div class="I-2">
+            <%= cl_image_tag @bet.beter.pick_photo, class:"avatar-xl"%>
+            <br/>
+            <%= @bet.beter.nickname %>
+          </div>
         </div>
       </div>
     </div>
+    <%= simple_form_for(@bet) do |f| %>
+        <%= f.collection : %>
+    <% end %>
+
   </div>
 </div>
 
