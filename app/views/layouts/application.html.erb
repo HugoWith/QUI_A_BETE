@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Qui a beté ?</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Qui a beté ?</title>
 
-    <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/k6g81xj/logoqabweb.png">
+  <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/k6g81xj/logoqabweb.png">
 
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <div class="main-container">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+</head>
+<body>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/flashes' %>
+  <div class="main-container">
+
+
+
     <%= yield %>
-    </div>
-    <%= render 'shared/footer' %>
+  </div>
+  <%= render 'shared/footer' %>
 
-    <%= javascript_pack_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
 
-  </body>
+</body>
 </html>
