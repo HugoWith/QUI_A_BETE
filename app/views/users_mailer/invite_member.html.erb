@@ -1,13 +1,15 @@
 <h2>Hello,</h2>
 
-<p><%= @owner.first_name %> t'invite à rejoindre son crew !
-
-Avec Qui a beté ?, tu :
-- crées ton crew
-- invites tes potes
-- crées un pari
-
+<p><%= @owner.first_name.capitalize %> t'invite à rejoindre son crew !
+<br>
+<ul>Avec Qui a beté ?, tu :
+<li>crées ton crew</li>
+<li>invites tes potes</li>
+<li>crées un bet</li>
+</ul>
+<br>
 Et on se charge de vous rappeler qui doit quoi à qui, sans mauvaise foi possible.
-
+<br>
 Prêt à béter ?
-<%= link_to "Crée ton compte", new_user_registration_url %> ou <%= link_to "J'ai déjà un compte, rejoindre le crew", new_user_session_url %></p>
+  <br>
+<%= link_to "Crée ton compte", new_member_url(@group) %> ou <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group) %></p>
