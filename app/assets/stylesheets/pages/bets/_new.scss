@@ -7,3 +7,10 @@
     width: 90px;
     height: 90px;
 }
+
+.bet-form {
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
