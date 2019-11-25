@@ -38,6 +38,7 @@ const initTriggerWebPush = () => {
       .then((subscription) => {
         $.post("/push", { subscription: subscription.toJSON(), message: "Un nouveau pari a été lancé! 🎉" });
       });
+
     });
 }
 

@@ -4,7 +4,11 @@ require('jquery')
 import "bootstrap";
 import { initTypedJS } from '../components/typed';
 import { initCursorJS } from '../components/cursor';
+
 import {  initServiceWorkerJS } from '../components/serviceWorker';
+
+import { initRoll } from '../components/roue';
+
 
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
@@ -16,6 +20,12 @@ application.load(definitionsFromContext(context))
 initTypedJS();
 initCursorJS();
 initServiceWorkerJS();
+
+initPushmanagerJS();
+initTriggerWebPush();
+
+initPushPermission();
+initRoll();
 
 // application()
 // context()

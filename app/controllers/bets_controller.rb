@@ -4,6 +4,7 @@ class BetsController < ApplicationController
 
   def show
     @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
   def new
@@ -11,6 +12,7 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
     # @users.map { |user| user.nickname }
+    
   end
 
   def create
@@ -36,14 +38,22 @@ class BetsController < ApplicationController
   def destroy
   end
 
-  def who_won
+  def end_bet
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
     @bet.is_over
+    @bet.save
+    redirect_to define_winner_path(@group, @bet)
+  end
+
+  def who_won
+    @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
   # def push
   #   current_user.update(subscription: params[:subscription])
+
 
   #   Webpush.payload_send(
   #     message: params[:message],
@@ -68,6 +78,7 @@ class BetsController < ApplicationController
   #     api_key: "AIzaSyCHyemgMJqIOPnDfJ_duR4RAVyANGqDrog"
   #     )
   # end
+
 
   private
 

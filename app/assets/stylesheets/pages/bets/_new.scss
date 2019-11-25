@@ -1,5 +1,13 @@
-.new_bet {
+
+.new_betA {
     cursor: pointer;
+    width: 70px;
+    margin: 0 auto;
+}
+.cardds {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 54px;
 }
 
 .avatar-xl:hover {
@@ -7,3 +15,52 @@
     width: 90px;
     height: 90px;
 }
+
+.bet-form {
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
+
+.form-footer .btn-home {
+    margin-bottom: 0px;
+}
+
+.mb-4 {
+  font-family: 'Baloo Bhai';
+}
+
+@media(max-width: 992px) {
+  .cardds {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cardds {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 544px) {
+  .cardds {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.container-index {
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.HH {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.col-12 {
+  max-width: 100% !important;
+}
+

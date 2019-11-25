@@ -1,74 +1,108 @@
 .index-group {
-  background-color: white;
+    background-color: white;
+}
+
+.group-index-image {
+  height: 168px;
+  width: 168px;
 }
 
 .container-index {
- background-color: white;
- height: 80vh;
- width: 1080px;
- margin-left: auto;
- margin-right: auto;
+    background-color: white;
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 //  .container-index {
 //   max-width: 35%;
 //   margin: 0 auto;
 // }
 h2 {
-  text-align: center;
-  font-family: $main-font;
-  font-size: 70px;
-  margin-bottom: 20px;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 70px;
+    margin-bottom: 20px;
 }
-
 
 
 .cards-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    height: 30vh;
+
+
+a {
+  h4.index-group-writing {
+  color: black;
+  font-family: $second-font;
+}
+  h3.index-group-writing {
+  color: black;
+  font-family: $second-font;
+}
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.fa-trash-alt{
+  color: black;
+}
+
+.cards-index {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  height: 30vh;
+  grid-gap: 30px;
+}
+
+.card-index-group {
+  background: white;
+  box-shadow: 0 0 20px rgba(245, 206, 218, 0.4);
+  width: 100%;
 }
 
 .card-category-index {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  background-size: contain;
-  align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-size: contain;
+    align-items: center;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards-index {
-    grid-template-columns: 1fr;
-  }
+    .cards-index {
+        grid-template-columns: 1fr;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards-index {
-    grid-template-columns: 1fr;
-  }
+    .cards-index {
+        grid-template-columns: 1fr;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards-index {
-    grid-template-columns: 1fr 1fr;
-  }
+    .cards-index {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
 
@@ -121,34 +155,40 @@ h2 {
 //   font-family: $second-font;
 //   color: $main-color;
 //   font-size: 30px;
-}
-.fas {
-  margin: 3px 3px;
-}
-.inline-block {
-  display: inline-block !important;
-}
-.link {
- vertical-align: middle;
- font-weight: bold;
- color: white;
- font-size: 30px;
- transition: 0.8s ease-in-out;
-}
-.link:hover {
-  text-decoration: none;
-  color: $second-color;
-  transition: 0.8s ease-in-out;
-}
-.button_new {
-  background-color: #9BD5F2;
-  border-radius: 5px;
-  padding: 8px;
-  color: black;
-  text-decoration: none;
-}
-.button_new:hover {
-  color: $second-color;
-  transition: 0.8s ease-in-out;
+
 }
 
+.fas {
+    margin: 3px 3px;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.link {
+    vertical-align: middle;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    transition: 0.8s ease-in-out;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: $second-color;
+    transition: 0.8s ease-in-out;
+}
+
+.button_new {
+    background-color: #9BD5F2;
+    border-radius: 5px;
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+.button_new:hover {
+    color: $second-color;
+    transition: 0.8s ease-in-out;
+}

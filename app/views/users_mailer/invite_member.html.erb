@@ -1,15 +1,24 @@
-<h2>Hello,</h2>
+<div class="AAA" align="center" style="font-weight:bold; font-size:1em; line-height:1em; font-family:Raleway,'times',serif;">
 
-<p><%= @owner.first_name.capitalize %> t'invite à rejoindre son crew !
-<br>
-<ul>Avec Qui a beté ?, tu :
-<li>crées ton crew</li>
-<li>invites tes potes</li>
-<li>crées un bet</li>
-</ul>
-<br>
-Et on se charge de vous rappeler qui doit quoi à qui, sans mauvaise foi possible.
-<br>
-Prêt à béter ?
+  <img src="http://localhost:3000/images/logoqabweb.png" alt="" width="200" height="200">
+
+  <h2>Salut beteur,</h2>
+
+  <p><strong><%= @owner.first_name.capitalize %></strong> t'invite à rejoindre son crew !
   <br>
-<%= link_to "Crée ton compte", new_member_url(@group_id) %> ou <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group_id) %></p>
+
+  <p>Avec <strong>Qui a beté ?</strong> , tu peux:</p>
+  </br>
+  <p>- créer ton crew</p>
+  <p>- inviter tes potes</p>
+  <p>- créer un bet</p>
+  </br>
+
+  <p>Et on se charge de vous rappeler qui doit quoi à qui, sans mauvaise foi possible. Prêt à béter ?
+  </br>
+  </br>
+  Rejoins-nous !
+  </br>
+  <%= link_to "Crée ton compte", new_member_url(@group_id) %></br>
+  <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group_id) %></p>
+</div>
