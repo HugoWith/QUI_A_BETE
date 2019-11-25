@@ -20,6 +20,7 @@ class BetsController < ApplicationController
     @bet.creator = current_user
 
     if @bet.save!
+      send_notifications
       redirect_to group_path(@group)
     else
       render :new
@@ -41,32 +42,40 @@ class BetsController < ApplicationController
     @bet.is_over
   end
 
-  def push
-    Webpush.payload_send(
-      message: params[:message],
-      endpoint: params[:subscription][:endpoint],
-      p256dh: params[:subscription][:keys][:p256dh],
-      auth: params[:subscription][:keys][:auth],
-      vapid: {
-        subject: "mailto:sender@example.com",
-        public_key: ENV['VAPID_PUBLIC_KEY'],
-        private_key: ENV['VAPID_PRIVATE_KEY']
-      },
-    ssl_timeout: 5, # value for Net::HTTP#ssl_timeout=, optional
-    open_timeout: 5, # value for Net::HTTP#open_timeout=, optional
-    read_timeout: 5 # value for Net::HTTP#read_timeout=, optional
-    )
+  # def push
+  #   current_user.update(subscription: params[:subscription])
 
-    Webpush.payload_send(
-  endpoint: "https://fcm.googleapis.com/gcm/send/eah7hak....",
-  message: "A message",
-  p256dh: "BO/aG9nYXNkZmFkc2ZmZHNmYWRzZmFl...",
-  auth: "aW1hcmthcmFpa3V6ZQ==",
-  api_key: "AIzaSyCHyemgMJqIOPnDfJ_duR4RAVyANGqDrog"
-)
-  end
+  #   Webpush.payload_send(
+  #     message: params[:message],
+  #     endpoint: params[:subscription][:endpoint],
+  #     p256dh: params[:subscription][:keys][:p256dh],
+  #     auth: params[:subscription][:keys][:auth],
+  #     vapid: {
+  #       subject: "mailto:sender@example.com",
+  #       public_key: ENV['VAPID_PUBLIC_KEY'],
+  #       private_key: ENV['VAPID_PRIVATE_KEY']
+  #     },
+  #   ssl_timeout: 5, # value for Net::HTTP#ssl_timeout=, optional
+  #   open_timeout: 5, # value for Net::HTTP#open_timeout=, optional
+  #   read_timeout: 5 # value for Net::HTTP#read_timeout=, optional
+  #   )
+
+  #   Webpush.payload_send(
+  #     endpoint: "https://fcm.googleapis.com/gcm/send/eah7hak....",
+  #     message: "A message",
+  #     p256dh: "BO/aG9nYXNkZmFkc2ZmZHNmYWRzZmFl...",
+  #     auth: "aW1hcmthcmFpa3V6ZQ==",
+  #     api_key: "AIzaSyCHyemgMJqIOPnDfJ_duR4RAVyANGqDrog"
+  #     )
+  # end
 
   private
+
+  def send_notifications
+    @group.users.each do |user|
+      user.send_notification_with("Un nouveau paris est en ligne")
+    end
+  end
 
   def bet_params
     params.require(:bet).permit(:description, :end_date, :stake, :difficulty, :group_id, :creator_id, :beter_id)
