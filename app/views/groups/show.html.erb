@@ -1,9 +1,9 @@
 <div class="row" data-controller="hello">
-  <div class="col-12 col-md-12 index-group container-index" >
+  <div class="col-12 col-md-12 index-group container-index">
     <div class="d-flex justify-content-end recap">
       <%= link_to "Retourne voir tes crews", groups_path, class: 'btn-home mt-2' %>
       <button class="btn-home mt-2" data-action="click->hello#classement">Voir le classement</button>
-      <button class="btn-home mt-2" data-action="click->hello#inprogress">Voir les paris en cours</button>
+      <%# <button class="btn-home mt-2" data-action="click->hello#inprogress">Voir les paris en cours</button> %>
       <span data-action="click->hello#donebet" class="btn-home mt-2">Voir les paris terminés</span>
 
 
@@ -34,17 +34,32 @@
         </div>
 
       </div>
+                <h2><%= @group.name  %> - Les paris en cours 🔥</h2>
+                <div class="d-flex align-items-center">
+                <%= link_to "Crée un bet", new_group_bet_path(@group), class:"btn-home" %>
+                </div>
+      <div class="d-flex justify-content-center card-bet-infos2">
+              <div data-target="hello.classement" class="visible">
+              <h3>Le classement 🚀 </h3>
+          <% @usergroup.each do |usergroup| %>
+            <div class = "d-flex justify-content-start">
+            <p><%= cl_image_tag usergroup.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= usergroup.user.nickname %>
+            <br>
+            <%= usergroup.score %> pts</p>
+            </div>
+          <% end %>
+        </div>
       <div class="d-flex flex-column align-items-center justify-content-center text-center">
-      <h2><%= @group.name  %> - Les paris en cours 🔥</h2>
-        <%= link_to "Crée un bet", new_group_bet_path(@group), class:"btn-home" %>
+
+
         <div class="container">
           <div class="cards-show-bet">
-           <% @bets.each do |bet|%>
-           <% if bet.over == false  %>
-           <div class="card-bet-infos justify-content-between p-2">
-            <%= image_tag 'Batman.png', class: 'img-group-show'%>
-            <div class="avatar-bet ">
-              <div class="img-wrap">
+            <% @bets.each do |bet|%>
+            <% if bet.over == false  %>
+              <div class="card-bet-infos justify-content-between p-2">
+              <%= image_tag 'Batman.png', class: 'img-group-show'%>
+                <div class="avatar-bet ">
+                <div class="img-wrap">
                 <%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle avatar1", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <p class="nickname-img"><%= bet.creator.nickname %></p>
               </div>
@@ -62,17 +77,21 @@
               <p> <strong>La confiance: </strong> <%=bet.difficulty%>/10</p>
               <p> <%= link_to "Voir le détail du pari", group_bet_path(@group, bet), class: "btn-home" %></p>
             </div>
-
             <% else %>
             <% end %>
-
           </div>
           <% end %>
         </div>
       </div>
+    </div>
 
+
+
+
+
+    <div class="d-flex justify-content-space-between">
       <div data-target="hello.donebet" class="visible">
-       <div class="container">
+        <div class="container">
         <% @bets.each do |bet|%>
         <% if bet.end_date < DateTime.now  %>
         <h3>Actuellement <%= @bets.size %> paris terminés</h3>
@@ -92,55 +111,10 @@
         <% end %>
       </div>
     </div>
-
-    <div data-target="hello.inprogress" class="visible">
-      <div class="container">
-        <div class="cards-show-bet">
-         <% @bets.each do |bet|%>
-         <% if bet.over == false  %>
-
-         <div class="card-bet-infos justify-content-between">
-          <%= image_tag 'Batman.png', class: 'img-group-show'%>
-          <div class="avatar-bet ">
-            <div class="img-wrap">
-              <%= cl_image_tag bet.creator.photo, class: "avatar dropdown-toggle avatar1", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <p class="nickname-img"><%= bet.creator.nickname %></p>
-            </div>
-            <div class="img-wrap">
-              <%= cl_image_tag bet.beter.photo, class: "avatar dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <p class="nickname-img"><%= bet.beter.nickname %></p>
-            </div>
-          </div>
-          <div>
-            <p>Le pari: <strong> <%=bet.description%></strong></p>
-            <p>Le bel enjeu: <strong>  <%=bet.stake%></strong></p>
-          </div>
-          <div>
-            <p>La deadline: <strong>  <%=bet.end_date%></strong></p>
-            <p>La confiance: <strong>  <%=bet.difficulty%>/10</strong></p>
-          </div>
-
-          <% else %>
-          <% end %>
-
-        </div>
-        <% end %>
-      </div>
-    </div>
+  </div>
+    
   </div>
 
 
-  <div class="container">
-    <div data-target="hello.classement" class="visible">
-      <% @usergroup.each do |usergroup| %>
-      <% user = User.find(usergroup.user_id) %>
-      <% score = usergroup.score %>
-      <div class = "d-flex justify-content-center">
-        <%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= user.nickname %>  <p> a <b> <%= score %></b> pts.</p>
-      </div>
-      <% end %>
-    </div>
 
-
-  </div>
 
