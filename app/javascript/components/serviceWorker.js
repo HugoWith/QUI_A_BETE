@@ -1,16 +1,14 @@
 // application.js
 // Register the serviceWorker script at /serviceworker.js from your server if supported
 const initServiceWorkerJS = () => {
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/serviceworker.js')
-  .then(function(reg) {
-     console.log('Service worker change, registered the service worker');
-  });
-}
-// Otherwise, no push notifications :(
-else {
-  console.error('Service worker is not supported in this browser');
-}
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/serviceworker.js')
+      .then(function(reg) {
+        initPushmanagerJS()
+      });
+  } else {
+    console.error('Service worker is not supported in this browser');
+  }
 }
 
 
@@ -18,13 +16,15 @@ else {
 
 const initPushmanagerJS = () => {
   navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
-    console.log("ici :-)")
-  serviceWorkerRegistration.pushManager
-  .subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: window.vapidPublicKey
+    serviceWorkerRegistration.pushManager
+    .subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: window.vapidPublicKey
+    })
+    .then(() => {
+      initTriggerWebPush()
+    })
   });
-});
 }
 
 
@@ -32,17 +32,14 @@ const initPushmanagerJS = () => {
 // Send the subscription and message from the client for the backend
 // to set up a push notification
 const initTriggerWebPush = () => {
-  $(".webpush-button").on("click", (e) => {
   navigator.serviceWorker.ready
-  .then((serviceWorkerRegistration) => {
-    serviceWorkerRegistration.pushManager.getSubscription()
-    .then((subscription) => {
-
-      $.post("/push", { subscription: subscription.toJSON(), message: "Un nouveau pari a été lancé! 🎉" });
+    .then((serviceWorkerRegistration) => {
+      serviceWorkerRegistration.pushManager.getSubscription()
+      .then((subscription) => {
+        $.post("/push", { subscription: subscription.toJSON(), message: "Un nouveau pari a été lancé! 🎉" });
+      });
 
     });
-  });
-});
 }
 
 
@@ -78,7 +75,7 @@ else if (Notification.permission !== 'denied') {
 
 
 
-export { initServiceWorkerJS, initPushmanagerJS, initTriggerWebPush, initPushPermission };
+export { initServiceWorkerJS };
 
 
 
