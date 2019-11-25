@@ -40,7 +40,8 @@ class BetsController < ApplicationController
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
     @bet.is_over
-    redirect_to define_winner(@group, @bet)
+    @bet.save
+    redirect_to define_winner_path(@group, @bet)
   end
 
   def who_won
