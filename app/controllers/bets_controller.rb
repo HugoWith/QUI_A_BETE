@@ -41,6 +41,10 @@ class BetsController < ApplicationController
     @bet.is_over
   end
 
+  def win_wheel
+
+  end
+
   private
 
   def bet_params

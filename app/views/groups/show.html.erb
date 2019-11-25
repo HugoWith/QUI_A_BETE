@@ -2,6 +2,7 @@
   <div class="col-12 col-md-12 index-group container-index">
     <div class="d-flex justify-content-end recap">
       <%= link_to "Retourne voir tes crews", groups_path, class: 'btn-home mt-2' %>
+      <%= link_to "Quitter ce crew", group_usergroup_path(@group, @usergroup), class: 'btn-home mt-2', method: :delete %>
       <button class="btn-home mt-2" data-action="click->hello#classement">Voir le classement</button>
       <%# <button class="btn-home mt-2" data-action="click->hello#inprogress">Voir les paris en cours</button> %>
       <span data-action="click->hello#donebet" class="btn-home mt-2">Voir les paris terminés</span>
@@ -26,13 +27,9 @@
               <%= render 'invite_form' %>
               <button type="button" class="btn-home" data-dismiss="modal">Retour</button>
             </div>
-            <!--             <div class="modal-footer"> -->
-              <!--               <button type="button" class="btn btn-primary">Save changes</button> -->
-              <!--             </div> -->
             </div>
           </div>
         </div>
-
       </div>
                 <h2><%= @group.name  %> - Les paris en cours 🔥</h2>
                 <div class="d-flex align-items-center">
@@ -41,7 +38,7 @@
       <div class="d-flex justify-content-center card-bet-infos2">
               <div data-target="hello.classement" class="visible">
               <h3>Le classement 🚀 </h3>
-          <% @usergroup.each do |usergroup| %>
+          <% @usergroup_score.each do |usergroup| %>
             <div class = "d-flex justify-content-start">
             <p><%= cl_image_tag usergroup.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= usergroup.user.nickname %>
             <br>
@@ -112,7 +109,7 @@
       </div>
     </div>
   </div>
-    
+
   </div>
 
 

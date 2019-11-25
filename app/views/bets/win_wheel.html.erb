@@ -39,7 +39,7 @@
 </head>
 
     <div id="chart"></div>
-    <div id="question"><h1></h1></div>
+    <div id="question"><h1 id="result"></h1></div>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -160,6 +160,9 @@
                     oldrotation = rotation;
                 
                     container.on("click", spin);
+                    const resultat = result.innerHTML;
+      
+                    console.log(resultat)
                 });
         }
         //make arrow
@@ -205,8 +208,8 @@
             }
             return array;
         }
+        
     </script>
-
         </div>
         <div class="d-flex justify-content-center">
             <%= link_to "A la creation du bet", class: 'btn-home' %>
