@@ -12,6 +12,7 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
     # @users.map { |user| user.nickname }
+    
   end
 
   def create

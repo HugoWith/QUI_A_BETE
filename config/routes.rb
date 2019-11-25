@@ -4,14 +4,23 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  get 'invitation/new'
+  get 'invitation/post'
+  get 'usergroups/join_crew'
+
+
+
   resources :groups do
     resources :invitations, only: [:create]
     resources :usergroups, only: [:destroy]
     resources :bets
   end
   get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
+
   get "/groups/:group_id/bets/:id/end-bet", to: "bets#end_bet", as: :end_bet
+
   get "/groups/:group_id/new-member", to: "usergroups#create", as: :new_member
+
 
   devise_for :users,
   controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }

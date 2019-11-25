@@ -1,59 +1,67 @@
 
-  <div class="row">
+<div class="row">
+  <div class="col-12 col-md-12 index-group">
     <div class="container-index mt-4">
-      <div class="col-12 col-md-4 index-group">
-        <div class="card-product">
-          <div class= "d-flex justify-content-between mb-5">
-            <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
-            <i class="fas fa-cog"></i>
-          </div>
-
+      <div class="card-product">
+        <div class= "d-flex justify-content-between mb-4">
+                        <%#= render "win_wheel" %>
+          <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
+          <i class="fas fa-cog"></i>
         </div>
-        <div class="HH">
-          <h1 class = "mb-4 text-center">Crée un bet !</h1>
-          <h3 class = "mb-4 text-center">Avec qui tu paries ?</h3>
-        </div>
-          <div class="cardds col-12">
-            <% @group.users.each do |member| %>
-              <div class= "new_betA", data-toggle="modal" data-target="#modal<%= member.id %>">
-                <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
-              </div>
-              <!-- Modal -->
-              <div class="modal fade" id="modal<%= member.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Création du bet</h5>
-                      <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Tu paries avec <%= member.nickname %></p>
-                      <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
-                        <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
-                        <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
-                        <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
-                        <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
-                        <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
-                        <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn-home" data-dismiss="modal">Retour</button>
-                      <%= form.button :submit, class: "btn-home", value: "Crée ton bet           " %>
-                      <%# <button type="button" class="btn btn-primary">Save changes</button> %>
-                      <% end %>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            <% end %>
+      </div>
+      <h1 class = "mb-4 text-center">Crée un bet !</h1>
+      <h3 class = "mb-4 text-center">Avec qui tu paries ?</h3>
+      <div class="d-flex justify-content-between mb-4" data-controller="tabs">
+        <% @group.users.each do |member| %>
+          <div class= "new_bet" data-action="click->tabs#showCorrespondingForm" data-id="<%= member.id %>">
+            <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
           </div>
-          <%# <div class="d-flex align-items-center mb-4">
-            <h4 class= "p-3 mr-3">Est ce que le pari porte sur un beteur du groupe ?</h4>
-            <input type="radio"> %>
+          <!-- Modal -->
+        <% end %>
+      </div>
+        <%# <div class="d-flex align-items-center mb-4">
+          <h4 class= "p-3 mr-3">Est ce que le pari porte sur un beteur du groupe ?</h4>
+        <input type="radio"> %>
+        <% @group.users.each do |member| %>
+          <div class="bet-form" data-id="<%= member.id %>">
+            <div class="form-header">
+              <h5 class="form-title" id="exampleModalLongTitle">Création du bet</h5>
+              <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
+            </div>
+            <div class="form-body">
+              <p>Tu paries avec <%= member.nickname %></p>
+              <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
+                <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
+                <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
+                <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
+                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
+                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
+                <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal" } %>
+                <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
+            </div>
+            <div class="form-footer">
+              <a href="/groups" class="btn-home" >Retour</a>
+              <%= form.button :submit, class: "btn-home webpush-button", value: "Crée ton bet" %>
+              <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Roue de l'infortune 🎲</h5>
+            </div>
+            <div class="modal-body">
+            <%= render "win_wheel" %>
+            </div>
+            <div class="modal-footer">
+              <button class="btn-home" onclick="myFunction()">Save changes</button>
+              <button class="btn-home" data-dismiss="modal">Close</button>
+            </div>
+
           </div>
         </div>
       </div>
