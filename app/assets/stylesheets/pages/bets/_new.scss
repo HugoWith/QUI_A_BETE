@@ -16,6 +16,17 @@
     height: 90px;
 }
 
+.bet-form {
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
+
+.form-footer .btn-home {
+    margin-bottom: 0px;
+}
+
 .mb-4 {
   font-family: 'Baloo Bhai';
 }
@@ -52,3 +63,4 @@
 .col-12 {
   max-width: 100% !important;
 }
+
