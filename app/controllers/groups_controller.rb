@@ -12,12 +12,13 @@ class GroupsController < ApplicationController
     @user = @group.users
 
     @group = Group.find(params[:id])
+    @usergroup = Usergroup.where(user_id: current_user.id, group_id: @group.id).first
     # @invitation = Invitation.new
     # @invitation.group =  @group
     @invitation = @group.invitations.build
     @invitation.invited_users.build
 
-    @usergroup = @group.usergroups.order(score: :desc)
+    @usergroup_score = @group.usergroups.order(score: :desc)
     # @group_user = @group.usergroups
 
     # @all_creator = Bet.all
