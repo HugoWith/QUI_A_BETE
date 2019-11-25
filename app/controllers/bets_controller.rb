@@ -41,11 +41,11 @@ class BetsController < ApplicationController
     @bet.is_over
   end
 
-<<<<<<< HEAD
+
   def win_wheel
     @bet = Bet.new
     @group = Group.find(params[:group_id])
-=======
+
   def push
     Webpush.payload_send(
       message: params[:message],
@@ -61,7 +61,6 @@ class BetsController < ApplicationController
     open_timeout: 5, # value for Net::HTTP#open_timeout=, optional
     read_timeout: 5 # value for Net::HTTP#read_timeout=, optional
     )
->>>>>>> 14856ed943a9d948601dc61033aaaaa2beb3363c
   end
 
   private
