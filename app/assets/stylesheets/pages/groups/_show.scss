@@ -4,7 +4,7 @@
 
 .card-show-bet {
     overflow: hidden;
-    height: 120px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -22,7 +22,10 @@
     border-radius: 5px;
     margin-bottom: 20px;
     display: flex;
+    min-width: 800px;
+
 }
+
 
 .img-group-show {
     width: 15%;
@@ -46,6 +49,10 @@
 .img-wrap:hover .nickname-img {
     visibility: visible;
     font-weight: bold;
-    transition: 1s ease-in-out;
+    transition: 0.4s ease-in-out;
     opacity: 1;
+}
+
+.nickname-img {
+  margin-bottom: 2px;
 }

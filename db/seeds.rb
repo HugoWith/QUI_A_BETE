@@ -139,15 +139,14 @@ axel = User.create!(
  batch = Group.create!(
   name: "Batch 308",
   # remote_photo_url: "https://images.unsplash.com/photo-1551623063-6adb5b1f487f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574172284/itxcuoo0boiwhepb9zzm.jpg")
-
+  photo: "fire.png"
   )
 
 love = Group.create!(
 
   name: "Bae <3",
   # photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574169462/bwjwejd6nfzlgcf18gwx.jpg")
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574170892/ngpxxxoop8a9l11wybbp.jpg")
+  photo: "peach.png"
   # remote_photo_url: "https://images.unsplash.com/photo-1540888747681-44f58059d761?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80"
   )
 
@@ -156,13 +155,13 @@ frero = Group.create!(
   name: "Les frérots",
   # photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574169463/plmnr0ggiptso2qchuwc.jpg")
   # remote_photo_url: "https://images.unsplash.com/photo-1500499284653-0db5113b0388?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574171309/rslj5flsvsfxuefoscdz.jpg")
+  photo: "beer.png"
   )
 
 family = Group.create!(
   name: "Familia",
   # photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574169464/j51givq2opupaz7jfkkx.jpg")
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574171419/id07hchdsbsplsxvf2cw.jpg")
+  photo: "frog.png"
   # remote_photo_url: "https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
   )
 
