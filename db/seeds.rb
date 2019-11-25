@@ -168,21 +168,25 @@ family = Group.create!(
 
 ug1 = Usergroup.create!(
   user: marin,
-  group: batch)
+  group: batch,
+  score: 10)
 
 ug2 = Usergroup.create!(
   user: hugo,
   group: batch,
-  is_owner: false)
+  is_owner: false,
+  score: 70)
 
 ug3 = Usergroup.create!(
   user: alex,
   group: batch,
-  is_owner: true)
+  is_owner: true
+  score: 40)
 
 ug4 = Usergroup.create!(
   user: marine,
-  group: batch)
+  group: batch,
+  score: 60)
 
 ug5 = Usergroup.create!(
   user: lea,
@@ -190,12 +194,14 @@ ug5 = Usergroup.create!(
 
 ug6 = Usergroup.create!(
   user: simon,
-  group: batch)
+  group: batch,
+  score: 50)
 
 ugx = Usergroup.create!(
   user: evan,
   group: batch,
-  is_owner: false)
+  is_owner: false,
+  score: 5)
 
 ug7 = Usergroup.create!(
   user: jojo,
