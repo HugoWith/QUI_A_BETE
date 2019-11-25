@@ -9,11 +9,12 @@ class Bet < ApplicationRecord
   validates :stake, presence: true
   validates :difficulty, presence: true, inclusion: { in: (1..10) }
 
-
   def is_over
     self.over = true
   end
 
-
-
+  def self.count_en_cours(bet_array)
+    array = bet_array.select { |bet|  bet.over == false }
+    array.count
+  end
 end

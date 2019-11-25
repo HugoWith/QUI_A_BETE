@@ -16,7 +16,7 @@
           <div class= "d-flex flex-column align-items-center justify-content-center">
             <div clas='link-index-group'> <%= link_to group_path(group)  do %>
               <h3 class= "index-group-writing"><%= group.name %></h3>
-              <h4 class= "index-group-writing"><%= group.bets.count %> paris en cours </h4>
+              <h4 class= "index-group-writing"><%= Bet.count_en_cours(group.bets) %> paris en cours </h4>
             <% end %>
             </div>
             </div>
