@@ -12,7 +12,6 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
     # @users.map { |user| user.nickname }
-
   end
 
   def create
@@ -30,9 +29,15 @@ class BetsController < ApplicationController
   end
 
   def edit
+    @bet = @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
   def update
+    @bet = @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
+    @bet.update(bet_params)
+    redirect_to group_bet_path(@group, @bet)
   end
 
   def destroy
