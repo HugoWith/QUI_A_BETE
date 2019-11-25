@@ -3,6 +3,7 @@
     <div class="container-index mt-4">
       <div class="card-product">
         <div class= "d-flex justify-content-between mb-4">
+                        <%#= render "win_wheel" %>
           <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
           <i class="fas fa-cog"></i>
         </div>
@@ -34,7 +35,7 @@
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
                 <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
                 <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
-                <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal#{member.id}" } %>
+                <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal" } %>
                 <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
             </div>
             <div class="form-footer">
@@ -44,24 +45,23 @@
               <% end %>
             </div>
           </div>
+        <% end %>
 
-          <!-- Modal -->
-          <div class="modal fade" id="modal<%= member.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Roue de l'infortune</h5>
-                </div>
-                <div class="modal-body">
-                <%= render "win_wheel" %>
-                </div>
-                <div class="modal-footer">
-
-                </div>
-              </div>
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Roue de l'infortune 🎲</h5>
+            </div>
+            <div class="modal-body">
+            <%= render "win_wheel" %>
+            </div>
+            <div class="modal-footer">
+              
             </div>
           </div>
-        <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
