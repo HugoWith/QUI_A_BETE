@@ -8,9 +8,6 @@ Rails.application.routes.draw do
   get 'invitation/post'
   get 'usergroups/join_crew'
 
-  # Route pour la roue
-  get 'groups/:group_id/bets' , to: "bets#win_wheel", as: :turn
-  post 'groups/:group_id/bets/new', to: "bets#create_with_wheel", as: :create
 
 
   resources :groups do
@@ -19,7 +16,7 @@ Rails.application.routes.draw do
     resources :bets
   end
   get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
-  # get "/groups/:group_id/bets/:id/win_wheel",  to: "bets#wheel", as: :wheel
+
 
   get "/groups/:group_id/new-member", to: "usergroups#create", as: :new_member
 

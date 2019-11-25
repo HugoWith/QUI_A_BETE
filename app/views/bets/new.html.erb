@@ -38,8 +38,8 @@
                 <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
             </div>
             <div class="form-footer">
-              <button type="button" class="btn-home" data-dismiss="modal">Retour</button>
-              <%= form.button :submit, class: "btn-home webpush-button", value: "Crée ton bet           " %>
+              <a href="/groups" class="btn-home" >Retour</a>
+              <%= form.button :submit, class: "btn-home webpush-button", value: "Crée ton bet" %>
               <%# <button type="button" class="btn btn-primary">Save changes</button> %>
               <% end %>
             </div>
@@ -53,7 +53,7 @@
                   <h5 class="modal-title" id="exampleModalLongTitle">Roue de l'infortune</h5>
                 </div>
                 <div class="modal-body">
-                  
+                <%= render "win_wheel" %>
                 </div>
                 <div class="modal-footer">
 
