@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :groups do
     resources :invitations, only: [:create]
+    resources :usergroups, only: [:destroy]
     resources :bets
   end
   get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner

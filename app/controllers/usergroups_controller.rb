@@ -6,4 +6,9 @@ class UsergroupsController < ApplicationController
     @usergroup.save
     redirect_to group_path(@group)
   end
+
+  def destroy
+    @usergroup = Usergroup.find(params[:id])
+    @usergroup.destroy
+  end
 end
