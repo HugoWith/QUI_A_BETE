@@ -4,8 +4,8 @@
 
     <% @images_samples.each do |image_name| %>
       <span>
-        <input type="radio" class ="mr-2" name="group[photo]" value=<%= "#{image_name}" %>>
-        <label style='height: 168px; width: 168px; background-image: url(<%= image_url("#{image_name}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="group_photo_"></label>
+        <input id="<%= image_name %>" type="radio" class ="mr-2" name="group[photo]" value="<%= image_name %>" style="display: none;">
+        <label class = "label-img-group" for="<%= image_name %>" style='height: 168px; width: 168px; background-image: url(<%= image_url("#{image_name}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="group_photo_"></label>
       </span>
     <% end %>
 

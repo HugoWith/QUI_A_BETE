@@ -9,8 +9,8 @@
     <div class="cards-index">
       <% @owner_groups.each do |group| %>
 
-      <div class="card-category-index align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.ibb.co/fn8tN2D/Cat.png)">
-
+      <div class="card-category-index align-items-center">
+        <%= image_tag group.pick_photo %>
        <%= link_to group.name, group_path(group), class: 'link'%>
        <i class="fas fa-cog"></i>
        <%if @groups.include?(group) %>
@@ -28,4 +28,4 @@
 
 </div>
 
-<%#= cl_image_path group.photo %>
+<!-- style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.ibb.co/fn8tN2D/Cat.png)" -->
