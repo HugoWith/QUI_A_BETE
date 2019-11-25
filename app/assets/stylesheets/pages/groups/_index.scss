@@ -2,6 +2,11 @@
   background-color: white;
 }
 
+.group-index-image {
+  height: 168px;
+  width: 168px;
+}
+
 .container-index {
  background-color: white;
  height: 80vh;
@@ -20,13 +25,36 @@ h2 {
   margin-bottom: 20px;
 }
 
+// .index-group-writing {
+//   color: black;
+//   text-decoration: none !important;
+//   font-family: $second-font;
+// }
+
+a {
+  h4.index-group-writing {
+  color: black;
+  text-decoration: none !important;
+  font-family: $second-font;
+}
+  h5.index-group-writing {
+  color: black;
+  text-decoration: none !important;
+  font-family: $second-font;
+}
+}
 
 
 .cards-index {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  height: 30vh;
+  // grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.card-index-group {
+  background: white;
+  box-shadow: 0 0 20px rgba(245, 206, 218, 0.4);
+  width: 100%;
 }
 
 .card-category-index {
