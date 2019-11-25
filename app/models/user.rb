@@ -53,5 +53,7 @@ class User < ApplicationRecord
         default_photo
       end
     end
+
+
 end
 

@@ -13,4 +13,7 @@ class Bet < ApplicationRecord
   def is_over
     self.over = true
   end
+
+
+
 end
