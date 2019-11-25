@@ -25,29 +25,28 @@ h2 {
   margin-bottom: 20px;
 }
 
-// .index-group-writing {
-//   color: black;
-//   text-decoration: none !important;
-//   font-family: $second-font;
-// }
 
 a {
   h4.index-group-writing {
   color: black;
-  text-decoration: none !important;
   font-family: $second-font;
 }
-  h5.index-group-writing {
+  h3.index-group-writing {
   color: black;
-  text-decoration: none !important;
   font-family: $second-font;
 }
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
+.fa-trash-alt{
+  color: black;
+}
 
 .cards-index {
   display: grid;
-  // grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
 
@@ -89,14 +88,14 @@ a {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
 
