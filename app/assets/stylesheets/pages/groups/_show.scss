@@ -1,82 +1,56 @@
-
-
-
 .visible {
-  display: none;
+    display: none;
 }
 
-
 .card-show-bet {
- overflow: hidden;
- height: 120px;
- display: flex;
- align-items: center;
- margin-bottom: 20px;
+    overflow: hidden;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
+.card-bet-infos2 {
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .card-bet-infos {
- background: white;
- box-shadow: 0 0 20px rgba(245,206,218,0.4);
- border-radius: 5px;
- margin-bottom: 20px;
- display: flex;
+    background: white;
+    box-shadow: 0 0 20px rgba(245, 206, 218, 0.4);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    min-width: 800px;
 }
 
-
-.img-group-show{
-  width: 15%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px 0 0 5px;
-  margin-right: 5px;
-
+.img-group-show {
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+    margin-right: 5px;
 }
 
 .avatar-bet {
-  position: relative;
-  flex-wrap: wrap;
-   margin: auto 0;
-
-
+    position: relative;
+    flex-wrap: wrap;
+    margin: auto 0;
 }
 
 .nickname-img {
-  opacity: 0;
-  font-weight: bold;
+    opacity: 0;
+    font-weight: bold;
 }
 
-.img-wrap:hover .nickname-img{
-  visibility: visible;
-  font-weight: bold;
-  transition: 1s ease-in-out;
-  opacity: 1;
+.img-wrap:hover .nickname-img {
+    visibility: visible;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.nickname-img {
+  margin-bottom: 2px;
+}
