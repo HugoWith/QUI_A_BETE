@@ -168,21 +168,25 @@ family = Group.create!(
 
 ug1 = Usergroup.create!(
   user: marin,
-  group: batch)
+  group: batch,
+  score: 10)
 
 ug2 = Usergroup.create!(
   user: hugo,
   group: batch,
-  is_owner: false)
+  is_owner: false,
+  score: 70)
 
 ug3 = Usergroup.create!(
   user: alex,
   group: batch,
-  is_owner: true)
+  is_owner: true,
+  score: 40)
 
 ug4 = Usergroup.create!(
   user: marine,
-  group: batch)
+  group: batch,
+  score: 60)
 
 ug5 = Usergroup.create!(
   user: lea,
@@ -190,12 +194,14 @@ ug5 = Usergroup.create!(
 
 ug6 = Usergroup.create!(
   user: simon,
-  group: batch)
+  group: batch,
+  score: 50)
 
 ugx = Usergroup.create!(
   user: evan,
   group: batch,
-  is_owner: false)
+  is_owner: false,
+  score: 5)
 
 ug7 = Usergroup.create!(
   user: jojo,
@@ -257,29 +263,40 @@ bet2 = Bet.create!(
 )
 
 bet3 = Bet.create!(
-  description:"Arthur dira j'ai tout compris",
+  description:"Axel ne demandera pas d'aide pendant une journée",
   end_date: Date.new(2019,12,15),
   creator_id: hugo.id,
   beter_id: alex.id,
   group_id: batch.id,
   target_id: axel.id,
-  stake: "un béret des Peaky Blinders",
-  difficulty: 3
+  stake: "3 mois d'abonnement Netflix",
+  difficulty: 6
 )
 
 bet4 = Bet.create!(
-  description:"Shlarz ne dira aucune insulte pendant une journée",
+  description:"Evan sera super poli pendant 24 heures",
   end_date: Date.new(2019,12,15),
   creator_id: lea.id,
   beter_id: marine.id,
   group_id: batch.id,
   stake: "une pizza",
-  difficulty: 6
+  difficulty: 2
 )
 
-bet4 = Bet.create!(
-  description:"Le garçon de Alex va naitre le 11 novembre",
-  end_date: Date.new(2019,11,11),
+bet5 = Bet.create!(
+  description:"Le garçon d'Alex va naitre le 6 décembre",
+  end_date: Date.new(2019,12,06),
+  creator_id: evan.id,
+  beter_id: alex.id,
+  group_id: batch.id,
+  stake: "une chouffe 🍺",
+  difficulty: 1,
+  over: true
+)
+
+bet6 = Bet.create!(
+  description:"Le garçon d'Alex va naitre le 6 décembre",
+  end_date: Date.new(2019,12,06),
   creator_id: evan.id,
   beter_id: alex.id,
   group_id: frero.id,
@@ -288,5 +305,14 @@ bet4 = Bet.create!(
   over: true
 )
 
-
+bet7 = Bet.create!(
+  description:"John ne fera pas tomber de plante en jouant au ping-pong",
+  end_date: Date.new(2019,12,12),
+  creator_id: lea.id,
+  beter_id: axel.id,
+  group_id: batch.id,
+  stake: "une chouffe 🍺",
+  difficulty: 1,
+  over: true
+)
 

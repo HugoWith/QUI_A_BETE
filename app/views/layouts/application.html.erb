@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Qui a beté ?</title>
-
+  <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/k6g81xj/logoqabweb.png">
 
   <%= csrf_meta_tags %>
@@ -18,12 +18,11 @@
   <%= render 'shared/flashes' %>
   <div class="main-container">
 
-
-
     <%= yield %>
   </div>
   <%= render 'shared/footer' %>
 
+  <script>window.vapidPublicKey = new Uint8Array(<%= Base64.urlsafe_decode64(ENV['VAPID_PUBLIC_KEY']).bytes %>);</script>
   <%= javascript_pack_tag 'application' %>
 
 </body>
