@@ -45,6 +45,7 @@ class BetsController < ApplicationController
   def win_wheel
     @bet = Bet.new
     @group = Group.find(params[:group_id])
+  end
 
   def push
     Webpush.payload_send(
