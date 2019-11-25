@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :bets
   end
   get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
+  get "/groups/:group_id/bets/:id/end-bet", to: "bets#end_bet", as: :end_bet
   get "/groups/:group_id/new-member", to: "usergroups#create", as: :new_member
 
   devise_for :users,
