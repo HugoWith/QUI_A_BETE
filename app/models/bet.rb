@@ -14,7 +14,7 @@ class Bet < ApplicationRecord
   end
 
   def self.count_en_cours(bet_array)
-    array = bet_array.select { |bet|  bet.over == false }
+    array = bet_array.select { |bet| bet.over == false }
     array.count
   end
 end
