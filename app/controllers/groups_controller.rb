@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
     @invitation = @group.invitations.build
     @invitation.invited_users.build
 
-    @usergroup = @group.usergroups
+    @usergroup = @group.usergroups.order(score: :desc)
     # @group_user = @group.usergroups
 
     # @all_creator = Bet.all
