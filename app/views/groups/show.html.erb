@@ -42,12 +42,10 @@
               <div data-target="hello.classement" class="visible">
               <h3>Le classement 🚀 </h3>
           <% @usergroup.each do |usergroup| %>
-          <% user = User.find(usergroup.user_id) %>
-          <% score = usergroup.score %>
             <div class = "d-flex justify-content-start">
-            <p><%= cl_image_tag user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= user.nickname %>
+            <p><%= cl_image_tag usergroup.user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= usergroup.user.nickname %>
             <br>
-            <%= score %> pts</p>
+            <%= usergroup.score %> pts</p>
             </div>
           <% end %>
         </div>

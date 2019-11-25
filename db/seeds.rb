@@ -180,7 +180,7 @@ ug2 = Usergroup.create!(
 ug3 = Usergroup.create!(
   user: alex,
   group: batch,
-  is_owner: true
+  is_owner: true,
   score: 40)
 
 ug4 = Usergroup.create!(
