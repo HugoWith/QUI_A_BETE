@@ -19,6 +19,7 @@ gem 'webpacker'
 gem 'omniauth-facebook'
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
+gem 'webpush'
 # gem "omniauth-rails_csrf_protection"
 
 
