@@ -37,7 +37,9 @@ const initTriggerWebPush = () => {
   .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.getSubscription()
     .then((subscription) => {
+
       $.post("/push", { subscription: subscription.toJSON(), message: "Un nouveau pari a été lancé! 🎉" });
+
     });
   });
 });

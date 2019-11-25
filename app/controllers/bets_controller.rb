@@ -57,6 +57,7 @@ class BetsController < ApplicationController
     read_timeout: 5 # value for Net::HTTP#read_timeout=, optional
     )
 
+
     Webpush.payload_send(
   endpoint: "https://fcm.googleapis.com/gcm/send/eah7hak....",
   message: "A message",
@@ -64,6 +65,7 @@ class BetsController < ApplicationController
   auth: "aW1hcmthcmFpa3V6ZQ==",
   api_key: "AIzaSyCHyemgMJqIOPnDfJ_duR4RAVyANGqDrog"
 )
+
   end
 
   private

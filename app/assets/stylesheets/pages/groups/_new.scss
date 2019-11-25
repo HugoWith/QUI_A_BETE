@@ -11,8 +11,12 @@
     transition: 0.8s ease-in-out;
 }
 
-.group_photo_1 {
-  // background-image: ("images/group/frog.png");
-  background-image: url("../../../images/frog.png");
-  background-color: red;
+
+input:checked + label {
+  border: solid 7px black;
+  opacity: 1;
+}
+
+.label-img-group {
+  opacity: 0.85;
 }
