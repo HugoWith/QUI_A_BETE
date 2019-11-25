@@ -11,6 +11,7 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
     # @users.map { |user| user.nickname }
+    
   end
 
   def create
@@ -40,7 +41,7 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @bet.is_over
   end
-  
+
   def push
     Webpush.payload_send(
       message: params[:message],
