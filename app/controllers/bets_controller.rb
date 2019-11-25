@@ -42,7 +42,8 @@ class BetsController < ApplicationController
   end
 
   def win_wheel
-
+    @bet = Bet.new
+    @group = Group.find(params[:group_id])
   end
 
   private
