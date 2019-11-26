@@ -18,10 +18,8 @@ margin-right: 30px;
 opacity: 0;
 animation:fadeIn 5s ease-out;
 h4 {
-  font-size: 12px;
-
+  font-size: 16px;
 }
-
  }
 
 @keyframes fadeIn {
@@ -31,5 +29,4 @@ h4 {
     to {
       opacity:0;
     }
-
 }
