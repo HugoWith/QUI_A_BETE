@@ -58,7 +58,7 @@
               <p><strong>Le bel enjeu: </strong> <%=bet.stake%></p>
               <% if bet.target.present?  %>
                   <%= cl_image_tag bet.target.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <p class=""><%= bet.target.nickname %> 🎯 </p
+                  <p class=""><%= bet.target.nickname %> 🎯 </p>
               <% end %>
             </div>
             <div class = "d-flex flex-column justify-content-center">
