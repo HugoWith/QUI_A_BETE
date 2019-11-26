@@ -23,9 +23,7 @@
     }
 }
 
-.bet_difficulty {
-    margin-top: 5px;
-}
+.bet_difficulty {}
 
 .form-footer .btn-home {
     margin-bottom: 0px;
@@ -66,3 +64,32 @@
 // .col-12 {
 //     max-width: 100% !important;
 // }
+#bet_description {
+    height: 100px;
+}
+
+#bet_target_id {
+    width: 160px;
+    margin-right: 40px;
+}
+
+#wheel_link {
+    margin: auto 0;
+    margin-left: 40px;
+}
+
+#wheelsvg {
+    width: 55px;
+}
+
+#bet_end_date_1i {
+    width: 200px;
+}
+
+#bet_end_date_2i {
+    width: 200px;
+}
+
+#bet_end_date_3i {
+    width: 200px;
+}
