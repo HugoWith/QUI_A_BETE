@@ -29,7 +29,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
-    height: 30vh;
+    // height: 30vh;
 }
 
 a {
@@ -100,6 +100,7 @@ a:hover {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+
     .cards-index {
         grid-template-columns: 1fr 1fr;
     }
@@ -133,7 +134,6 @@ a:hover {
     //   font-family: $second-font;
     //   color: $main-color;
     //   font-size: 30px;
-}
 
 .fas {
     margin: 3px 3px;
