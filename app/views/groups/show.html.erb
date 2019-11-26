@@ -67,6 +67,13 @@
                   <%= cl_image_tag bet.beter.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                   <p class="nickname-img"><%= bet.beter.nickname %></p>
                 </div>
+                <% if bet.target.present?  %>
+                <div class="img-wrap d-flex flex-column justify-content-center">
+                  <%= cl_image_tag bet.target.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                  <p class="nickname-img"><%= bet.target.nickname %></p>
+                </div>
+                <% else %>
+                <% end %>
               </div>
               <div class = "d-flex flex-column justify-content-center">
                 <p><strong>Le bet: </strong> <%=bet.description%></p>

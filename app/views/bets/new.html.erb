@@ -32,7 +32,7 @@
               <p>Tu paries avec <%= member.nickname %></p>
               <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
                 <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
-                <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true%>
+                <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true, input_html: { value: member.id }%>
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
                 <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
