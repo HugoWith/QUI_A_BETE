@@ -30,10 +30,10 @@
     <p><%= link_to "LE BET EST FINI PLUS TÔT QUE PRÉVU ?", end_bet_path(@group, @bet) %></p>
   </div>
   <div class="D-2">
-    <p>SUPPRIME LE BET</p>
+    <p><%= link_to "SUPPRIME LE BET", group_bet_path(@group, @bet), method: :delete %></p>
   </div>
   <div class="D-3">
-    <p><%= link_to "MODIFIE LE BET", edit_group_bet_path %></p>
+    <p><%= link_to "MODIFIE LE BET", edit_group_bet_path(@group, @bet) %></p>
   </div>
 
   <div class="B-4">
