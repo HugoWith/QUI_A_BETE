@@ -1,33 +1,28 @@
 <div class="container-index justify-content-center align-items-center">
+
   <div class="mt-4">
     <h2> "<%= @bet.description %>" est terminé ! </h2>
     <h3 class = "text-center mb-4">Alors, qui a gagné <%= @bet.stake %>? </h3>
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="w-50">
+  </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-center">
         <div class="d-flex justify-content-between mt-3">
-          <div class="I-1">
-            <%= cl_image_tag @bet.creator.pick_photo, class:"avatar-xl"%>
-            <br/>
-            <%= @bet.creator.nickname %>
-          </div>
-          <div class="I-2">
-            <%= cl_image_tag @bet.beter.pick_photo, class:"avatar-xl"%>
-            <br/>
-            <%= @bet.beter.nickname %>
-          </div>
+        <%= simple_form_for(@bet, url: save_winner_path(@bet), method: :post) do |f| %>
+          <span>
+            <input id="<%= @bet.creator.nickname %>" type="radio" class ="mr-2" name="bet[winner]" value="<%= @bet.creator.nickname %>" style="display: none;">
+            <label class = "avatar-huge mr-4" for="<%= @bet.creator.nickname %>" style='height: 168px; width: 168px; background-image: url(<%= image_url("#{@bet.creator.pick_photo}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="bet_winner"></label>
+          </span>
+          <span>
+            <input id="<%= @bet.beter.nickname %>" type="radio" class ="mr-2" name="bet[winner]" value="<%= @bet.beter.nickname %>" style="display: none;">
+            <label class = "avatar-huge ml-4" for="<%= @bet.beter.nickname %>" style='height: 168px; width: 168px; background-image: url(<%= image_url("#{@bet.beter.pick_photo}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="bet_winner"></label>
+          </span>
         </div>
-      </div>
+          <div class="d-flex justify-content-center mt-4">
+            <%= f.button :submit, class: "btn-home", value: 'Valide ton choix' %>
+            <% end %>
+          </div>
     </div>
 
-
-  </div>
 </div>
 
-<!--   <div class= "new_bet", data-toggle="modal" data-target="#modal<%= @bet.creator.id %>">
-    <%= cl_image_tag  @bet.creator.pick_photo, class: "avatar-xl" %>
-  </div>
-  <div class= "new_bet", data-toggle="modal" data-target="#modal<%= @bet.beter.id %>">
-    <%= cl_image_tag  @bet.beter.pick_photo, class: "avatar-xl" %>
-  </div>
-</div>
--->
+
