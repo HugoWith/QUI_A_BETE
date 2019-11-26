@@ -1,4 +1,4 @@
-<%= simple_form_for([ @group, @bet ], remote: true) do |form| %>
+<%= simple_form_for([ @group, @bet ]) do |form| %>
   <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
   <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
   <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
