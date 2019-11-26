@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col-12 col-md-12 index-group">
+  <div class="col-12 col-md-12 index-group" style="height: 120vh">
     <div class="container-index mt-4">
       <div class="card-product">
         <div class= "d-flex justify-content-between mb-4">
@@ -36,8 +36,10 @@
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
                 <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
                 <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
+                <div class="d-flex justify-content-center">
                 <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal" } %>
-                <%= form.input :difficulty, label: "Sur 10, ta confiance en la faisabilité du pari ?" %>
+                </div>
+                <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
             </div>
             <div class="form-footer">
               <a href="/groups" class="btn-home" >Retour</a>
@@ -58,8 +60,6 @@
             <%= render "win_wheel" %>
             </div>
             <div class="modal-footer">
-              <button class="btn-home" onclick="myFunction()">Save changes</button>
-              <button class="btn-home" data-dismiss="modal">Close</button>
             </div>
 
           </div>

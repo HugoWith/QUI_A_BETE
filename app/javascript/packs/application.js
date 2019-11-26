@@ -5,7 +5,7 @@ import "bootstrap";
 import { initTypedJS } from '../components/typed';
 import { initCursorJS } from '../components/cursor';
 
-import {  initServiceWorkerJS } from '../components/serviceWorker';
+import { initServiceWorkerJS } from '../components/serviceWorker';
 
 import { initRoll } from '../components/roue';
 

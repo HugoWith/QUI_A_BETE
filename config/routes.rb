@@ -30,6 +30,6 @@ Rails.application.routes.draw do
 
   # post '/push', to: 'bets#push'
   # post '/push', to: 'devise/sessions#push'
-  post '/push', to: 'user_notifications#push', as: 'user_push'
-  get '/push', to: 'user_notifications#notification_for_users', as: 'user_notif_push'
+  # post '/push', to: 'user_notifications#push', as: 'user_push'
+  # get '/push', to: 'user_notifications#notification_for_users', as: 'user_notif_push'
 end
