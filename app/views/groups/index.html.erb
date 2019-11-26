@@ -20,7 +20,7 @@
                 <%= link_to icon("far","trash-alt"), user_group.group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
             <% end %>
             <%  %>
-            <%= link_to "", group_usergroup_path(user_group.group, user_group), method: :delete, class: "fas fa-sign-out-alt" %>
+            <%= link_to "", group_usergroup_path(user_group.group, user_group), method: :delete, class: "fas fa-sign-out-alt tippy", data: { "tippy-content" => "Quitter le crew","tippy-arrow" => true} %>
             </div>
         </div>
         <% end %>
