@@ -5,7 +5,6 @@ class BetsController < ApplicationController
   def show
     @bet = Bet.find(params[:id])
     @group = @bet.group
-
   end
 
   def new
@@ -65,7 +64,7 @@ class BetsController < ApplicationController
     @group = @bet.group
     @bet.winner = User.find_by(nickname: params["bet"]["winner"])
     @bet.save
-    ug = Usergroup.find(user_id: @bet.winner.id, group_id: @group.id)
+    ug = Usergroup.where(user_id: @bet.winner.id, group_id: @group.id).first
     case @bet.difficulty
     when 0
       ug.score = ug.score + 110
@@ -93,7 +92,6 @@ class BetsController < ApplicationController
     ug.save
     redirect_to group_path(@group)
   end
-
 
   private
 
