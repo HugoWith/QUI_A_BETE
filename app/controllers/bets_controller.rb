@@ -4,7 +4,7 @@ class BetsController < ApplicationController
 
   def show
     @bet = Bet.find(params[:id])
-    @group = Group.find(params[:group_id])
+    @group = @bet.group
   end
 
   def new
@@ -48,22 +48,49 @@ class BetsController < ApplicationController
   end
 
   def end_bet
+    p params
     @bet = Bet.find(params[:id])
-    @group = Group.find(params[:group_id])
     @bet.is_over
     @bet.save
-    redirect_to define_winner_path(@group, @bet)
+    redirect_to define_winner_path(@bet)
   end
 
   def who_won
     @bet = Bet.find(params[:id])
-    @group = Group.find(params[:group_id])
   end
 
   def save_winner
     @bet = Bet.find(params[:id])
-    @bet.winner = params["group"]["winner"]
+    @group = @bet.group
+    @bet.winner = User.find_by(nickname: params["bet"]["winner"])
     @bet.save
+    ug = Usergroup.find(user_id: @bet.winner.id, group_id: @group.id)
+    case @bet.difficulty
+    when 0
+      ug.score = ug.score + 110
+    when 1
+      ug.score = ug.score + 100
+    when 2
+      ug.score = ug.score + 90
+    when 3
+      ug.score = ug.score + 80
+    when 4
+      ug.score = ug.score + 70
+    when 5
+      ug.score = ug.score + 60
+    when 6
+      ug.score = ug.score + 50
+    when 7
+      ug.score = ug.score + 40
+    when 8
+      ug.score = ug.score + 30
+    when 9
+      ug.score = ug.score + 20
+    when 10
+      ug.score = ug.score + 10
+    end
+    ug.save
+    redirect_to group_path(@group)
   end
 
   private
