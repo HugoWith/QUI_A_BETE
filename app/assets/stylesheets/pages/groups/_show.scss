@@ -2,6 +2,11 @@
     display: none;
 }
 
+.bet-en-cours {
+  h2 {
+    font-size: 50px;
+  }
+}
 .card-show-bet {
     overflow: hidden;
     min-height: 100px;
@@ -56,3 +61,56 @@
 .nickname-img {
   margin-bottom: 2px;
 }
+
+.scoreboard {
+display: block;
+position: sticky;
+top: 290px;
+margin-right: 40px;
+}
+
+.first_user{
+  padding-bottom: 30px;
+
+ h4 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+img {
+  height: 70px;
+  width: 70px;
+
+}
+
+}
+
+.avatar-scoreboard {
+  border: 3px solid $main-color;
+}
+
+.img-scoreboard{
+  img {
+
+    border: 5px solid $main-color;
+  }
+  height: 100px;
+  width: 100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

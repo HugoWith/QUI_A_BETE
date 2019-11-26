@@ -28,8 +28,13 @@
         </div>
       </div>
     </div>
-    <h2><%= @group.name  %> - Les paris en cours 🔥</h2>
+
+
+    <div class="d-flex container-index-bet">
+  <div class="bet-en-cours flex-grow-1">
+<h2><%= @group.name  %> - Les paris en cours 🔥</h2>
     <div class="d-flex align-items-center">
+
       <%= link_to "Crée un bet", new_group_bet_path(@group), class:"btn-home" %>
     </div>
     <div class="card-show-bet flex-column">
@@ -68,17 +73,49 @@
         <% end %>
       <% end %>
     </div>
-    <div class="d-flex justify-content-center card-bet-infos2">
+</div>
+
+    <div class="scoreboard flex-shrink-1">
+    <div class="d-flex justify-content-center card-bet-infos2  scoreboard">
       <div data-target="hello.classement" class="visible">
       <h3>Le classement 🚀 </h3>
+
+       <div class="d-flex justify-content-center first_user">
+        <div class="avatar-nickname">
+          <%= image_tag 'crown.png'  %>
+           <div class="img-scoreboard">
+                <%= cl_image_tag @usergroup_score[0].user.pick_photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </div>
+
+       </div>
+       <div class="img-score">
+        <p><%= @usergroup_score[0].score %>pts<p>
+       <h4><%= first_user = @usergroup_score[0].user.nickname%></h4>
+        </div>
+      </div>
+
       <% @usergroup_score.each do |usergroup| %>
+
       <div class = "d-flex justify-content-start">
-        <p><%= cl_image_tag usergroup.user.pick_photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><%= usergroup.user.nickname %>
+        <p><%= cl_image_tag usergroup.user.pick_photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <em><%= usergroup.user.nickname %></em>
           <br>
-          <%= usergroup.score %> pts</p>
+          <strong><%= usergroup.score %> pts</p></strong>
         </div>
         <% end %>
       </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
       <!-- <div class="d-flex flex-column align-items-center justify-content-center text-center"> -->
         <!--           <div class="container"> -->
           <!--         </div> -->
