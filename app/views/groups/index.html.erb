@@ -6,7 +6,7 @@
     <div class="container-index">
       <h2>Tes crews</h2>
 
-      <div class="cards-index">
+      <div class="cards-index mb-4">
         <% @owner_groups.each do |group| %>
 
         <div class="d-flex card-index-group justify-content-between">
@@ -16,14 +16,14 @@
           <div class= "d-flex flex-column align-items-center justify-content-center">
             <div clas='link-index-group'> <%= link_to group_path(group)  do %>
               <h3 class= "index-group-writing"><%= group.name %></h3>
-              <h4 class= "index-group-writing"><%= group.bets.count %> paris en cours </h4>
+              <h4 class= "index-group-writing"><%= Bet.count_en_cours(group.bets) %> paris en cours </h4>
             <% end %>
             </div>
             </div>
             <div>
             <i class="fas fa-cog"></i>
             <%if @groups.include?(group) %>
-                <%= link_to icon("far","trash-alt") , group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
+                <%= link_to icon("far","trash-alt"), group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
             <% else %>
             <% end %>
             </div>
@@ -33,12 +33,12 @@
       </div>
     </div>
 
-    <div class="d-flex justify-content-center">
-      <%= link_to "Crée ton crew", new_group_path, class:"btn-home" %>
-    </div>
 
   </div>
 </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Crée ton crew", new_group_path, class:"btn-home" %>
+    </div>
 
   <!-- style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.ibb.co/fn8tN2D/Cat.png)" -->
 

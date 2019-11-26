@@ -29,12 +29,12 @@ class BetsController < ApplicationController
   end
 
   def edit
-    @bet = @bet = Bet.find(params[:id])
+    @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
   end
 
   def update
-    @bet = @bet = Bet.find(params[:id])
+    @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
     @bet.update(bet_params)
     redirect_to group_bet_path(@group, @bet)
