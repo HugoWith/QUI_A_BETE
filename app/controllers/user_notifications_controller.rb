@@ -1,16 +1,16 @@
 # class UserNotificationsController < ApplicationController
 #   skip_before_action :verify_authenticity_token
 
-#   def push
-#     user = current_user
-#     user.update(subscription: JSON.parse(params["subscription"]))
-#   end
 
-#   def notification_for_users
-#     @group = Group.find(37)
+  def push
+    current_user.update(subscription: params["subscription"])
+  end
 
-#     @group.users.where.not(subscription: nil).each do |user|
-#       p user
+  def notification_for_users
+    @group = Group.find(params[:group_id])
+
+    @group.users.where.not(subscription: nil).each do |user|
+
 
 #       Webpush.payload_send(
 #         message: "DTG",
