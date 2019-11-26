@@ -6,7 +6,6 @@
         <div class= "d-flex justify-content-between mb-4">
                         <%#= render "win_wheel" %>
           <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
-          <i class="fas fa-cog"></i>
         </div>
       </div>
       <h1 class = "mb-4 text-center">Crée un bet !</h1>
@@ -24,25 +23,30 @@
         <input type="radio"> %>
         <% @group.users.each do |member| %>
           <div class="bet-form" data-id="<%= member.id %>">
-            <div class="form-header">
-              <h5 class="form-title" id="exampleModalLongTitle">Création du bet</h5>
+            <div class="form-header d-flex justify-content-start">
               <%= cl_image_tag  member.pick_photo, class: "avatar-xl" %>
+              <h4 style="margin: auto 0">cool ! tu paries avec <%= member.nickname %></h4>
             </div>
             <div class="form-body">
-              <p>Tu paries avec <%= member.nickname %></p>
               <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
                 <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
-                <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true %>
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
-                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
-                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
-                <div class="d-flex justify-content-center">
-                <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal" } %>
+                <div class="d-flex justify-content-start">
+                <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true %>
+                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁"  %> 
+                <%= link_to image_tag('wheel.svg', id:"wheelsvg"), '#', id: "wheel_link", data: { toggle: 'modal', target: "#modal" }%>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
                 </div>
-                <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?" %>
+                <div class="d-flex justify-content-start">
+                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
+                <%= form.input :difficulty, label: "Ta confiance en la faisabilité du pari ?", collection: 1..10%>
+                </div>
+                
+
             </div>
-            <div class="form-footer">
+            <div class="form-footer d-flex justify-content-center">
+       
               <a href="/groups" class="btn-home" >Retour</a>
               <%= form.button :submit, class: "btn-home webpush-button", value: "Crée ton bet" %>
               <%# <button type="button" class="btn btn-primary">Save changes</button> %>
