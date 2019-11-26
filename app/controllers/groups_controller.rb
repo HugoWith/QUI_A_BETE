@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
     @owner_user_groups = Usergroup.where(is_owner: true, user_id: current_user.id)
     @groups = @owner_user_groups.map { |ug| ug.group }
     @user = current_user
-    @usergroup = Usergroup.where(user_id: @user.id, group_id: @group.id).first
+    # @usergroup = Usergroup.where(user_id: @user.id, group_id: @group.id).first
   end
 
   def show
