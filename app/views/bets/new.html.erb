@@ -6,7 +6,6 @@
         <div class= "d-flex justify-content-between mb-4">
                         <%#= render "win_wheel" %>
           <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
-          <i class="fas fa-cog"></i>
         </div>
       </div>
       <h1 class = "mb-4 text-center">Crée un bet !</h1>
@@ -36,7 +35,7 @@
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min" %>
                 <%= form.input :end_date, label: "Vous avez jusqu'à quand ?" %>
-                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁" %>
+                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁"  %> 
                 <div class="d-flex justify-content-center">
                 <%= link_to "Pas d'idées go roue de l'infortune", '#', class: "btn-home", data: { toggle: 'modal', target: "#modal" } %>
                 </div>
