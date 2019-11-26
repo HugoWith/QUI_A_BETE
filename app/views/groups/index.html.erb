@@ -18,8 +18,8 @@
             <div class= "pr-2 pt-2">
             <%if @groups.include?(group) %>
                 <%= link_to icon("far","trash-alt"), group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
-            <% else %>
             <% end %>
+            <%= link_to "", group_usergroup_path(group, @usergroup), method: :delete, class: "fas fa-sign-out-alt" %>
             </div>
         </div>
         <% end %>
