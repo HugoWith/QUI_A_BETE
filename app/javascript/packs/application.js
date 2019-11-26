@@ -5,7 +5,7 @@ import "bootstrap";
 import { initTypedJS } from '../components/typed';
 import { initCursorJS } from '../components/cursor';
 
-import {  initServiceWorkerJS } from '../components/serviceWorker';
+import { initServiceWorkerJS } from '../components/serviceWorker';
 
 import { initRoll } from '../components/roue';
 
@@ -21,10 +21,10 @@ initTypedJS();
 initCursorJS();
 initServiceWorkerJS();
 
-initPushmanagerJS();
-initTriggerWebPush();
+// initPushmanagerJS();
+// initTriggerWebPush();
 
-initPushPermission();
+// initPushPermission();
 initRoll();
 
 // application()
