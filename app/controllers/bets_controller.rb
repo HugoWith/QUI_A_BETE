@@ -5,6 +5,8 @@ class BetsController < ApplicationController
   def show
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
+
+
   end
 
   def new
@@ -59,6 +61,7 @@ class BetsController < ApplicationController
     @bet = Bet.find(params[:id])
     @group = Group.find(params[:group_id])
   end
+
 
 
 

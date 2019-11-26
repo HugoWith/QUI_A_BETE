@@ -1,3 +1,5 @@
+
+
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :destroy]
 
@@ -23,6 +25,14 @@ class GroupsController < ApplicationController
 
     # @all_creator = Bet.all
     # @creator = @all_creator.find()
+    #     puts @user = current_user.id
+    # @bet = Bet.where(user_id: @user)
+    # @like = @bet.like
+    # ap @like
+    @bets.each do |bet|
+      bet.like_number = bet.likes.count
+    end
+
   end
 
   def new
