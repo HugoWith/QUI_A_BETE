@@ -60,33 +60,6 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  # def push
-  #   current_user.update(subscription: params[:subscription])
-
-
-  #   Webpush.payload_send(
-  #     message: params[:message],
-  #     endpoint: params[:subscription][:endpoint],
-  #     p256dh: params[:subscription][:keys][:p256dh],
-  #     auth: params[:subscription][:keys][:auth],
-  #     vapid: {
-  #       subject: "mailto:sender@example.com",
-  #       public_key: ENV['VAPID_PUBLIC_KEY'],
-  #       private_key: ENV['VAPID_PRIVATE_KEY']
-  #     },
-  #   ssl_timeout: 5, # value for Net::HTTP#ssl_timeout=, optional
-  #   open_timeout: 5, # value for Net::HTTP#open_timeout=, optional
-  #   read_timeout: 5 # value for Net::HTTP#read_timeout=, optional
-  #   )
-
-  #   Webpush.payload_send(
-  #     endpoint: "https://fcm.googleapis.com/gcm/send/eah7hak....",
-  #     message: "A message",
-  #     p256dh: "BO/aG9nYXNkZmFkc2ZmZHNmYWRzZmFl...",
-  #     auth: "aW1hcmthcmFpa3V6ZQ==",
-  #     api_key: "AIzaSyCHyemgMJqIOPnDfJ_duR4RAVyANGqDrog"
-  #     )
-  # end
 
 
   private

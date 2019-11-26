@@ -21,10 +21,10 @@ initTypedJS();
 initCursorJS();
 initServiceWorkerJS();
 
-initPushmanagerJS();
-initTriggerWebPush();
+// initPushmanagerJS();
+// initTriggerWebPush();
 
-initPushPermission();
+// initPushPermission();
 initRoll();
 
 // application()
