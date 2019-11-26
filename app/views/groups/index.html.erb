@@ -3,24 +3,24 @@
     <div class="container-index">
       <h2>Tes crews</h2>
       <div class="cards-index mb-4">
-        <% @owner_groups.each do |group| %>
+        <% current_user.usergroups.each do |user_group| %>
         <div class="d-flex card-index-group justify-content-between">
           <div>
-            <%= image_tag group.photo, class: 'group-index-image mr-2'%>
+            <%= image_tag user_group.group.photo, class: 'group-index-image mr-2'%>
           </div>
           <div class= "d-flex flex-column align-items-center justify-content-center">
-            <div clas='link-index-group'> <%= link_to group_path(group)  do %>
-              <h3 class= "index-group-writing"><%= group.name %></h3>
-              <h4 class= "index-group-writing"><%= Bet.count_en_cours(group.bets) %> paris en cours </h4>
+            <div clas='link-index-group'> <%= link_to group_path(user_group.group)  do %>
+              <h3 class= "index-group-writing"><%= user_group.group.name %></h3>
+              <h4 class= "index-group-writing"><%= Bet.count_en_cours(user_group.group.bets) %> paris en cours </h4>
             <% end %>
             </div>
             </div>
             <div class= "pr-2 pt-2">
-            <i class="fas fa-cog"></i>
-            <%if @groups.include?(group) %>
-                <%= link_to icon("far","trash-alt"), group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
-            <% else %>
+            <%if @groups.include?(user_group.group) %>
+                <%= link_to icon("far","trash-alt"), user_group.group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
             <% end %>
+            <%  %>
+            <%= link_to "", group_usergroup_path(user_group.group, user_group), method: :delete, class: "fas fa-sign-out-alt tippy", data: { "tippy-content" => "Quitter le crew","tippy-arrow" => true} %>
             </div>
         </div>
         <% end %>

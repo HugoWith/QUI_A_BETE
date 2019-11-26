@@ -119,7 +119,7 @@ const initRoll = () => {
             }
             rotation += 90 - Math.round(ps / 2);
             vis.transition()
-                .duration(3000)
+                .duration(10000)
                 .attrTween("transform", rotTween)
                 .each("end", function() {
                     //mark question as seen
@@ -135,7 +135,7 @@ const initRoll = () => {
                     const resultat = result.innerHTML;
                     input.value = resultat;
 
-                    document.dispatchEvent(new CustomEvent("closeModal"));
+                    // document.dispatchEvent(new CustomEvent("closeModal"));
                 });
         }
         //make arrow
