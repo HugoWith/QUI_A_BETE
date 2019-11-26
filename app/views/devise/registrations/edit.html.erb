@@ -7,7 +7,7 @@
             <%= f.error_notification %>
 
             <div class="form-inputs">
-              <div class="justify-content-between ">
+              <div class=" d-flex flex-column align-items-center justify-content-between ">
                 <%= f.input :email, required: true, autofocus: true %>
 
                 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,9 +21,11 @@
                             input_html: { autocomplete: "nouveau-surnom" } %>
               </div>
             </div>
-            <div class="boutons">
+            <div>
               <div class="form-actions">
-                <%= f.button :submit, "Valider" %>
+                <%= f.button :submit, "Valider", class: "btn" %>
+              </div>
+              <div class="d-flex align-items-center">
                 <%= link_to "Retour", :back, class: "btn"%>
               </div>
             </div>
