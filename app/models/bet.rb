@@ -4,6 +4,7 @@ class Bet < ApplicationRecord
   belongs_to :beter, class_name: 'User'
   belongs_to :target, class_name: 'User', optional: true
   belongs_to :winner, class_name: 'User', optional: true
+  has_many   :likes, dependent: :destroy
   validates :description, presence: true
   validates :end_date, presence: true
   validates :stake, presence: true

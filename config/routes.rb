@@ -15,9 +15,9 @@ Rails.application.routes.draw do
     resources :usergroups, only: [:destroy]
     resources :bets
   end
-  get "/groups/:group_id/bets/:id/winner", to: "bets#who_won", as: :define_winner
-
-  get "/groups/:group_id/bets/:id/end-bet", to: "bets#end_bet", as: :end_bet
+  get "/bets/:id/winner", to: "bets#who_won", as: :define_winner
+  post "/bets/:id/winner", to: "bets#save_winner", as: :save_winner
+  get "/bets/:id/end-bet", to: "bets#end_bet", as: :end_bet
 
   get "/groups/:group_id/new-member", to: "usergroups#create", as: :new_member
 
@@ -30,6 +30,13 @@ Rails.application.routes.draw do
 
   # post '/push', to: 'bets#push'
   # post '/push', to: 'devise/sessions#push'
-  # post '/push', to: 'user_notifications#push', as: 'user_push'
-  # get '/push', to: 'user_notifications#notification_for_users', as: 'user_notif_push'
+  post '/push', to: 'user_notifications#push', as: 'user_push'
+  get '/push', to: 'user_notifications#notification_for_users', as: 'user_notif_push'
+
+  resources :groups do
+    resources :bets do
+      resources :likes
+    end
+  end
+
 end
