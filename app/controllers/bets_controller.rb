@@ -60,17 +60,21 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-
+  def save_winner
+    @bet = Bet.find(params[:id])
+    @bet.winner = params["group"]["winner"]
+    @bet.save
+  end
 
   private
 
   def send_notifications
     @group.users.each do |user|
-      user.send_notification_with("Un nouveau paris est en ligne")
+      user.send_notification_with("Un nouveau bet est en ligne")
     end
   end
 
   def bet_params
-    params.require(:bet).permit(:description, :end_date, :stake, :difficulty, :group_id, :creator_id, :beter_id, :target_id)
+    params.require(:bet).permit(:description, :end_date, :stake, :difficulty, :group_id, :creator_id, :beter_id, :target_id, :winner)
   end
 end
