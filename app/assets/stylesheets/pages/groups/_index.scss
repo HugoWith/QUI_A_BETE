@@ -75,7 +75,6 @@ a:hover {
 @media (min-width: 100px) and (max-width: 575px) {
     .cards-index {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
     }
 }
 
@@ -83,7 +82,6 @@ a:hover {
 @media (min-width: 576px) {
     .cards-index {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
     }
 }
 
@@ -91,7 +89,6 @@ a:hover {
 @media (min-width: 768px) {
     .cards-index {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: auto;
     }
 }
 
@@ -99,7 +96,6 @@ a:hover {
 @media (min-width: 992px) {
   .cards-index {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
   }
 }
 
@@ -107,7 +103,6 @@ a:hover {
 @media (min-width: 1200px) {
   .cards-index {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
   }
 
 
