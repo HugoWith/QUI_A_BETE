@@ -2,6 +2,7 @@
 #   skip_before_action :verify_authenticity_token
 
 
+
   def push
     current_user.update(subscription: params["subscription"])
   end
