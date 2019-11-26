@@ -5,6 +5,7 @@ class BetsController < ApplicationController
   def show
     @bet = Bet.find(params[:id])
     @group = @bet.group
+
   end
 
   def new
@@ -92,6 +93,7 @@ class BetsController < ApplicationController
     ug.save
     redirect_to group_path(@group)
   end
+
 
   private
 
