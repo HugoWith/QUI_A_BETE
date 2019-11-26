@@ -20,6 +20,7 @@ gem 'omniauth-facebook'
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
 gem 'webpush'
+gem 'awesome_print'
 # gem "watir-rails"
 # gem "omniauth-rails_csrf_protection"
 

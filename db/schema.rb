@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_150519) do
+ActiveRecord::Schema.define(version: 2019_11_26_125522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_150519) do
     t.boolean "gift_received", default: false
     t.bigint "winner_id"
     t.boolean "over", default: false
+    t.integer "like_number", default: 0
     t.index ["beter_id"], name: "index_bets_on_beter_id"
     t.index ["creator_id"], name: "index_bets_on_creator_id"
     t.index ["group_id"], name: "index_bets_on_group_id"
@@ -57,6 +58,15 @@ ActiveRecord::Schema.define(version: 2019_11_25_150519) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["invitation_id"], name: "index_invited_users_on_invitation_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "bet_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bet_id"], name: "index_likes_on_bet_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "usergroups", force: :cascade do |t|
@@ -100,6 +110,8 @@ ActiveRecord::Schema.define(version: 2019_11_25_150519) do
   add_foreign_key "bets", "users", column: "winner_id"
   add_foreign_key "invitations", "groups"
   add_foreign_key "invited_users", "invitations"
+  add_foreign_key "likes", "bets"
+  add_foreign_key "likes", "users"
   add_foreign_key "usergroups", "groups"
   add_foreign_key "usergroups", "users"
 end

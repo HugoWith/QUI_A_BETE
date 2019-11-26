@@ -62,7 +62,7 @@
               <p> <strong>Jusqu'au: </strong> <%=bet.end_date.to_formatted_s(:rfc822) %></p>
               <p> <strong>La confiance: </strong> <%=bet.difficulty%>/10</p>
               <p> <%= link_to "Voir le détail du pari", group_bet_path(@group, bet), class: "btn-home" %></p>
-              <%# <p> <%= bet.like_number  %></p> %>
+              <p> <%= bet.like_number  %></p>
             </div>
           </div>
         <% end %>
@@ -106,4 +106,9 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+
+        </div>
+>>>>>>> 10b1d4cb3e5dd0cecb88d12f2929eeb5cd353ee2
