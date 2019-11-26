@@ -12,7 +12,7 @@ class BetsController < ApplicationController
     @group = Group.find(params[:group_id])
     @users = @group.users.where.not(id: current_user.id)
     # @users.map { |user| user.nickname }
-    
+
   end
 
   def create
@@ -36,6 +36,10 @@ class BetsController < ApplicationController
   end
 
   def destroy
+    @bet = Bet.find(params[:id])
+    @group = Group.find(params[:group_id])
+    @bet.destroy
+    redirect_to group_path(@group)
   end
 
   def end_bet
