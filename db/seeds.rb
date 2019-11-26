@@ -301,7 +301,7 @@ bet6 = Bet.create!(
   group_id: frero.id,
   stake: "une chouffe 🍺",
   difficulty: 1,
-  over: true
+  over: false
 )
 
 bet7 = Bet.create!(
@@ -312,6 +312,39 @@ bet7 = Bet.create!(
   group_id: batch.id,
   stake: "une chouffe 🍺",
   difficulty: 1,
-  over: true
+  over: false
 )
 
+bet8 = Bet.create!(
+  description:"John refera tomber le tableau",
+  end_date: Date.new(2019,12,10),
+  creator_id: marin.id,
+  beter_id: john.id,
+  group_id: family.id,
+  stake: "une pinte",
+  difficulty: 3,
+  over: false
+)
+
+bet9 = Bet.create!(
+  description:"Marin gagnera 5-0 à FIFA",
+  end_date: Date.new(2019,12,14),
+  creator_id: marin.id,
+  beter_id: john.id,
+  group_id: family.id,
+  stake: "un café suspendu",
+  difficulty: 3,
+  over: false
+)
+
+bet10 = Bet.create!(
+  description:"Marin viendra un jour sans bonnet",
+  end_date: Date.new(2019,12,11),
+  creator_id: evan.id,
+  beter_id: john.id,
+  group_id: family.id,
+  stake: "un café suspendu",
+  target_id: marin.id,
+  difficulty: 3,
+  over: false
+)
