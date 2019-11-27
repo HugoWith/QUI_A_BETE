@@ -161,8 +161,36 @@
 
 
 
+.card-bet-infos-done {
+  margin: 0px 125px;
+  width: 17%;
+  opacity: 0.3;
+  background: white;
+  box-shadow: 0 0 20px rgba(245, 206, 218, 0.4);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  min-width: 800px;
+  transition: all 0.3s ease-out;
+}
+
+.card-bet-infos-done:hover {
+  opacity: 0.9;
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+  0 24px 46px var(--box-shadow-color);
+  // background-color: rgba(255, 214, 112, 0.1);
+  box-shadow: 0 0 25px rgba(245, 206, 218, 0.7);
+}
 
 
+.done-bet-container {
+      width: 90%;
+    margin: 0 auto;
+  h2 {
+    font-size: 50px;
+  }
+}
 
 
 
