@@ -28,9 +28,9 @@
     margin-bottom: 15px;
 }
 
-.form-footer .btn-home {
-    margin-bottom: 0px;
-}
+// .form-footer .btn-home {
+//     margin-bottom: 0px;
+// }
 
 .mb-4 {
     font-family: 'Baloo Bhai';
@@ -67,9 +67,9 @@
 // .col-12 {
 //     max-width: 100% !important;
 // }
-// #bet_description {
-//     height: 100px;
-// }
+#bet_description {
+    width: 500px;
+}
 
 #bet_target_id {
     width: 160px;
@@ -95,6 +95,10 @@
 
 #bet_end_date_3i {
     width: 100px;
+}
+
+.bet_end_date {
+  margin-right: 52px;
 }
 
 .required {}

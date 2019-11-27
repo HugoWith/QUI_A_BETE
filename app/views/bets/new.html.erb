@@ -26,7 +26,7 @@
         <input type="radio"> %>
         <% @group.users.each do |member| %>
           <div class="bet-form" data-id="<%= member.id %>">
-            <div class="form-header d-flex justify-content-center mb-3">
+            <div class="form-header d-flex justify-content-start mb-3">
               <%= cl_image_tag  member.pick_photo, class: "avatar-xl mr-4" %>
 
               <h4 style="margin: auto 0">Cool ! Tu paries avec <%= member.nickname %></h4>
@@ -37,26 +37,25 @@
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
                 <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true, label: "Une victime ?", label_html: { class: "bet-label"} %>
-                <div class="d-flex align-items-center" style="margin-bottom : 35px;">
+                <div class="d-flex align-items-center" >
                 <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁", label_html: { class: "bet-label"}  %>
-                <div class= "d-flex align-items-center">
+                <div class= "d-flex align-items-center" style="margin-bottom : 35px;">
                   <%= link_to image_tag('wheel.svg', id:"wheelsvg"), '#', id: "wheel_link", data: { toggle: 'modal', target: "#modal" }, class: "mr-1" %>
                   <p style="margin: auto 20px;">Tu sais pas quoi parier ? Lance la roue de l'infortune !</p>
                 </div>
                 </div>
                 <div class="d-flex justify-content-start">
-                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?", label_html: { class: "bet-label"} %>
+                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?", label_html: { class: "bet-label"}, class: "mr-2" %>
                 <%= form.input :difficulty, label_html: { class: "bet-label"}, label: "Ta confiance en la faisabilité du pari ?", collection: 1..10%>
                 </div>
 
 
             </div>
-            <div class="form-footer" style="margin-left: 400px">
-
-              <a href="/groups" class="btn-home" >Retour</a>
-              <%= form.button :submit, class: "btn-home webpush-button", value: "Crée ton bet" %>
+            <div class="d-flex">
+              <%= form.button :submit, class: "btn-home", value: "Crée ton bet", style: "margin: 0px !important;" %>
               <%# <button type="button" class="btn btn-primary">Save changes</button> %>
               <% end %>
+              <a href="/groups" class="btn-home" style="margin: 0px !important;" >Retour</a>
             </div>
           </div>
         <% end %>
