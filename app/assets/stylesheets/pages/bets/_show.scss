@@ -2,8 +2,9 @@
     text-align: center;
     max-width: 500px;
     float: right;
-    margin-right: 64px;
-    margin-top: 12px;
+    margin-top: 15px;
+    flex: grow;
+    margin-left: 25px;
 }
 
 .date-A {
@@ -19,9 +20,7 @@
     height: 350px;
 }
 
-.A-2 {
-    float: right;
-}
+.A-2 {}
 
 .B-3 {
     margin: 0 auto;
