@@ -1,26 +1,43 @@
 .visible {
-  display: none;
+  display: block;
 }
 
+
+
 .bet-en-cours {
+  display: flex;
+  margin-top: 20px;
   h2 {
     font-size: 50px;
+    margin-top: 25px;
   }
 }
+
 .card-show-bet {
+  flex-grow: 1;
   overflow: hidden;
   min-height: 100px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  padding: 20px;
-
-
   a {
     text-decoration: none;
     color: black;
 
   }
+}
+
+.scoreboard {
+  transition: 1s ease;
+  width: 0%;
+
+}
+
+.scoreboard-actived {
+  flex-grow: 1;
+  padding: 20px;
+
+
 }
 
 // .card-link {
@@ -93,13 +110,7 @@
   margin-bottom: 2px;
 }
 
-.scoreboard {
- display: block;
- position: sticky;
- top: 230px;
- margin-right: 40px;
 
-}
 
 .first_user{
   padding-bottom: 30px;
@@ -185,12 +196,15 @@
 
 
 .done-bet-container {
-      width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
   h2 {
     font-size: 50px;
   }
 }
 
-
+.create-bet {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
 
