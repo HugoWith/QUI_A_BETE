@@ -24,6 +24,8 @@ class GroupsController < ApplicationController
 
     @usergroup_score = @group.usergroups.order(score: :desc)
 
+    @not_first_user =  @usergroup_score.except[1..-1]
+
     # @group_user = @group.usergroups
 
     # @all_creator = Bet.all
