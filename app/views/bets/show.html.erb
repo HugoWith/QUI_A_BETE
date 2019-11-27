@@ -2,7 +2,9 @@
 <body>
 
   <div class="A-1">
+  <div class="d-flex justify-content-center">
     <h3 class="HZ"><%= @bet.description %></h3>
+    </div>
     <div class="avatarcont">
       <div class="I-1">
         <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-x"%>
@@ -19,13 +21,20 @@
 
     <div class="A-2">
       <div class="C-2">
-        <p><strong>Enjeu: </strong><%= @bet.stake %></p>
+      <div class="d-flex justify-content-start" style="margin-right: 180px;margin-top: 30px;">
+      <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
+      <div display-wrap>
+      <p><strong>Enjeu: </strong><%= @bet.stake %></p>
+      <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
+      <p><strong>Jusqu'au: </strong> 15 Dec 2019</p>
+            </div>
+
+      </div>
       </div>
       <div class="C-3">
-        <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
+
       </div>
     </div>
 
   </div>
-<a class="date-A"><strong>Jusqu'au: </strong> 15 Dec 2019</a>
 </body>
