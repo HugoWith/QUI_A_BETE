@@ -2,7 +2,12 @@
 <body>
 
   <div class="A-1">
-    <h3 class="HZ"><%= @bet.description %></h3>
+    <div class="d-flex justify-content-between">
+      <h3 class="HZ"><%= @bet.description %></h3>
+      <div class="flex-shrink-1">
+      <%= link_to icon("far","trash-alt"), group_bet_path, class: "tippy", method: :delete, data: { confirm: 'Sûr sûr?', "tippy-content" => "Supprimer le bet","tippy-arrow" => true }, style:"margin-top: 20px; margin-left: 6px" %>
+      </div>
+    </div>
     <div class="avatarcont">
       <div class="I-1">
         <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-x"%>
@@ -15,17 +20,22 @@
         <%= @bet.beter.nickname %>
       </div>
     </div>
-
-
     <div class="A-2">
       <div class="C-2">
-        <p><strong>Enjeu: </strong><%= @bet.stake %></p>
-      </div>
-      <div class="C-3">
-        <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
+        <div class="d-flex justify-content-start" style="margin-right: 180px;margin-top: 30px;">
+          <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
+            <div display-wrap>
+              <p><strong>Enjeu: </strong><%= @bet.stake %></p>
+              <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
+              <p><strong>Jusqu'au: </strong> 15 Dec 2019</p>
+            </div>
+        </div>
       </div>
     </div>
-
   </div>
-<a class="date-A"><strong>Jusqu'au: </strong> 15 Dec 2019</a>
+  <div class="button_bets">
+  <%= link_to "Mets fin au pari" , end_bet_path , style:"color: black", class:"btn-home"%>
+  <%= link_to "Modifies ton pari" , edit_group_bet_path(@group, @bet) , style:"color: black", class:"btn-home"%>
+  </div>
+</div>
 </body>
