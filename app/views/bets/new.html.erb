@@ -1,15 +1,17 @@
 
 <div class="row">
   <div class="col-12 col-md-12 index-group" style="height: 120vh">
-    <div class="container-index mt-4">
+    <div class="container-index">
       <div class="card-product">
         <div class= "d-flex justify-content-between mb-4">
                         <%#= render "win_wheel" %>
-          <%= link_to @group.name, group_path(@group), class: 'btn-home'%>
         </div>
       </div>
-      <h1 class = "mb-4 text-center">Crée un bet !</h1>
-      <h3 class = "mb-4 text-center">Avec qui tu paries ?</h3>
+      <h1 class = "mb-4 text-center"><%= @group.name %></h1>
+      <div class="d-flex justify-content-center">
+      <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
+      </div>
+      <h3 class = "mb-4 text-center" style="margin-top: 20px">Avec qui tu paries ?</h3>
       <div class="d-flex justify-content-between mb-4" data-controller="tabs">
         <% @group.users.each do |member| %>
           <div class= "new_bet" data-action="click->tabs#showCorrespondingForm" data-id="<%= member.id %>">
