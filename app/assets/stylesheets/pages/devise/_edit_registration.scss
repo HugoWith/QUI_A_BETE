@@ -8,3 +8,37 @@
         opacity: 100%;
     }
 }
+
+// .input-edit-profil {
+//   width: 270px;
+//   margin: 0px !important;
+// }
+
+// .label-edit-profil {
+//   width: 80px;
+
+// }
+
+.form-edit-registration {
+  margin: 0 30%;
+  input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+  .email {
+    margin-right: 0px;
+  }
+  label {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  input.btn-home {
+    width: 35%;
+    margin-right: 5px;
+    height: 20%;
+  }
+  a.btn-home {
+    width: 35%;
+    height: 20%;
+  }
+}

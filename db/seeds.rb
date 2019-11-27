@@ -17,7 +17,7 @@ puts "Groups destroyed"
 
 
 marin = User.create!(
-  nickname: "jr",
+  nickname: "Junior",
   first_name: "Marin",
   last_name: "Vanthier",
   email: "marin@marin.com",
@@ -27,7 +27,7 @@ marin = User.create!(
   )
 
 hugo = User.create!(
-  nickname: "hugoxxx",
+  nickname: "Hugoxxx",
   first_name: "Hugo",
   last_name: "Valla",
   email: "hugo@hugo.com",
@@ -37,7 +37,7 @@ hugo = User.create!(
 )
 
 alex = User.create!(
-  nickname: "dadalex",
+  nickname: "Dadalex",
   first_name: "Alex",
   last_name: "Viretti",
   email: "alex@alex.com",
@@ -47,7 +47,7 @@ alex = User.create!(
   )
 
 marine = User.create!(
-  nickname: "marineX3",
+  nickname: "MarineX3",
   first_name: "marine",
   last_name: "Diot",
   email: "marine@marine.com",
@@ -57,7 +57,7 @@ marine = User.create!(
   )
 
 lea = User.create!(
-  nickname: "belze",
+  nickname: "Belze",
   first_name: "lea",
   last_name: "bzs",
   email: "lea@lea.com",
@@ -67,7 +67,7 @@ lea = User.create!(
   )
 
 evan = User.create!(
-  nickname: "schlarz",
+  nickname: "Schlarz",
   first_name: "evan",
   last_name: "wichlarz",
   email: "evan@evan.com",
@@ -77,7 +77,7 @@ evan = User.create!(
   )
 
 simon = User.create!(
-  nickname: "geekquest",
+  nickname: "Geekquest",
   first_name: "simon",
   last_name: "stef",
   email: "simon@simon.com",
@@ -87,7 +87,7 @@ simon = User.create!(
   )
 
 jojo = User.create!(
-  nickname: "jojo",
+  nickname: "Jojo",
   first_name: "joseph",
   last_name: "blanchard",
   email: "jojo@jojo.com",
@@ -97,7 +97,7 @@ jojo = User.create!(
   )
 
 kev = User.create!(
-  nickname: "kevcha",
+  nickname: "Kevcha",
   first_name: "kevin",
   last_name: "chavanne",
   email: "kev@kev.com",
@@ -107,7 +107,7 @@ kev = User.create!(
 )
 
 john = User.create!(
-  nickname: "la frite",
+  nickname: "La frite",
   first_name: "john",
   last_name: "jomard",
   email: "john@john.com",
@@ -117,7 +117,7 @@ john = User.create!(
   )
 
 haris = User.create!(
-  nickname: "pain moelleux",
+  nickname: "Pain moelleux",
   first_name: "haris",
   last_name: "haris",
   email: "haris@haris.com",
@@ -125,7 +125,7 @@ haris = User.create!(
 
 
 axel = User.create!(
-  nickname: "arthur",
+  nickname: "Arthur",
   first_name: "axel",
   last_name: "axel",
   email: "axel@axel.com",
