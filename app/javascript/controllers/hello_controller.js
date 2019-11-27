@@ -9,7 +9,8 @@ export default class extends Controller {
     }
 
     classement() {
-        this.classementTarget.classList.toggle('visible');
+      document.querySelector('.scoreboard').classList.toggle('scoreboard-actived')
+
     }
 
     donebet() {
@@ -17,3 +18,4 @@ export default class extends Controller {
     }
 
 }
+

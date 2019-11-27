@@ -1,4 +1,4 @@
-.footer {
+.footer  {
   background: transparent;
   display: flex;
   align-items: center;
@@ -6,11 +6,13 @@
   height: 8vh;
   padding: 0px 50px;
   color: #767676;
-  bottom: 0;
   width: 100%;
   border-top: solid 1px $main-color;
+  bottom: 0;
+
 
 }
+
 .footer-links {
   display: flex;
   align-items: center;
