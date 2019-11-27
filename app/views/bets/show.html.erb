@@ -28,11 +28,14 @@
               <p><strong>Enjeu: </strong><%= @bet.stake %></p>
               <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
               <p><strong>Jusqu'au: </strong> 15 Dec 2019</p>
-              <p><strong>Mets fin au pari : </strong></p><%= link_to icon("fas","check-circle") , end_bet_path , style:"color: black"%>
             </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="button_bets">
+  <%= link_to "Mets fin au pari" , end_bet_path , style:"color: black", class:"btn-home"%>
+  <%= link_to "Modifies ton pari" , edit_group_bet_path(@group, @bet) , style:"color: black", class:"btn-home"%>
   </div>
 </div>
 </body>
