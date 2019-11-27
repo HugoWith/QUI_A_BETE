@@ -1,35 +1,32 @@
 <div class="row">
-    <div class="col-12 col-md-12 sign-up-body">
-      <div class="mt-4 container-edit-registration">
-        <h2 class= "mb-3">Modifie ton compte</h2>
+  <div class="col-12 col-md-12 sign-up-body">
+    <div class="mt-4 container-edit-registration">
+      <h2 class= "mb-3">Modifie ton compte</h2>
 
-          <%= simple_form_for(resource, as: resource_name, url: root_path, html: { method: :get }) do |f| %>
-            <%= f.error_notification %>
+      <div class="form-edit-registration">
+        <%= simple_form_for(resource, as: resource_name, url: root_path, html: { method: :get }) do |f| %>
+        <%= f.error_notification %>
+          <%= f.input :email, required: true, autofocus: true %>
 
-            <div class="form-inputs">
-              <div class=" d-flex flex-column align-items-center justify-content-between ">
-                <%= f.input :email, required: true, autofocus: true %>
-
-                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                  <p>On attend confirmation de: <%= resource.unconfirmed_email %></p>
-                <% end %>
-
-                <%= f.input :nickname,
-                            label: "Surnom",
-                            hint: "Choisis un surnom pour beter !",
-                            required: false,
-                            input_html: { autocomplete: "nouveau-surnom" } %>
-              </div>
-            </div>
-            <div>
-              <div class="form-actions">
-                <%= f.button :submit, "Valider", class: "btn" %>
-              </div>
-              <div class="d-flex align-items-center">
-                <%= link_to "Retour", :back, class: "btn"%>
-              </div>
-            </div>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p>On attend confirmation de: <%= resource.unconfirmed_email %></p>
           <% end %>
+
+          <%= f.input :nickname,
+                      label: "Surnom",
+                      hint: "Choisis un surnom pour beter !",
+                      required: false %>
+          <div class="d-flex">
+            <%= f.button :submit, "Valider", class: "btn-home" %>
+            <%= link_to "Retour", :back, class: "btn btn-home"%>
+          </div>
+        <% end %>
       </div>
+
     </div>
+  </div>
 </div>
+<!--
+
+-->
+<!-- d-flex flex-column align-items-center justify-content-between  -->
