@@ -25,9 +25,9 @@
         <div class="d-flex justify-content-start" style="margin-right: 180px;margin-top: 30px;">
           <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
             <div display-wrap>
-              <p><strong>Enjeu: </strong><%= @bet.stake %></p>
-              <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
-              <p><strong>Jusqu'au: </strong> 15 Dec 2019</p>
+              <p><i class="fas fa-gift"></i><%= @bet.stake %></p>
+              <p><i class="fas fa-theater-masks"></i><%= @bet.difficulty %> / 10</p>
+              <p><i class="fas fa-hourglass-half"></i> <%=@bet.end_date.to_formatted_s(:rfc822)%> </p>
             </div>
         </div>
       </div>
