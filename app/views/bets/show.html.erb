@@ -25,17 +25,27 @@
         <div class="d-flex justify-content-start" style="margin-right: 180px;margin-top: 30px;">
           <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
             <div display-wrap>
-              <p><strong>Enjeu: </strong><%= @bet.stake %></p>
-              <p><strong>Niveau de confiance: </strong><%= @bet.difficulty %> / 10</p>
-              <p><strong>Jusqu'au: </strong> 15 Dec 2019</p>
+              <p><i class="fas fa-gift"></i><%= @bet.stake %></p>
+              <p><i class="fas fa-theater-masks"></i><%= @bet.difficulty %> / 10</p>
+              <p><i class="fas fa-hourglass-half"></i> <%=@bet.end_date.to_formatted_s(:rfc822)%> </p>
+              <p><strong><i class="fas fa-heart"></i><%= @bet.likes.count %></strong></p>
+              <div class="d-flex justify-content-center">
+
+                  <% pre_like = @bet.likes.find { |like| like.user_id == current_user.id} %>
+                  <% if pre_like %>
+                  <%= button_to 'Unlike',  group_bet_like_path(@group, @bet, pre_like), method: :delete, class: 'btn btn-home' %>
+                  <% else %>
+                  <%= button_to 'Like',  group_bet_likes_path(@group, @bet), method: :post, class: 'btn btn-home' %>
+                  <% end %>
+                </div>
             </div>
         </div>
       </div>
     </div>
   </div>
   <div class="button_bets">
-  <%= link_to "Mets fin au pari" , end_bet_path , style:"color: black", class:"btn-home"%>
-  <%= link_to "Modifies ton pari" , edit_group_bet_path(@group, @bet) , style:"color: black", class:"btn-home"%>
+  <%= link_to "Mets fin au pari" , end_bet_path , class:"btn btn-home"%>
+  <%= link_to "Modifies ton pari" , edit_group_bet_path(@group, @bet) , class:"btn btn-home"%>
   </div>
 </div>
 </body>

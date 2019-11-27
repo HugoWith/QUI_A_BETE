@@ -119,7 +119,7 @@ const initRoll = () => {
             }
             rotation += 90 - Math.round(ps / 2);
             vis.transition()
-                .duration(10000)
+                .duration(8000)
                 .attrTween("transform", rotTween)
                 .each("end", function() {
                     //mark question as seen
