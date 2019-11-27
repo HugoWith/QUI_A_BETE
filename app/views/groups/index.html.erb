@@ -17,7 +17,7 @@
             </div>
             <div class= "pr-2 pt-2">
             <%if @groups.include?(user_group.group) %>
-                <%= link_to icon("far","trash-alt"), user_group.group, method: :delete, data: { confirm: 'Sûr sûr?' } %>
+                <%= link_to icon("far","trash-alt"), user_group.group, class: "tippy", method: :delete, data: { confirm: 'Sûr sûr?', "tippy-content" => "Supprimer le crew","tippy-arrow" => true } %>
             <% end %>
             <%  %>
             <%= link_to "", group_usergroup_path(user_group.group, user_group), method: :delete, class: "fas fa-sign-out-alt tippy", data: { "tippy-content" => "Quitter le crew","tippy-arrow" => true} %>
