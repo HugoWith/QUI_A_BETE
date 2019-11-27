@@ -4,16 +4,14 @@
     margin: 0 auto;
 }
 
+.bet-label {
+    font-size: 18px;
+}
+
 .cardds {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 54px;
-}
-
-.avatar-xl:hover {
-    opacity: 30%;
-    width: 90px;
-    height: 90px;
 }
 
 .bet-form {
@@ -30,10 +28,9 @@
     margin-bottom: 15px;
 }
 
-.form-footer .btn-home {
-    margin-bottom: 0px;
-}
-
+// .form-footer .btn-home {
+//     margin-bottom: 0px;
+// }
 .mb-4 {
     font-family: 'Baloo Bhai';
 }
@@ -70,7 +67,7 @@
 //     max-width: 100% !important;
 // }
 #bet_description {
-    height: 100px;
+    width: 500px;
 }
 
 #bet_target_id {
@@ -88,15 +85,32 @@
 }
 
 #bet_end_date_1i {
-    width: 200px;
+    width: 100px;
 }
 
 #bet_end_date_2i {
-    width: 200px;
+    width: 150px;
 }
 
 #bet_end_date_3i {
-    width: 200px;
+    width: 100px;
+}
+
+.modal-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bet_end_date {
+    margin-right: 52px;
 }
 
 .required {}
+
+.new-bet-form input {
+    margin-bottom: 35px;
+}
+
+.new-bet-form select {
+    margin-bottom: 35px;
+}

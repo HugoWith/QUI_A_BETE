@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:3000/groups/56/bets/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Qui a beté ?</title>
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/k6g81xj/logoqabweb.png">
+
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+  <meta name="action-cable-url" content="/cable">
+
+  <link rel="stylesheet" media="all" href="./Qui a beté __files/application-7efc05031b61aa518033736ec0b9cf53bf7a3314530b27ebbcce05af2a7558cf.css">
+   <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+<style>.tippy-tooltip[data-animation=fade][data-state=hidden]{opacity:0}.tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}.tippy-popper{pointer-events:none;max-width:calc(100vw - 10px);transition-timing-function:cubic-bezier(.165,.84,.44,1);transition-property:transform}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;background-color:#333;transition-property:visibility,opacity,transform;outline:0}.tippy-tooltip[data-placement^=top]>.tippy-arrow{border-width:8px 8px 0;border-top-color:#333;margin:0 3px;transform-origin:50% 0;bottom:-7px}.tippy-tooltip[data-placement^=bottom]>.tippy-arrow{border-width:0 8px 8px;border-bottom-color:#333;margin:0 3px;transform-origin:50% 7px;top:-7px}.tippy-tooltip[data-placement^=left]>.tippy-arrow{border-width:8px 0 8px 8px;border-left-color:#333;margin:3px 0;transform-origin:0 50%;right:-7px}.tippy-tooltip[data-placement^=right]>.tippy-arrow{border-width:8px 8px 8px 0;border-right-color:#333;margin:3px 0;transform-origin:7px 50%;left:-7px}.tippy-tooltip[data-interactive][data-state=visible]{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{position:absolute;border-color:transparent;border-style:solid}.tippy-content{padding:5px 9px}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRpcHB5LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx1REFBdUQsU0FBUyxDQUFDLFdBQVcsd0JBQXdCLENBQUMsdUNBQXVDLENBQUMsY0FBYyxtQkFBbUIsQ0FBQyw0QkFBNEIsQ0FBQyx1REFBdUQsQ0FBQyw2QkFBNkIsQ0FBQyxlQUFlLGlCQUFpQixDQUFDLFVBQVUsQ0FBQyxpQkFBaUIsQ0FBQyxjQUFjLENBQUMsZUFBZSxDQUFDLHFCQUFxQixDQUFDLGdEQUFnRCxDQUFDLFNBQVMsQ0FBQyxpREFBaUQsc0JBQXNCLENBQUMscUJBQXFCLENBQUMsWUFBWSxDQUFDLHNCQUFzQixDQUFDLFdBQVcsQ0FBQyxvREFBb0Qsc0JBQXNCLENBQUMsd0JBQXdCLENBQUMsWUFBWSxDQUFDLHdCQUF3QixDQUFDLFFBQVEsQ0FBQyxrREFBa0QsMEJBQTBCLENBQUMsc0JBQXNCLENBQUMsWUFBWSxDQUFDLHNCQUFzQixDQUFDLFVBQVUsQ0FBQyxtREFBbUQsMEJBQTBCLENBQUMsdUJBQXVCLENBQUMsWUFBWSxDQUFDLHdCQUF3QixDQUFDLFNBQVMsQ0FBQyxxREFBcUQsbUJBQW1CLENBQUMsaURBQWlELHlEQUF5RCxDQUFDLGFBQWEsaUJBQWlCLENBQUMsd0JBQXdCLENBQUMsa0JBQWtCLENBQUMsZUFBZSxlQUFlIiwiZmlsZSI6InRpcHB5LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aXBweS10b29sdGlwW2RhdGEtYW5pbWF0aW9uPWZhZGVdW2RhdGEtc3RhdGU9aGlkZGVuXXtvcGFjaXR5OjB9LnRpcHB5LWlPU3tjdXJzb3I6cG9pbnRlciFpbXBvcnRhbnQ7LXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOnRyYW5zcGFyZW50fS50aXBweS1wb3BwZXJ7cG9pbnRlci1ldmVudHM6bm9uZTttYXgtd2lkdGg6Y2FsYygxMDB2dyAtIDEwcHgpO3RyYW5zaXRpb24tdGltaW5nLWZ1bmN0aW9uOmN1YmljLWJlemllciguMTY1LC44NCwuNDQsMSk7dHJhbnNpdGlvbi1wcm9wZXJ0eTp0cmFuc2Zvcm19LnRpcHB5LXRvb2x0aXB7cG9zaXRpb246cmVsYXRpdmU7Y29sb3I6I2ZmZjtib3JkZXItcmFkaXVzOjRweDtmb250LXNpemU6MTRweDtsaW5lLWhlaWdodDoxLjQ7YmFja2dyb3VuZC1jb2xvcjojMzMzO3RyYW5zaXRpb24tcHJvcGVydHk6dmlzaWJpbGl0eSxvcGFjaXR5LHRyYW5zZm9ybTtvdXRsaW5lOjB9LnRpcHB5LXRvb2x0aXBbZGF0YS1wbGFjZW1lbnRePXRvcF0+LnRpcHB5LWFycm93e2JvcmRlci13aWR0aDo4cHggOHB4IDA7Ym9yZGVyLXRvcC1jb2xvcjojMzMzO21hcmdpbjowIDNweDt0cmFuc2Zvcm0tb3JpZ2luOjUwJSAwO2JvdHRvbTotN3B4fS50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj1ib3R0b21dPi50aXBweS1hcnJvd3tib3JkZXItd2lkdGg6MCA4cHggOHB4O2JvcmRlci1ib3R0b20tY29sb3I6IzMzMzttYXJnaW46MCAzcHg7dHJhbnNmb3JtLW9yaWdpbjo1MCUgN3B4O3RvcDotN3B4fS50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj1sZWZ0XT4udGlwcHktYXJyb3d7Ym9yZGVyLXdpZHRoOjhweCAwIDhweCA4cHg7Ym9yZGVyLWxlZnQtY29sb3I6IzMzMzttYXJnaW46M3B4IDA7dHJhbnNmb3JtLW9yaWdpbjowIDUwJTtyaWdodDotN3B4fS50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj1yaWdodF0+LnRpcHB5LWFycm93e2JvcmRlci13aWR0aDo4cHggOHB4IDhweCAwO2JvcmRlci1yaWdodC1jb2xvcjojMzMzO21hcmdpbjozcHggMDt0cmFuc2Zvcm0tb3JpZ2luOjdweCA1MCU7bGVmdDotN3B4fS50aXBweS10b29sdGlwW2RhdGEtaW50ZXJhY3RpdmVdW2RhdGEtc3RhdGU9dmlzaWJsZV17cG9pbnRlci1ldmVudHM6YXV0b30udGlwcHktdG9vbHRpcFtkYXRhLWluZXJ0aWFdW2RhdGEtc3RhdGU9dmlzaWJsZV17dHJhbnNpdGlvbi10aW1pbmctZnVuY3Rpb246Y3ViaWMtYmV6aWVyKC41NCwxLjUsLjM4LDEuMTEpfS50aXBweS1hcnJvd3twb3NpdGlvbjphYnNvbHV0ZTtib3JkZXItY29sb3I6dHJhbnNwYXJlbnQ7Ym9yZGVyLXN0eWxlOnNvbGlkfS50aXBweS1jb250ZW50e3BhZGRpbmc6NXB4IDlweH0iXX0= */</style><style>.tippy-tooltip[data-placement^=top]>.tippy-backdrop{transform-origin:0 25%;border-radius:40% 40% 0 0}.tippy-tooltip[data-placement^=top]>.tippy-backdrop[data-state=visible]{transform:scale(1) translate(-50%,-55%)}.tippy-tooltip[data-placement^=top]>.tippy-backdrop[data-state=hidden]{transform:scale(.2) translate(-50%,-45%)}.tippy-tooltip[data-placement^=bottom]>.tippy-backdrop{transform-origin:0 -50%;border-radius:0 0 30% 30%}.tippy-tooltip[data-placement^=bottom]>.tippy-backdrop[data-state=visible]{transform:scale(1) translate(-50%,-45%)}.tippy-tooltip[data-placement^=bottom]>.tippy-backdrop[data-state=hidden]{transform:scale(.2) translate(-50%)}.tippy-tooltip[data-placement^=left]>.tippy-backdrop{transform-origin:50% 0;border-radius:50% 0 0 50%}.tippy-tooltip[data-placement^=left]>.tippy-backdrop[data-state=visible]{transform:scale(1) translate(-50%,-50%)}.tippy-tooltip[data-placement^=left]>.tippy-backdrop[data-state=hidden]{transform:scale(.2) translate(-75%,-50%)}.tippy-tooltip[data-placement^=right]>.tippy-backdrop{transform-origin:-50% 0;border-radius:0 50% 50% 0}.tippy-tooltip[data-placement^=right]>.tippy-backdrop[data-state=visible]{transform:scale(1) translate(-50%,-50%)}.tippy-tooltip[data-placement^=right]>.tippy-backdrop[data-state=hidden]{transform:scale(.2) translate(-25%,-50%)}.tippy-tooltip[data-animatefill]{background-color:transparent!important}.tippy-backdrop{position:absolute;background-color:#333;border-radius:50%;width:calc(110% + 32px);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop[data-state=hidden]{opacity:0}.tippy-backdrop:after{content:"";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhY2tkcm9wLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxvREFBb0Qsc0JBQXNCLENBQUMseUJBQXlCLENBQUMsd0VBQXdFLHVDQUF1QyxDQUFDLHVFQUF1RSx3Q0FBd0MsQ0FBQyx1REFBdUQsdUJBQXVCLENBQUMseUJBQXlCLENBQUMsMkVBQTJFLHVDQUF1QyxDQUFDLDBFQUEwRSxtQ0FBbUMsQ0FBQyxxREFBcUQsc0JBQXNCLENBQUMseUJBQXlCLENBQUMseUVBQXlFLHVDQUF1QyxDQUFDLHdFQUF3RSx3Q0FBd0MsQ0FBQyxzREFBc0QsdUJBQXVCLENBQUMseUJBQXlCLENBQUMsMEVBQTBFLHVDQUF1QyxDQUFDLHlFQUF5RSx3Q0FBd0MsQ0FBQyxpQ0FBaUMsc0NBQXNDLENBQUMsZ0JBQWdCLGlCQUFpQixDQUFDLHFCQUFxQixDQUFDLGlCQUFpQixDQUFDLHVCQUF1QixDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsVUFBVSxDQUFDLDJDQUEyQyxDQUFDLGtDQUFrQyxDQUFDLDBCQUEwQixDQUFDLG1DQUFtQyxTQUFTLENBQUMsc0JBQXNCLFVBQVUsQ0FBQyxVQUFVLENBQUMsZ0JBQWdCLENBQUMsK0JBQStCLDJCQUEyQixDQUFDLG1CQUFtQixDQUFDLGtEQUFrRCxTQUFTIiwiZmlsZSI6ImJhY2tkcm9wLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj10b3BdPi50aXBweS1iYWNrZHJvcHt0cmFuc2Zvcm0tb3JpZ2luOjAgMjUlO2JvcmRlci1yYWRpdXM6NDAlIDQwJSAwIDB9LnRpcHB5LXRvb2x0aXBbZGF0YS1wbGFjZW1lbnRePXRvcF0+LnRpcHB5LWJhY2tkcm9wW2RhdGEtc3RhdGU9dmlzaWJsZV17dHJhbnNmb3JtOnNjYWxlKDEpIHRyYW5zbGF0ZSgtNTAlLC01NSUpfS50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj10b3BdPi50aXBweS1iYWNrZHJvcFtkYXRhLXN0YXRlPWhpZGRlbl17dHJhbnNmb3JtOnNjYWxlKC4yKSB0cmFuc2xhdGUoLTUwJSwtNDUlKX0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49Ym90dG9tXT4udGlwcHktYmFja2Ryb3B7dHJhbnNmb3JtLW9yaWdpbjowIC01MCU7Ym9yZGVyLXJhZGl1czowIDAgMzAlIDMwJX0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49Ym90dG9tXT4udGlwcHktYmFja2Ryb3BbZGF0YS1zdGF0ZT12aXNpYmxlXXt0cmFuc2Zvcm06c2NhbGUoMSkgdHJhbnNsYXRlKC01MCUsLTQ1JSl9LnRpcHB5LXRvb2x0aXBbZGF0YS1wbGFjZW1lbnRePWJvdHRvbV0+LnRpcHB5LWJhY2tkcm9wW2RhdGEtc3RhdGU9aGlkZGVuXXt0cmFuc2Zvcm06c2NhbGUoLjIpIHRyYW5zbGF0ZSgtNTAlKX0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49bGVmdF0+LnRpcHB5LWJhY2tkcm9we3RyYW5zZm9ybS1vcmlnaW46NTAlIDA7Ym9yZGVyLXJhZGl1czo1MCUgMCAwIDUwJX0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49bGVmdF0+LnRpcHB5LWJhY2tkcm9wW2RhdGEtc3RhdGU9dmlzaWJsZV17dHJhbnNmb3JtOnNjYWxlKDEpIHRyYW5zbGF0ZSgtNTAlLC01MCUpfS50aXBweS10b29sdGlwW2RhdGEtcGxhY2VtZW50Xj1sZWZ0XT4udGlwcHktYmFja2Ryb3BbZGF0YS1zdGF0ZT1oaWRkZW5de3RyYW5zZm9ybTpzY2FsZSguMikgdHJhbnNsYXRlKC03NSUsLTUwJSl9LnRpcHB5LXRvb2x0aXBbZGF0YS1wbGFjZW1lbnRePXJpZ2h0XT4udGlwcHktYmFja2Ryb3B7dHJhbnNmb3JtLW9yaWdpbjotNTAlIDA7Ym9yZGVyLXJhZGl1czowIDUwJSA1MCUgMH0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49cmlnaHRdPi50aXBweS1iYWNrZHJvcFtkYXRhLXN0YXRlPXZpc2libGVde3RyYW5zZm9ybTpzY2FsZSgxKSB0cmFuc2xhdGUoLTUwJSwtNTAlKX0udGlwcHktdG9vbHRpcFtkYXRhLXBsYWNlbWVudF49cmlnaHRdPi50aXBweS1iYWNrZHJvcFtkYXRhLXN0YXRlPWhpZGRlbl17dHJhbnNmb3JtOnNjYWxlKC4yKSB0cmFuc2xhdGUoLTI1JSwtNTAlKX0udGlwcHktdG9vbHRpcFtkYXRhLWFuaW1hdGVmaWxsXXtiYWNrZ3JvdW5kLWNvbG9yOnRyYW5zcGFyZW50IWltcG9ydGFudH0udGlwcHktYmFja2Ryb3B7cG9zaXRpb246YWJzb2x1dGU7YmFja2dyb3VuZC1jb2xvcjojMzMzO2JvcmRlci1yYWRpdXM6NTAlO3dpZHRoOmNhbGMoMTEwJSArIDMycHgpO2xlZnQ6NTAlO3RvcDo1MCU7ei1pbmRleDotMTt0cmFuc2l0aW9uOmFsbCBjdWJpYy1iZXppZXIoLjQ2LC4xLC41MiwuOTgpOy13ZWJraXQtYmFja2ZhY2UtdmlzaWJpbGl0eTpoaWRkZW47YmFja2ZhY2UtdmlzaWJpbGl0eTpoaWRkZW59LnRpcHB5LWJhY2tkcm9wW2RhdGEtc3RhdGU9aGlkZGVuXXtvcGFjaXR5OjB9LnRpcHB5LWJhY2tkcm9wOmFmdGVye2NvbnRlbnQ6XCJcIjtmbG9hdDpsZWZ0O3BhZGRpbmctdG9wOjEwMCV9LnRpcHB5LWJhY2tkcm9wKy50aXBweS1jb250ZW50e3RyYW5zaXRpb24tcHJvcGVydHk6b3BhY2l0eTt3aWxsLWNoYW5nZTpvcGFjaXR5fS50aXBweS1iYWNrZHJvcCsudGlwcHktY29udGVudFtkYXRhLXN0YXRlPWhpZGRlbl17b3BhY2l0eTowfSJdfQ== */</style><style type="text/css">/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+#wanteeed html, #wanteeed body, #wanteeed div, #wanteeed span, #wanteeed applet, #wanteeed object, #wanteeed iframe,
+#wanteeed h1, #wanteeed h2, #wanteeed h3, #wanteeed h4, #wanteeed h5, #wanteeed h6, #wanteeed p, #wanteeed blockquote, #wanteeed pre,
+#wanteeed a, #wanteeed abbr, #wanteeed acronym, #wanteeed address, #wanteeed big, #wanteeed cite, #wanteeed code,
+#wanteeed del, #wanteeed dfn, #wanteeed em, #wanteeed img, #wanteeed ins, #wanteeed kbd, #wanteeed q, #wanteeed s, #wanteeed samp,
+#wanteeed small, #wanteeed strike, #wanteeed strong, #wanteeed sub, #wanteeed sup, #wanteeed tt, #wanteeed var,
+#wanteeed b, #wanteeed u, #wanteeed i, #wanteeed center,
+#wanteeed dl, #wanteeed dt, #wanteeed dd, #wanteeed ol, #wanteeed ul, #wanteeed li,
+#wanteeed fieldset, #wanteeed form, #wanteeed label, #wanteeed legend,
+#wanteeed table, #wanteeed caption, #wanteeed tbody, #wanteeed tfoot, #wanteeed thead, #wanteeed tr, #wanteeed th, #wanteeed td,
+#wanteeed article, #wanteeed aside, #wanteeed canvas, #wanteeed details, #wanteeed embed, 
+#wanteeed figure, #wanteeed figcaption, #wanteeed footer, #wanteeed header, #wanteeed hgroup, 
+#wanteeed menu, #wanteeed nav, #wanteeed output, #wanteeed ruby, #wanteeed section, #wanteeed summary,
+#wanteeed time, #wanteeed mark, #wanteeed audio, #wanteeed video, #wanteeed button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*font-size: 100%;
+	font: inherit;*/
+	font:13px "Verdana", sans-serif;
+	text-align:left;
+	vertical-align: baseline;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing:initial;
+	box-sizing:initial;
+	box-shadow: none;
+	color:#555555;
+	text-transform:none;
+}
+/* HTML5 display-role reset for older browsers */
+#wanteeed article, #wanteeed aside, #wanteeed details, #wanteeed figcaption, #wanteeed figure, 
+#wanteeed footer, #wanteeed header, #wanteeed hgroup, #wanteeed menu, #wanteeed nav, #wanteeed section {
+	display: block;
+}
+#wanteeed body {
+	line-height: 1;
+}
+#wanteeed ol, #wanteeed ul {
+	list-style: none;
+}
+#wanteeed blockquote, #wanteeed q {
+	quotes: none;
+}
+#wanteeed blockquote:before, #wanteeed blockquote:after,
+#wanteeed q:before, #wanteeed q:after {
+	content: '';
+	content: none;
+}
+#wanteeed table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*report*/
+
+#wanteeed-report html, #wanteeed-report body, #wanteeed-report div, #wanteeed-report span, #wanteeed-report applet, #wanteeed-report object, #wanteeed-report iframe,
+#wanteeed-report h1, #wanteeed-report h2, #wanteeed-report h3, #wanteeed-report h4, #wanteeed-report h5, #wanteeed-report h6, #wanteeed-report p, #wanteeed-report blockquote, #wanteeed-report pre,
+#wanteeed-report a, #wanteeed-report abbr, #wanteeed-report acronym, #wanteeed-report address, #wanteeed-report big, #wanteeed-report cite, #wanteeed-report code,
+#wanteeed-report del, #wanteeed-report dfn, #wanteeed-report em, #wanteeed-report img, #wanteeed-report ins, #wanteeed-report kbd, #wanteeed-report q, #wanteeed-report s, #wanteeed-report samp,
+#wanteeed-report small, #wanteeed-report strike, #wanteeed-report strong, #wanteeed-report sub, #wanteeed-report sup, #wanteeed-report tt, #wanteeed-report var,
+#wanteeed-report b, #wanteeed-report u, #wanteeed-report i, #wanteeed-report center,
+#wanteeed-report dl, #wanteeed-report dt, #wanteeed-report dd, #wanteeed-report ol, #wanteeed-report ul, #wanteeed-report li,
+#wanteeed-report fieldset, #wanteeed-report form, #wanteeed-report label, #wanteeed-report legend,
+#wanteeed-report table, #wanteeed-report caption, #wanteeed-report tbody, #wanteeed-report tfoot, #wanteeed-report thead, #wanteeed-report tr, #wanteeed-report th, #wanteeed-report td,
+#wanteeed-report article, #wanteeed-report aside, #wanteeed-report canvas, #wanteeed-report details, #wanteeed-report embed, 
+#wanteeed-report figure, #wanteeed-report figcaption, #wanteeed-report footer, #wanteeed-report header, #wanteeed-report hgroup, 
+#wanteeed-report menu, #wanteeed-report nav, #wanteeed-report output, #wanteeed-report ruby, #wanteeed-report section, #wanteeed-report summary,
+#wanteeed-report time, #wanteeed-report mark, #wanteeed-report audio, #wanteeed-report video, #wanteeed-report button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*font-size: 100%;*/
+	text-align:left;
+	font:13px "Verdana", sans-serif;
+	vertical-align: baseline;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing:initial;
+	box-sizing:initial;
+	box-shadow: none;
+	color:#555555;
+	text-transform:none;
+}
+/* HTML5 display-role reset for older browsers */
+#wanteeed-report article, #wanteeed-report aside, #wanteeed-report details, #wanteeed-report figcaption, #wanteeed-report figure, 
+#wanteeed-report footer, #wanteeed-report header, #wanteeed-report hgroup, #wanteeed-report menu, #wanteeed-report nav, #wanteeed-report section {
+	display: block;
+}
+#wanteeed-report body {
+	line-height: 1;
+}
+#wanteeed-report ol, #wanteeed-report ul {
+	list-style: none;
+}
+#wanteeed-report blockquote, #wanteeed-report q {
+	quotes: none;
+}
+#wanteeed-report blockquote:before, #wanteeed-report blockquote:after,
+#wanteeed-report q:before, #wanteeed-report q:after {
+	content: '';
+	content: none;
+}
+
+/*main item **/
+
+
+.wanteeed-main-item html, .wanteeed-main-item body, .wanteeed-main-item div, .wanteeed-main-item span, .wanteeed-main-item applet, .wanteeed-main-item object, .wanteeed-main-item iframe,
+.wanteeed-main-item h1, .wanteeed-main-item h2, .wanteeed-main-item h3, .wanteeed-main-item h4, .wanteeed-main-item h5, .wanteeed-main-item h6, .wanteeed-main-item p, .wanteeed-main-item blockquote, .wanteeed-main-item pre,
+.wanteeed-main-item a, .wanteeed-main-item abbr, .wanteeed-main-item acronym, .wanteeed-main-item address, .wanteeed-main-item big, .wanteeed-main-item cite, .wanteeed-main-item code,
+.wanteeed-main-item del, .wanteeed-main-item dfn, .wanteeed-main-item em, .wanteeed-main-item img, .wanteeed-main-item ins, .wanteeed-main-item kbd, .wanteeed-main-item q, .wanteeed-main-item s, .wanteeed-main-item samp,
+.wanteeed-main-item small, .wanteeed-main-item strike, .wanteeed-main-item strong, .wanteeed-main-item sub, .wanteeed-main-item sup, .wanteeed-main-item tt, .wanteeed-main-item var,
+.wanteeed-main-item b, .wanteeed-main-item u, .wanteeed-main-item i, .wanteeed-main-item center,
+.wanteeed-main-item dl, .wanteeed-main-item dt, .wanteeed-main-item dd, .wanteeed-main-item ol, .wanteeed-main-item ul, .wanteeed-main-item li,
+.wanteeed-main-item fieldset, .wanteeed-main-item form, .wanteeed-main-item label, .wanteeed-main-item legend,
+.wanteeed-main-item table, .wanteeed-main-item caption, .wanteeed-main-item tbody, .wanteeed-main-item tfoot, .wanteeed-main-item thead, .wanteeed-main-item tr, .wanteeed-main-item th, .wanteeed-main-item td,
+.wanteeed-main-item article, .wanteeed-main-item aside, .wanteeed-main-item canvas, .wanteeed-main-item details, .wanteeed-main-item embed, 
+.wanteeed-main-item figure, .wanteeed-main-item figcaption, .wanteeed-main-item footer, .wanteeed-main-item header, .wanteeed-main-item hgroup, 
+.wanteeed-main-item menu, .wanteeed-main-item nav, .wanteeed-main-item output, .wanteeed-main-item ruby, .wanteeed-main-item section, .wanteeed-main-item summary,
+.wanteeed-main-item time, .wanteeed-main-item mark, .wanteeed-main-item audio, .wanteeed-main-item video, .wanteeed-main-item button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*font-size: 100%;*/
+	text-align:left;
+	font:13px "Verdana", sans-serif;
+	vertical-align: baseline;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing:initial;
+	box-sizing:initial;
+	box-shadow: none;
+	color:#555555;
+	text-transform:none;
+}
+/* HTML5 display-role reset for older browsers */
+.wanteeed-main-item article, .wanteeed-main-item aside, .wanteeed-main-item details, .wanteeed-main-item figcaption, .wanteeed-main-item figure, 
+.wanteeed-main-item footer, .wanteeed-main-item header, .wanteeed-main-item hgroup, .wanteeed-main-item menu, .wanteeed-main-item nav, .wanteeed-main-item section {
+	display: block;
+}
+.wanteeed-main-item body {
+	line-height: 1;
+}
+.wanteeed-main-item ol, .wanteeed-main-item ul {
+	list-style: none;
+}
+.wanteeed-main-item blockquote, .wanteeed-main-item q {
+	quotes: none;
+}
+.wanteeed-main-item blockquote:before, .wanteeed-main-item blockquote:after,
+.wanteeed-main-item q:before, .wanteeed-main-item q:after {
+	content: '';
+	content: none;
+}
+
+
+
+
+#wanteeed-report table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#wanteeed-progress-bar div  {
+    background-size: 30px 30px;
+	color:white;
+	background-color:rgb(209, 43, 53);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);            
+    
+    -webkit-animation: animate-stripes 3s linear infinite;             
+}
+
+
+@-webkit-keyframes animate-stripes
+{
+    from {
+        background-position: 0 0;
+    }
+    to {
+       background-position: 60px 0;
+    }
+}</style><style type="text/css">/* ========================================================================
+ * bootstrap-tour - v0.10.1
+ * http://bootstraptour.com
+ * ========================================================================
+ * Copyright 2012-2013 Ulrich Sossou
+ *
+ * ========================================================================
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================================
+ */
+
+/*!
+ * Bootstrap v3.1.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+
+
+.popover-wanteeed html, .popover-wanteeed body, .popover-wanteeed div, .popover-wanteeed span, .popover-wanteeed applet, .popover-wanteeed object, .popover-wanteeed iframe,
+.popover-wanteeed h1, .popover-wanteeed h2, .popover-wanteeed h3, .popover-wanteeed h4, .popover-wanteeed h5, .popover-wanteeed h6, .popover-wanteeed p, .popover-wanteeed blockquote, .popover-wanteeed pre,
+.popover-wanteeed a, .popover-wanteeed abbr, .popover-wanteeed acronym, .popover-wanteeed address, .popover-wanteeed big, .popover-wanteeed cite, .popover-wanteeed code,
+.popover-wanteeed del, .popover-wanteeed dfn, .popover-wanteeed em, .popover-wanteeed img, .popover-wanteeed ins, .popover-wanteeed kbd, .popover-wanteeed q, .popover-wanteeed s, .popover-wanteeed samp,
+.popover-wanteeed small, .popover-wanteeed strike, .popover-wanteeed strong, .popover-wanteeed sub, .popover-wanteeed sup, .popover-wanteeed tt, .popover-wanteeed var,
+.popover-wanteeed b, .popover-wanteeed u, .popover-wanteeed i, .popover-wanteeed center,
+.popover-wanteeed dl, .popover-wanteeed dt, .popover-wanteeed dd, .popover-wanteeed ol, .popover-wanteeed ul, .popover-wanteeed li,
+.popover-wanteeed fieldset, .popover-wanteeed form, .popover-wanteeed label, .popover-wanteeed legend,
+.popover-wanteeed table, .popover-wanteeed caption, .popover-wanteeed tbody, .popover-wanteeed tfoot, .popover-wanteeed thead, .popover-wanteeed tr, .popover-wanteeed th, .popover-wanteeed td,
+.popover-wanteeed article, .popover-wanteeed aside, .popover-wanteeed canvas, .popover-wanteeed details, .popover-wanteeed embed,
+.popover-wanteeed figure, .popover-wanteeed figcaption, .popover-wanteeed footer, .popover-wanteeed header, .popover-wanteeed hgroup,
+.popover-wanteeed menu, .popover-wanteeed nav, .popover-wanteeed output, .popover-wanteeed ruby, .popover-wanteeed section, .popover-wanteeed summary,
+.popover-wanteeed time, .popover-wanteeed mark, .popover-wanteeed audio, .popover-wanteeed video, .popover-wanteeed button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*font-size: 100%;
+	font: inherit;*/
+	font:13px "Verdana", sans-serif;
+	text-align:left;
+	vertical-align: baseline;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing:initial;
+	box-sizing:initial;
+	box-shadow: none;
+	color:#555555;
+	text-transform:none;
+	background:none;
+	bottom:inherit ;
+}
+/* HTML5 display-role reset for older browsers *//*
+.popover-wanteeed article, .popover-wanteeed aside, .popover-wanteeed details, .popover-wanteeed figcaption, .popover-wanteeed figure,
+.popover-wanteeed footer, .popover-wanteeed header, .popover-wanteeed hgroup, .popover-wanteeed menu, .popover-wanteeed nav, .popover-wanteeed section {
+	display: block;
+}
+.popover-wanteeed body {
+	line-height: 1;
+}
+.popover-wanteeed ol, .popover-wanteeed ul {
+	list-style: none;
+}
+.popover-wanteeed blockquote, .popover-wanteeed q {
+	quotes: none;
+}
+.popover-wanteeed blockquote:before, .popover-wanteeed blockquote:after,
+.popover-wanteeed q:before, .popover-wanteeed q:after {
+	content: '';
+	content: none;
+}
+.popover-wanteeed table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
+
+
+
+.popover-wanteeed .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popover-wanteeed .btn:focus,
+.popover-wanteeed .btn:active:focus,
+.popover-wanteeed .btn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.popover-wanteeed .btn:hover,
+.popover-wanteeed .btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.popover-wanteeed .btn:active,
+.popover-wanteeed .btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.popover-wanteeed .btn.disabled,
+.popover-wanteeed .btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.popover-wanteeed .btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.popover-wanteeed .btn-default:hover,
+.popover-wanteeed .btn-default:focus,
+.popover-wanteeed .btn-default:active,
+.popover-wanteeed .btn-default.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.popover-wanteeed .btn-default:active,
+.popover-wanteeed .btn-default.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.popover-wanteeed .btn-default.disabled,
+.popover-wanteeed .btn-default[disabled],
+.popover-wanteeed fieldset[disabled] .btn-default,
+.popover-wanteeed .btn-default.disabled:hover,
+.popover-wanteeed .btn-default[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-default:hover,
+.popover-wanteeed .btn-default.disabled:focus,
+.popover-wanteeed .btn-default[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-default:focus,
+.popover-wanteeed .btn-default.disabled:active,
+.popover-wanteeed .btn-default[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-default:active,
+.popover-wanteeed .btn-default.disabled.active,
+.popover-wanteeed .btn-default[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-default.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.popover-wanteeed .btn-default .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+.popover-wanteeed .btn-primary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.popover-wanteeed .btn-primary:hover,
+.popover-wanteeed .btn-primary:focus,
+.popover-wanteeed .btn-primary:active,
+.popover-wanteeed .btn-primary.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+.popover-wanteeed .btn-primary:active,
+.popover-wanteeed .btn-primary.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.popover-wanteeed .btn-primary.disabled,
+.popover-wanteeed .btn-primary[disabled],
+.popover-wanteeed fieldset[disabled] .btn-primary,
+.popover-wanteeed .btn-primary.disabled:hover,
+.popover-wanteeed .btn-primary[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-primary:hover,
+.popover-wanteeed .btn-primary.disabled:focus,
+.popover-wanteeed .btn-primary[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-primary:focus,
+.popover-wanteeed .btn-primary.disabled:active,
+.popover-wanteeed .btn-primary[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-primary:active,
+.popover-wanteeed .btn-primary.disabled.active,
+.popover-wanteeed .btn-primary[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-primary.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.popover-wanteeed .btn-primary .badge {
+  color: #428bca;
+  background-color: #ffffff;
+}
+.popover-wanteeed .btn-success {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.popover-wanteeed .btn-success:hover,
+.popover-wanteeed .btn-success:focus,
+.popover-wanteeed .btn-success:active,
+.popover-wanteeed .btn-success.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.popover-wanteeed .btn-success:active,
+.popover-wanteeed .btn-success.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.popover-wanteeed .btn-success.disabled,
+.popover-wanteeed .btn-success[disabled],
+.popover-wanteeed fieldset[disabled] .btn-success,
+.popover-wanteeed .btn-success.disabled:hover,
+.popover-wanteeed .btn-success[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-success:hover,
+.popover-wanteeed .btn-success.disabled:focus,
+.popover-wanteeed .btn-success[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-success:focus,
+.popover-wanteeed .btn-success.disabled:active,
+.popover-wanteeed .btn-success[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-success:active,
+.popover-wanteeed .btn-success.disabled.active,
+.popover-wanteeed .btn-success[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-success.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.popover-wanteeed .btn-success .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+.popover-wanteeed .btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.popover-wanteeed .btn-info:hover,
+.popover-wanteeed .btn-info:focus,
+.popover-wanteeed .btn-info:active,
+.popover-wanteeed .btn-info.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.popover-wanteeed .btn-info:active,
+.popover-wanteeed .btn-info.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.popover-wanteeed .btn-info.disabled,
+.popover-wanteeed .btn-info[disabled],
+.popover-wanteeed fieldset[disabled] .btn-info,
+.popover-wanteeed .btn-info.disabled:hover,
+.popover-wanteeed .btn-info[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-info:hover,
+.popover-wanteeed .btn-info.disabled:focus,
+.popover-wanteeed .btn-info[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-info:focus,
+.popover-wanteeed .btn-info.disabled:active,
+.popover-wanteeed .btn-info[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-info:active,
+.popover-wanteeed .btn-info.disabled.active,
+.popover-wanteeed .btn-info[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.popover-wanteeed .btn-info .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+.popover-wanteeed .btn-warning {
+  color: #ffffff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.popover-wanteeed .btn-warning:hover,
+.popover-wanteeed .btn-warning:focus,
+.popover-wanteeed .btn-warning:active,
+.popover-wanteeed .btn-warning.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-warning {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.popover-wanteeed .btn-warning:active,
+.popover-wanteeed .btn-warning.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.popover-wanteeed .btn-warning.disabled,
+.popover-wanteeed .btn-warning[disabled],
+.popover-wanteeed fieldset[disabled] .btn-warning,
+.popover-wanteeed .btn-warning.disabled:hover,
+.popover-wanteeed .btn-warning[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-warning:hover,
+.popover-wanteeed .btn-warning.disabled:focus,
+.popover-wanteeed .btn-warning[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-warning:focus,
+.popover-wanteeed .btn-warning.disabled:active,
+.popover-wanteeed .btn-warning[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-warning:active,
+.popover-wanteeed .btn-warning.disabled.active,
+.popover-wanteeed .btn-warning[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.popover-wanteeed .btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}
+.popover-wanteeed .btn-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.popover-wanteeed .btn-danger:hover,
+.popover-wanteeed .btn-danger:focus,
+.popover-wanteeed .btn-danger:active,
+.popover-wanteeed .btn-danger.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-danger {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.popover-wanteeed .btn-danger:active,
+.popover-wanteeed .btn-danger.active,
+.popover-wanteeed .open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.popover-wanteeed .btn-danger.disabled,
+.popover-wanteeed .btn-danger[disabled],
+.popover-wanteeed fieldset[disabled] .btn-danger,
+.popover-wanteeed .btn-danger.disabled:hover,
+.popover-wanteeed .btn-danger[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-danger:hover,
+.popover-wanteeed .btn-danger.disabled:focus,
+.popover-wanteeed .btn-danger[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-danger:focus,
+.popover-wanteeed .btn-danger.disabled:active,
+.popover-wanteeed .btn-danger[disabled]:active,
+.popover-wanteeed fieldset[disabled] .btn-danger:active,
+.popover-wanteeed .btn-danger.disabled.active,
+.popover-wanteeed .btn-danger[disabled].active,
+.popover-wanteeed fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.popover-wanteeed .btn-danger .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.popover-wanteeed .btn-link {
+  color: #428bca;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.popover-wanteeed .btn-link,
+.popover-wanteeed .btn-link:active,
+.popover-wanteeed .btn-link[disabled],
+.popover-wanteeed fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.popover-wanteeed .btn-link,
+.popover-wanteeed .btn-link:hover,
+.popover-wanteeed .btn-link:focus,
+.popover-wanteeed .btn-link:active {
+  border-color: transparent;
+}
+.popover-wanteeed .btn-link:hover,
+.popover-wanteeed .btn-link:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.popover-wanteeed .btn-link[disabled]:hover,
+.popover-wanteeed fieldset[disabled] .btn-link:hover,
+.popover-wanteeed .btn-link[disabled]:focus,
+.popover-wanteeed fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+.popover-wanteeed .btn-lg,
+.popover-wanteeed .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.popover-wanteeed .btn-sm,
+.popover-wanteeed .btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.popover-wanteeed .btn-xs,
+.popover-wanteeed btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.popover-wanteeed .btn-block {
+  display: block;
+  width: 100%;
+}
+.popover-wanteeed .btn-block + .btn-block {
+  margin-top: 5px;
+}
+.popover-wanteeed input[type="submit"].btn-block,
+.popover-wanteeed input[type="reset"].btn-block,
+.popover-wanteeed input[type="button"].btn-block {
+  width: 100%;
+}
+.popover-wanteeed .btn-group,
+.popover-wanteeed .btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.popover-wanteeed .btn-group > .btn,
+.popover-wanteeed .btn-group-vertical > .btn {
+  position: relative;
+  float: left;
+}
+.popover-wanteeed .btn-group > .btn:hover,
+.popover-wanteeed .btn-group-vertical > .btn:hover,
+.popover-wanteeed .btn-group > .btn:focus,
+.popover-wanteeed .btn-group-vertical > .btn:focus,
+.popover-wanteeed .btn-group > .btn:active,
+.popover-wanteeed .btn-group-vertical > .btn:active,
+.popover-wanteeed .btn-group > .btn.active,
+.popover-wanteeed .btn-group-vertical > .btn.active {
+  z-index: 2;
+}
+.popover-wanteeed .btn-group > .btn:focus,
+.popover-wanteeed .btn-group-vertical > .btn:focus {
+  outline: 0;
+}
+.popover-wanteeed .btn-group .btn + .btn,
+.popover-wanteeed .btn-group .btn + .btn-group,
+.popover-wanteeed .btn-group .btn-group + .btn,
+.popover-wanteeed .btn-group .btn-group + .btn-group {
+  margin-left: -1px;
+}
+.popover-wanteeed .btn-toolbar {
+  margin-left: -5px;
+}
+.popover-wanteeed .btn-toolbar .btn-group,
+.popover-wanteeed .btn-toolbar .input-group {
+  float: left;
+}
+.popover-wanteeed .btn-toolbar > .btn,
+.popover-wanteeed .btn-toolbar > .btn-group,
+.popover-wanteeed .btn-toolbar > .input-group {
+  margin-left: 5px;
+}
+.popover-wanteeed .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.popover-wanteeed .btn-group > .btn:first-child {
+  margin-left: 0;
+}
+.popover-wanteeed .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.popover-wanteeed .btn-group > .btn:last-child:not(:first-child),
+.popover-wanteeed .btn-group > .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.popover-wanteeed .btn-group > .btn-group {
+  float: left;
+}
+.popover-wanteeed .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.popover-wanteeed .btn-group > .btn-group:first-child > .btn:last-child,
+.popover-wanteeed .btn-group > .btn-group:first-child > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.popover-wanteeed .btn-group > .btn-group:last-child > .btn:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.popover-wanteeed .btn-group .dropdown-toggle:active,
+.popover-wanteeed .btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+.popover-wanteeed .btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.popover-wanteeed .btn-group > .btn-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.popover-wanteeed .btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.popover-wanteeed .btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.popover-wanteeed .btn .caret {
+  margin-left: 0;
+}
+.popover-wanteeed .btn-lg .caret {
+  border-width: 5px 5px 0;
+  border-bottom-width: 0;
+}
+.popover-wanteeed .dropup .btn-lg .caret {
+  border-width: 0 5px 5px;
+}
+.popover-wanteeed .btn-group-vertical > .btn,
+.popover-wanteeed .btn-group-vertical > .btn-group,
+.popover-wanteeed .btn-group-vertical > .btn-group > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+}
+.popover-wanteeed .btn-group-vertical > .btn-group > .btn {
+  float: none;
+}
+.popover-wanteeed .btn-group-vertical > .btn + .btn,
+.popover-wanteeed .btn-group-vertical > .btn + .btn-group,
+.popover-wanteeed .btn-group-vertical > .btn-group + .btn,
+.popover-wanteeed .btn-group-vertical > .btn-group + .btn-group {
+  margin-top: -1px;
+  margin-left: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.popover-wanteeed .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.popover-wanteeed .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.popover-wanteeed .btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.popover-wanteeed .btn-group-justified > .btn,
+.popover-wanteeed .btn-group-justified > .btn-group {
+  float: none;
+  display: table-cell;
+  width: 1%;
+}
+.popover-wanteeed .btn-group-justified > .btn-group .btn {
+  width: 100%;
+}
+.popover-wanteeed .btn-group-justified > .btn-group .dropdown-menu {
+  left: auto;
+}
+.popover-wanteeed [data-toggle="buttons"] > .btn > input[type="radio"],
+.popover-wanteeed [data-toggle="buttons"] > .btn > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.popover-wanteeed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  text-align: left;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  white-space: normal;
+  bottom:inherit ;
+}
+.popover-wanteeed.top {
+  margin-top: -10px;
+}
+.popover-wanteeed.right {
+  margin-left: 10px;
+}
+.popover-wanteeed.bottom {
+  margin-top: 10px;
+}
+.popover-wanteeed.left {
+  margin-left: -10px;
+}
+.popover-wanteeed .popover-title {
+  margin: 0;
+  padding: 8px 14px ;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+  text-align:center;
+}
+.popover-wanteeed .popover-content {
+  padding: 9px 14px;
+}
+.popover-wanteeed > .arrow,
+.popover-wanteeed > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover-wanteeed > .arrow {
+  border-width: 11px;
+}
+.popover-wanteeed > .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+.popover-wanteeed.top > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+.popover-wanteeed.top > .arrow:after {
+  content: " ";
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #ffffff;
+}
+.popover-wanteeed.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.popover-wanteeed.right > .arrow:after {
+  content: " ";
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+}
+.popover-wanteeed.bottom > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+.popover-wanteeed.bottom > .arrow:after {
+  content: " ";
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+}
+.popover-wanteeed.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.popover-wanteeed.left > .arrow:after {
+  content: " ";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #ffffff;
+  bottom: -10px;
+}
+.tour-backdrop-wanteeed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1999998;
+  background-color: #000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.tour-step-backdrop-wanteeed {
+  position: relative;
+  z-index: 1999999;
+  background: inherit;
+}
+.tour-step-backdrop-wanteeed > td {
+  position: relative;
+  z-index: 1999999;
+}
+.tour-step-background-wanteeed {
+  position: absolute !important;
+  z-index: 1999998;
+  background: inherit;
+  border-radius: 6px;
+}
+.popover-wanteeed[class*="tour-"] {
+  z-index: 1999999;/* 1100;*/
+}
+.popover-wanteeed[class*="tour-"] .popover-navigation {
+  padding: 9px 14px;
+}
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="end"] {
+  float: right;
+}
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="prev"],
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="next"],
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="end"] {
+  cursor: pointer;
+}
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="prev"].disabled,
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="next"].disabled,
+.popover-wanteeed[class*="tour-"] .popover-navigation *[data-role="end"].disabled {
+  cursor: default;
+}
+.popover-wanteeed[class*="tour-"].orphan {
+  position: fixed;
+  margin-top: 0;
+}
+.popover-wanteeed[class*="tour-"].orphan .arrow {
+  display: none;
+}
+</style></head>
+<body cz-shortcut-listen="true" class="modal-open">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="http://localhost:3000/">
+    <img src="./Qui a beté __files/noun-boxing-2748781.png">
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <div class="d-flex justify-content-between">
+        <div class="welcome-back">
+          <h4>Welcome back schlarz</h4>
+          </div>
+
+  <!--         <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li> -->
+          <div class="POM">
+        <li>
+          <a class="nav-link" href="http://localhost:3000/groups">Voir mes crews</a>
+        </li>
+        </div>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./Qui a beté __files/u4malxrdyoprfosonx8o.png">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="http://localhost:3000/groups">Voir mes crews</a>
+              <a class="dropdown-item" href="http://localhost:3000/users/edit">Editer mon profil</a>
+              <a class="dropdown-item" rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Me déconnecter</a>
+            </div>
+          </li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+  
+  <div class="main-container">
+
+    
+<div class="row">
+  <div class="col-12 col-md-12 index-group" style="height: 120vh">
+    <div class="container-index" style="width: 900px">
+      <div class="card-product">
+        <div class="d-flex justify-content-between mb-4">
+        </div>
+      </div>
+      <h1 class="mb-4 text-center">Batch 308</h1>
+      <div class="d-flex justify-content-center">
+      <img class="group-index-image mr-2" style="border-radius: 50%" src="./Qui a beté __files/fire-53d4be50b15ea1d5f72cdcee1b99611929138169703604459187e4f72415f525.png">
+      </div>
+      <h3 class="mb-4 text-center" style="margin-top: 20px">Avec qui tu paries ?</h3>
+      <div class="d-flex justify-content-between mb-4" data-controller="tabs">
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="147">
+            <img class="avatar-xl" src="./Qui a beté __files/rq03wkinuqqedrcfgj4g.jpg">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="148">
+            <img class="avatar-xl" src="./Qui a beté __files/jwz6hdwrozu8rjwycaam.jpg">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="149">
+            <img class="avatar-xl" src="./Qui a beté __files/lekgu29n86puqbwjbxa5.png">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="145">
+            <img class="avatar-xl" src="./Qui a beté __files/fvlozunaiuzuoi8fphpx.jpg">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="146">
+            <img class="avatar-xl" src="./Qui a beté __files/alpwntqhsjyfux6oazus.jpg">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="151">
+            <img class="avatar-xl" src="./Qui a beté __files/y3if8gcvatlmtgsmyp1y.png">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="156">
+            <img class="avatar-xl" src="./Qui a beté __files/vzrhcflzxkwfutvb6qau.jpg">
+          </div>
+          <!-- Modal -->
+          <div class="new_bet" data-action="click-&gt;tabs#showCorrespondingForm" data-id="150">
+            <img class="avatar-xl" src="./Qui a beté __files/u4malxrdyoprfosonx8o.png">
+          </div>
+          <!-- Modal -->
+      </div>
+          <div class="bet-form" data-id="147">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/rq03wkinuqqedrcfgj4g.jpg">
+              <h4 style="margin: auto 0">cool ! tu paries avec dadalex</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="147" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form visible" data-id="148">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/jwz6hdwrozu8rjwycaam.jpg">
+              <h4 style="margin: auto 0">cool ! tu paries avec marineX3</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="148" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="149">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/lekgu29n86puqbwjbxa5.png">
+              <h4 style="margin: auto 0">cool ! tu paries avec belze</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="149" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="145">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/fvlozunaiuzuoi8fphpx.jpg">
+              <h4 style="margin: auto 0">cool ! tu paries avec jr</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="145" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="146">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/alpwntqhsjyfux6oazus.jpg">
+              <h4 style="margin: auto 0">cool ! tu paries avec hugoxxx</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="146" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="151">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/y3if8gcvatlmtgsmyp1y.png">
+              <h4 style="margin: auto 0">cool ! tu paries avec geekquest</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="151" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="156">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/vzrhcflzxkwfutvb6qau.jpg">
+              <h4 style="margin: auto 0">cool ! tu paries avec arthur</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="156" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+          <div class="bet-form" data-id="150">
+            <div class="form-header d-flex justify-content-start">
+              <img class="avatar-xl" src="./Qui a beté __files/u4malxrdyoprfosonx8o.png">
+              <h4 style="margin: auto 0">cool ! tu paries avec schlarz</h4>
+            </div>
+            <div class="form-body">
+              <form class="simple_form new_bet" id="new_bet" novalidate="novalidate" action="http://localhost:3000/groups/56/bets" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="co3sFFXgiixEALHgIB6pojhSQqoQqfa/FeyyvChdxou1olBo6BFZPTMTbKj/E3EaLfhJjfBjqp04bq9PiqaMvg==">
+                <div class="form-group hidden bet_beter_id"><input class="form-control hidden" value="150" type="hidden" name="bet[beter_id]" id="bet_beter_id"></div>
+                <div class="form-group string required bet_description"><label class="string required" for="bet_description">Ton bet <abbr title="required">*</abbr></label><input class="form-control string required" placeholder="Alex peut manger plus de 3 Petit Beurre en 1 min" type="text" name="bet[description]" id="bet_description"></div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group select optional bet_target"><label class="select optional" for="bet_target_id">Target</label><select class="form-control select optional" name="bet[target_id]" id="bet_target_id"><option value=""></option>
+<option value="147">dadalex</option>
+<option value="148">marineX3</option>
+<option value="149">belze</option>
+<option value="145">jr</option>
+<option value="146">hugoxxx</option>
+<option value="151">geekquest</option>
+<option value="156">arthur</option></select></div>
+                <div class="form-group string required bet_stake"><label class="string required" for="bet_stake">Qu'est ce qu'on parie ? 🎁 <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="bet[stake]" id="bet_stake"></div> 
+                <a id="wheel_link" data-toggle="modal" data-target="#modal" href="http://localhost:3000/groups/56/bets/new#"><img id="wheelsvg" src="./Qui a beté __files/wheel-61df97798483f9f0aab3f765c1bb56243c11f9a0963abce621875ab4a0860275.svg"></a>
+                <p style="margin: auto 0">Pas d'idée click sur la roue</p>
+                </div>
+                <div class="d-flex justify-content-start">
+                <div class="form-group date required bet_end_date"><label class="date required" for="bet_end_date_1i">Vous avez jusqu'à quand ? <abbr title="required">*</abbr></label><div class="d-flex flex-row justify-content-between align-items-center"><select id="bet_end_date_1i" name="bet[end_date(1i)]" class="form-control mx-1 date required">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019" selected="selected">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+<select id="bet_end_date_2i" name="bet[end_date(2i)]" class="form-control mx-1 date required">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11" selected="selected">November</option>
+<option value="12">December</option>
+</select>
+<select id="bet_end_date_3i" name="bet[end_date(3i)]" class="form-control mx-1 date required">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27" selected="selected">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+</div></div>
+                <div class="form-group select required bet_difficulty"><label class="select required" for="bet_difficulty">Ta confiance en la faisabilité du pari ? <abbr title="required">*</abbr></label><select class="form-control select required" name="bet[difficulty]" id="bet_difficulty"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option></select></div>
+                </div>
+                
+
+            </form></div>
+            <div class="form-footer" style="margin-left: 400px">
+       
+              <a href="http://localhost:3000/groups" class="btn-home">Retour</a>
+              <input type="submit" name="commit" value="Crée ton bet" class="btn btn-home webpush-button" data-disable-with="Create Bet">
+            </div>
+          </div>
+
+      <div class="modal fade show" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-modal="true" style="display: block; padding-left: 0px;">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content" style="height: 790px">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Roue de l'infortune 🎲</h5>
+            </div>
+            <div class="modal-body" style="height: 33px;">
+            
+<div class="row">
+    <div class="col-12 col-md-12 index-group">
+        <div class="d-flex justify-content-center">
+            <div id="chart"><svg width="500" height="500"><g class="chartholder" transform="translate(230,260)"><g><g class="slice"><path fill="#1f77b4" d="M1.4083438190194563e-14,-230A230,230 0 0,1 147.84115022790405,-176.19022191736494L0,0Z"></path><text transform="rotate(-70)translate(220)" text-anchor="end">Une partie de bowling 🎳</text></g><g class="slice"><path fill="#aec7e8" d="M147.84115022790405,-176.19022191736494A230,230 0 0,1 226.50578319280785,-39.93908086339398L0,0Z"></path><text transform="rotate(-30.000000000000007)translate(220)" text-anchor="end">Un mac do 🍟</text></g><g class="slice"><path fill="#ff7f0e" d="M226.50578319280785,-39.93908086339398A230,230 0 0,1 199.1858428704209,114.99999999999996L0,0Z"></path><text transform="rotate(9.999999999999986)translate(220)" text-anchor="end">Un escape game 🎮</text></g><g class="slice"><path fill="#ffbb78" d="M199.1858428704209,114.99999999999996A230,230 0 0,1 78.66463296490383,216.1293027807589L0,0Z"></path><text transform="rotate(50)translate(220)" text-anchor="end">Un restaurant semi gastro 😎</text></g><g class="slice"><path fill="#2ca02c" d="M78.66463296490383,216.1293027807589A230,230 0 0,1 -78.6646329649038,216.12930278075893L0,0Z"></path><text transform="rotate(90)translate(220)" text-anchor="end">Une chouffe 🍻</text></g><g class="slice"><path fill="#98df8a" d="M-78.6646329649038,216.12930278075893A230,230 0 0,1 -199.18584287042086,115.00000000000007L0,0Z"></path><text transform="rotate(130)translate(220)" text-anchor="end">Une bonne bouteille de vin 🍷</text></g><g class="slice"><path fill="#d62728" d="M-199.18584287042086,115.00000000000007A230,230 0 0,1 -226.50578319280788,-39.939080863393905L0,0Z"></path><text transform="rotate(170)translate(220)" text-anchor="end">5 €</text></g><g class="slice"><path fill="#ff9896" d="M-226.50578319280788,-39.939080863393905A230,230 0 0,1 -147.84115022790408,-176.1902219173649L0,0Z"></path><text transform="rotate(209.99999999999994)translate(220)" text-anchor="end">Un ticket à gratter 🍀</text></g><g class="slice"><path fill="#9467bd" d="M-147.84115022790408,-176.1902219173649A230,230 0 0,1 -4.225031457058368e-14,-230L0,0Z"></path><text transform="rotate(250)translate(220)" text-anchor="end">Un cinoche 🎬 </text></g></g><circle cx="0" cy="0" r="60" style="fill: white; cursor: pointer;"></circle><text x="0" y="15" text-anchor="middle" style="font-weight: bold; font-size: 30px;">Lances</text></g><g transform="translate(500,260)"><path d="M-34.5,0L0,11.5L0,-11.5Z" style="fill: black;"></path></g></svg></div>
+            <div id="question"><h1 id="result"></h1></div>
+            <script src="./Qui a beté __files/d3.v3.min.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn-home" data-dismiss="modal">La roue à parlé</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="footer">
+  <div class="footer-links">
+    <a href="http://localhost:3000/groups/56/bets/new#"><i class="fab fa-github"></i></a>
+    <a href="http://localhost:3000/groups/56/bets/new#"><i class="fab fa-instagram"></i></a>
+    <a href="http://localhost:3000/groups/56/bets/new#"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/watch?v=G2LBIFQEr2M"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    WE <i class="fas fa-heart"></i> BET
+  </div>
+</div>
+
+
+  <script>window.vapidPublicKey = new Uint8Array([4, 96, 48, 113, 166, 49, 65, 204, 164, 155, 150, 221, 190, 232, 143, 67, 148, 205, 116, 88, 115, 201, 188, 42, 163, 45, 97, 147, 224, 129, 104, 188, 75, 138, 105, 175, 126, 58, 207, 31, 243, 130, 120, 170, 103, 255, 112, 94, 255, 133, 5, 84, 43, 239, 47, 177, 114, 214, 201, 194, 120, 111, 100, 86, 100]);</script>
+  <script src="./Qui a beté __files/application-67d6c9a1d3e5542037c0.js"></script>
+
+
+</div></div><iframe id="wanteeedPanel" data-version="1.6.4" allowtransparency="true" style="width: 335px !important; height: 250px !important; min-width: 0px; min-height: 0px; display: none; position: fixed; top: 10px; right: 10px; left: auto; border: none; background-color: rgb(255, 255, 255); overflow: hidden; z-index: 2147483647; clip: auto; border-radius: 3px; box-shadow: rgb(181, 181, 181) 1px 1px 3px 2px;" src="./Qui a beté __files/saved_resource.html"></iframe><div class="modal-backdrop fade show"></div></body></html>

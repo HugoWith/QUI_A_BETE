@@ -1,10 +1,12 @@
 <%= simple_form_for @group do |f| %>
-    <%= f.input :name, label: "Nom du crew", placeholder: 'Place le nom' %>
+  <div class="inputZ">
+    <%= f.input :name, label: "Nom du crew", placeholder: 'Place le nom'%>
+    </div>
     <div class = "group-img mt-4">
       <% @images_samples.each do |image_name| %>
         <span>
-          <input id="<%= image_name %>" type="radio" class ="mr-2" name="group[photo]" value="<%= image_name %>" style="display: none;">
-          <label class = "label-img-group" for="<%= image_name %>" style='height: 168px; width: 168px; background-image: url(<%= image_url("#{image_name}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="group_photo_"></label>
+          <input id="<%= image_name %>" type="radio" class="mr-2" name="group[photo]" value="<%= image_name %>" style="display: none;">
+          <label class="label-img-group" for="<%= image_name %>" style='height: 168px; width: 168px; background-image: url(<%= image_url("#{image_name}") %>); background-size: cover;' class="mr-2 collection_radio_buttons" for="group_photo_"></label>
         </span>
       <% end %>
     </div>

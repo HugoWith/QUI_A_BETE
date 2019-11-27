@@ -18,6 +18,11 @@ body {
 
 
 .page-container {
+
   position: relative;
   min-height: 100vh;
+
+abbr[title="required"] {
+  display: none;
+
 }
