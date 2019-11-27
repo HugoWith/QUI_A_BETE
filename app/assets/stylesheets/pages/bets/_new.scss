@@ -4,16 +4,14 @@
     margin: 0 auto;
 }
 
+.bet-label {
+  font-size: 18px;
+}
+
 .cardds {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 54px;
-}
-
-.avatar-xl:hover {
-    opacity: 30%;
-    width: 90px;
-    height: 90px;
 }
 
 .bet-form {
@@ -88,15 +86,23 @@
 }
 
 #bet_end_date_1i {
-    width: 200px;
+    width: 100px;
 }
 
 #bet_end_date_2i {
-    width: 200px;
+    width: 150px;
 }
 
 #bet_end_date_3i {
-    width: 200px;
+    width: 100px;
 }
 
 .required {}
+
+.new-bet-form input {
+  margin-bottom: 35px;
+}
+
+.new-bet-form select {
+  margin-bottom: 35px;
+}
