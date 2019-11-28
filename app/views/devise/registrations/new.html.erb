@@ -19,9 +19,11 @@
                           input_html: { autocomplete: "nouveau mot de passe" } %>
               </div>
               <%= f.input :password_confirmation,
+                          label: "Confirme ton mot de passe",
                           required: true,
                           input_html: { autocomplete: "nouveau mot de passe" } %>
               <%= f.input :nickname,
+                          label: "Ton surnom",
                           required: true %>
               <%= f.input :photo,
                           required: false %>
@@ -32,14 +34,11 @@
               <%= f.input :last_name,
                           label: "Ton nom",
                           required: true %>
-              <%= f.input :nickname,
-                          label: "Ton surnom",
-                          required: true %>
             </div>
             </div>
             <div class="">
-              <div class="form-actions">
-                <%= f.button :submit, "Crée ton compte" %>
+              <div class="text-center">
+                <%= f.button :submit, "Crée ton compte", class: "btn-home" %>
             </div>
             <% end %>
             <div class="text-center">
