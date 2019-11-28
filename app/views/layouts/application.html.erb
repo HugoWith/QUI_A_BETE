@@ -17,14 +17,14 @@
 <body>
   <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
-  <div class="main-container">
 
+  <div class="main-container">
     <%= yield %>
   </div>
 
+  <%= render 'shared/footer' %>
 
   <script>window.vapidPublicKey = new Uint8Array(<%= Base64.urlsafe_decode64(ENV['VAPID_PUBLIC_KEY']).bytes %>);</script>
   <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
 </body>
 </html>
