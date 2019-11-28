@@ -26,16 +26,16 @@ const initRoll = () => {
         // A remplir ici pour changer les cadeaux-----------------------------------------------------------------------------------
         var data = [
             { "color": "#70D6FF", "label": "Une partie de bowling 🎳", "value": 1, "question": "Une partie de bowling 🎳" }, // padding
-            { "color": "#F7D6E0", "label": "Un mac do 🍟", "value": 1, "question": "Un mac do 🍟" }, //font-family
+            { "color": "#F7D6E0", "label": "Un Mc Do 🍟", "value": 1, "question": "Un mac do 🍟" }, //font-family
             { "color": "#FF9770", "label": "Un escape game 🎮", "value": 1, "question": "Un escape game 🎮" }, //color
-            { "color": "#FFD670", "label": "Un restaurant semi gastro 😎", "value": 1, "question": "Un restaurant semi gastro 😎" }, //font-weight
-            { "color": "#F0C808", "label": "Une chouffe 🍻", "value": 1, "question": "Une chouffe 🍻" }, //font-size
+            { "color": "#FFD670", "label": "Un restaurant semi-gastro 😎", "value": 1, "question": "Un restaurant semi-gastro 😎" }, //font-weight
+            { "color": "#F0C808", "label": "Une Chouffe 🍻", "value": 1, "question": "Une Chouffe 🍻" }, //font-size
             { "color": "#70D6FF", "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
-            { "color": "#F7D6E0", "label": "5 € de don à une assoication 💶", "value": 1, "question": "5 € de don à une assoication 💶" }, //nesting
+            { "color": "#F7D6E0", "label": "5 € de don à une association 💶", "value": 1, "question": "5 € de don à une association 💶" }, //nesting
             { "color": "#FF9770", "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
-            { "color": "#F0C808", "label": "5 gifles à distribuer 👋", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
+            { "color": "#F0C808", "label": "5 gifles à distribuer 👋", "value": 1, "question": "5 gifles à distribuer 👋" }, //sans-serif
             { "color": "#70D6FF", "label": "1 café suspendu ☕️", "question": "1 café suspendu ☕️" }, //period
-            { "color": "#F7D6E0", "label": "1 dîner presque parfat 🍝", "value": 1, "question": "1 dîner presque parfat 🍝" }, //pound sign
+            { "color": "#F7D6E0", "label": "1 dîner presque parfait 🍝", "value": 1, "question": "1 dîner presque parfait 🍝" }, //pound sign
             // {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
             // {"label":"HOTEL TICKET", "value":1, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
             // {"label":"PLANE", "value":1, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
