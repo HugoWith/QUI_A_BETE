@@ -29,6 +29,7 @@ input:checked + label {
 .label-img-group:hover {
   border: solid 5px black;
   opacity: 1;
+  cursor: pointer;
 }
 
 .label-img-group::after {
