@@ -20,5 +20,5 @@
   Rejoins-nous !
   </br>
   <%= link_to "Crée ton compte", new_member_url(@group_id) %></br>
-  <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group_id) %></p>
+  <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group_id, params:{invited_user_id: @invited_user.id}) %></p>
 </div>

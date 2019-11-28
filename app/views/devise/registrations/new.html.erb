@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12 col-md-12 sign-up-body">
       <div class="container-signup ">
-            <h2>Bete Toi... / Crée ton compte</h2>
+            <h2>Crée ton compte</h2>
             <div class="form">
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
@@ -9,9 +9,11 @@
             <div class="d-flex justify-content-between">
               <%= f.input :email,
                           required: true,
+                          label: "Email",
                           autofocus: true,
                           input_html: { autocomplete: "email" }%>
               <%= f.input :password,
+                          label: "Mot de passe",
                           required: true,
                           hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
                           input_html: { autocomplete: "nouveau mot de passe" } %>
@@ -25,17 +27,24 @@
                           required: false %>
             <div class="d-flex justify-content-between">
               <%= f.input :first_name,
+                          label: "Ton prénom",
                           required: true %>
               <%= f.input :last_name,
+                          label: "Ton nom",
+                          required: true %>
+              <%= f.input :nickname,
+                          label: "Ton surnom",
                           required: true %>
             </div>
             </div>
-            <div class="boutons">
+            <div class="">
               <div class="form-actions">
                 <%= f.button :submit, "Crée ton compte" %>
             </div>
             <% end %>
-            <%= render "devise/shared/links" %>
+            <div class="text-center">
+             <%= render "devise/shared/links" %>
+            </div>
             </div>
       </div>
     </div>
