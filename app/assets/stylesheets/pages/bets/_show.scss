@@ -13,14 +13,17 @@
 
 .A-1 {
     margin: 0 auto;
-    margin-top: 80px;
+    // margin-top: 80px;
     max-width: 800px;
-    height: 300px;
-    box-shadow: 2px 8px 8px 2px rgba(0, 0, 0, 0.2);
-    height: 350px;
+    min-height: 320px;
+    box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px
 }
 
+.bet-buttons {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .A-2 {}
 
 .B-3 {
@@ -59,7 +62,13 @@
 // .I-1 {
 //     padding-top: 14px;
 // }
+.red {
+  color: $red;
+}
 
+.last-column {
+  min-width: 10%;
+}
 .I-2 {}
 
 .I-1:hover {
@@ -82,5 +91,35 @@
 .like-btn {}
 
 .grey-p {
-  color: #83878D;
+  color: #586261;
+  font-size: 19px;
 }
+
+.like-bet {
+  text-decoration: none;
+  border: none;
+  font-family: $second-font;
+  background-color: white;
+  margin-right: 0;
+}
+
+.like-bet:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a.like-bet {
+  text-decoration: none;
+  border: none;
+  font-family: $second-font;
+  background-color: transparent;
+  color: black;
+}
+
+a.like-bet:hover {
+  cursor: pointer;
+}
+
+// .bet-desc-container {
+//   min-width: 70%;
+// }
