@@ -16,7 +16,7 @@
         <% @group.users.each do |member| %>
           <div class= "new_bet" data-action="click->tabs#showCorrespondingForm" data-id="<%= member.id %>">
               <div class="avatar">
-                <%= cl_image_tag  member.pick_photo, class: "avatar-game"%>
+                <%= cl_image_tag  member.pick_photo, class: "avatar-game", style:"cursor: pointer"%>
                 <p class='text-center font-weight-light'><%= member.nickname %></p>
               </div>
             <%#= cl_image_tag  member.pick_photo, class: "avatar-xl", style: "cursor: pointer"%>
