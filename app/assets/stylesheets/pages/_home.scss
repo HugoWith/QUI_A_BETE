@@ -75,24 +75,24 @@ a {
   object-fit: cover;
 }
 
-.pointer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-background-color: rgba(112,214,255, 0.2);
-border: 1px solid rgba(112,214,255, 0.8);
-border-radius: 50%;
+// .pointer {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 30px;
+//   height: 30px;
+// background-color: rgba(112,214,255, 0.2);
+// border: 1px solid rgba(112,214,255, 0.8);
+// border-radius: 50%;
 
-// box-sizing: border-box;
-transition: 0.2s;
-}
+// // box-sizing: border-box;
+// transition: 0.2s;
+// }
 
-.pointer:active {
- background-color: rgba(112,214,255, 0.8);
-}
+// .pointer:active {
+//  background-color: rgba(112,214,255, 0.8);
+// }
 
 
 
