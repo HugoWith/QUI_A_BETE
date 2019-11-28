@@ -32,7 +32,6 @@
           <div class="bet-form" data-id="<%= member.id %>">
             <div class="form-header d-flex justify-content-start mb-3">
               <%= cl_image_tag  member.pick_photo, class: "avatar-xl mr-4" %>
-
               <h4 style="margin: auto 0">Cool ! Tu paries avec <%= member.nickname %></h4>
             </div>
             <div class="form-body new-bet-form">
@@ -40,20 +39,28 @@
                 <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
-                <%= form.association :target, label_method: :nickname, collection: @users, include_blank: true, label: "Une victime ?", label_html: { class: "bet-label"} %>
-                <div class="d-flex align-items-center" >
-                <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁", label_html: { class: "bet-label"}  %>
-                <div class= "d-flex align-items-center" style="margin-bottom : 35px;">
-                  <%= link_to image_tag('wheel.svg', id:"wheelsvg"), '#', id: "wheel_link", data: { toggle: 'modal', target: "#modal" }, class: "mr-1" %>
-                  <p style="margin: auto 20px;">Tu sais pas quoi parier ? Lance la roue de l'infortune !</p>
-                </div>
-                </div>
+                <%#= form.association :target, label_method: :nickname, collection: @users, include_blank: true, label: "Une victime ?", label_html: { class: "bet-label"} %>
+                    <h3 style="font-size: 18px">Target:</h3>
+                    <div class="d-flex justify-content-center">
+                  <% @group.users.each do |user| %>
+                    <input id="<%= user.id %>" type="radio" name="bet[target_id]" value="<%= user.id %>">
+                    <label for="<%= user.id %>">
+                      <%= cl_image_tag  user.pick_photo, class: "avatar-xl mr-4" %>
+                      <%= user.nickname %>
+                    </label>
+                  <% end %>
+                  </div>
+                  <div class="d-flex align-items-center" >
+                  <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁", label_html: { class: "bet-label"}  %>
+                    <div class= "d-flex align-items-center" style="margin-bottom : 35px;">
+                      <%= link_to image_tag('wheel.svg', id:"wheelsvg"), '#', id: "wheel_link", data: { toggle: 'modal', target: "#modal" }, class: "mr-1" %>
+                      <p style="margin: auto 20px;">Tu sais pas quoi parier ? Lance la roue de l'infortune !</p>
+                    </div>
+                  </div>
                 <div class="d-flex justify-content-start">
-                <%= form.input :end_date, label: "Vous avez jusqu'à quand ?", label_html: { class: "bet-label"}, class: "mr-2" %>
-                <%= form.input :difficulty, label_html: { class: "bet-label"}, label: "Ta confiance en la faisabilité du pari ?", collection: 1..10%>
+                  <%= form.input :end_date, label: "Vous avez jusqu'à quand ?", label_html: { class: "bet-label"}, class: "mr-2" %>
+                  <%= form.input :difficulty, label_html: { class: "bet-label"}, label: "Ta confiance en la faisabilité du pari ?", collection: 1..10%>
                 </div>
-
-
             </div>
             <div class="d-flex">
               <%= form.button :submit, class: "btn-home", value: "Crée ton bet", style: "margin: 0px !important;" %>
@@ -63,7 +70,6 @@
             </div>
           </div>
         <% end %>
-
       <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content" style="height: 760px">
@@ -76,7 +82,6 @@
             <div class="modal-footer">
             <button type="button" class="btn-home" data-dismiss="modal">La roue a parlé</button>
             </div>
-
           </div>
         </div>
       </div>
