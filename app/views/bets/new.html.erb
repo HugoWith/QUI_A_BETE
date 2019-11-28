@@ -34,7 +34,7 @@
                 <%= form.input :description, label: "Le bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
                     <h3 style="font-size: 18px">Target 🎯 :</h3>
                       <div class="d-flex justify-content-start">
-                        <% @group.users.except(member.id).each do |user| %>
+                        <% @group.users.each do |user| %>
                           <input id="<%= "#{user.id}#{member.id}" %>" type="radio" name="bet[target_id]" value="<%= user.id %>" style="display:none">
                           <label for="<%= "#{user.id}#{member.id}" %>">
                             <%= cl_image_tag  user.pick_photo, class: "avatar-game", style: "cursor: pointer" %>
