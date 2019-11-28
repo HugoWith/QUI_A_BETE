@@ -3,6 +3,7 @@
     <%= f.input :name, label: "Nom du crew", placeholder: 'Place le nom'%>
     </div>
     <div class = "group-img mt-4">
+      <p class = "p-new-crew">Quelle image pour ton crew ? </p>
       <% @images_samples.each do |image_name| %>
         <span>
           <input id="<%= image_name %>" type="radio" class="mr-2" name="group[photo]" value="<%= image_name %>" style="display: none;">
