@@ -44,8 +44,8 @@
                     <div class="d-flex justify-content-start">
                     <% @group.users.each do |user| %>
                       <input id="<%= user.id %>" type="radio" name="bet[target_id]" value="<%= user.id %>" style="display:none">
-                      <label for="<%= user.id %>">
-                        <%= cl_image_tag  user.pick_photo, class: "avatar-game", style:"margin-right: 6px"%>
+                      <label for="<%= user.id %>" style="background-image:attr(<%= user.pick_photo %>); background-size: cover; width: 50px; height: 50px">
+                        <%# <%= cl_image_tag  user.pick_photo, class: "avatar-game", style:"margin-right: 6px"%>
                         <%#= user.nickname %>
                       </label>
                     <% end %>
