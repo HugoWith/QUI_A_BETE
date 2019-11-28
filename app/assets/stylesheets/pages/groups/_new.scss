@@ -11,19 +11,35 @@
     transition: 0.8s ease-in-out;
 }
 
+.p-new-crew {
+  font-size: 24px;
+}
+
 
 input:checked + label {
-  border: solid 7px black;
+  border: solid 5px black;
   opacity: 1;
 }
 
 .label-img-group {
   opacity: 0.85;
+  border: solid 5px transparent;
+}
+
+.label-img-group:hover {
+  border: solid 5px black;
+  opacity: 1;
+}
+
+.label-img-group::after {
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .inputZ {
   max-width: 340px !important;
-  text-align: center;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  font-size: 24px;
+  // text-align: center;
+  // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  // border-radius: 6px;
 }
