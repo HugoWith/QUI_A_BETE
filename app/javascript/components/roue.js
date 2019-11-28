@@ -25,17 +25,17 @@ const initRoll = () => {
         //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
         // A remplir ici pour changer les cadeaux-----------------------------------------------------------------------------------
         var data = [
-            { "label": "Une partie de bowling 🎳", "value": 1, "question": "Une partie de bowling 🎳" }, // padding
-            { "label": "Un mac do 🍟", "value": 1, "question": "Un mac do 🍟" }, //font-family
-            { "label": "Un escape game 🎮", "value": 1, "question": "Un escape game 🎮" }, //color
-            { "label": "Un restaurant semi gastro 😎", "value": 1, "question": "Un restaurant semi gastro 😎" }, //font-weight
-            { "label": "Une chouffe 🍻", "value": 1, "question": "Une chouffe 🍻" }, //font-size
-            { "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
-            { "label": "5 €", "value": 1, "question": "5 €" }, //nesting
-            { "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
-            { "label": "Un cinoche 🎬 ", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
-            // {"label":"BMW", "value":1, "question":"With CSS selectors, what character prefix should one use to specify a class?"}, //period
-            // {"label":"RANGE ROVER", "value":1, "question":"With CSS selectors, what character prefix should one use to specify an ID?"}, //pound sign
+            { "color": "#70D6FF", "label": "Une partie de bowling 🎳", "value": 1, "question": "Une partie de bowling 🎳" }, // padding
+            { "color": "#F7D6E0", "label": "Un mac do 🍟", "value": 1, "question": "Un mac do 🍟" }, //font-family
+            { "color": "#FF9770", "label": "Un escape game 🎮", "value": 1, "question": "Un escape game 🎮" }, //color
+            { "color": "#FFD670", "label": "Un restaurant semi gastro 😎", "value": 1, "question": "Un restaurant semi gastro 😎" }, //font-weight
+            { "color": "#F0C808", "label": "Une chouffe 🍻", "value": 1, "question": "Une chouffe 🍻" }, //font-size
+            { "color": "#70D6FF", "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
+            { "color": "#F7D6E0", "label": "5 € de don à une assoication 💶", "value": 1, "question": "5 € de don à une assoication 💶" }, //nesting
+            { "color": "#FF9770", "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
+            { "color": "#F0C808", "label": "5 gifles à distribuer 👋", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
+            { "color": "#70D6FF", "label": "1 café suspendu ☕️", "question": "1 café suspendu ☕️" }, //period
+            { "color": "#F7D6E0", "label": "1 dîner presque parfat 🍝", "value": 1, "question": "1 dîner presque parfat 🍝" }, //pound sign
             // {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
             // {"label":"HOTEL TICKET", "value":1, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
             // {"label":"PLANE", "value":1, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
@@ -78,7 +78,7 @@ const initRoll = () => {
             .attr("class", "slice");
 
         arcs.append("path")
-            .attr("fill", function(d, i) { return color(i); })
+            .attr("fill", function(d) { return d.data.color; })
             .attr("d", function(d) { return arc(d); });
         // add the text
         arcs.append("text").attr("transform", function(d) {
@@ -143,7 +143,7 @@ const initRoll = () => {
             .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h / 2) + padding.top) + ")")
             .append("path")
             .attr("d", "M-" + (r * .15) + ",0L0," + (r * .05) + "L0,-" + (r * .05) + "Z")
-            .style({ "fill": "black" });
+            .style({ "fill": "#70D6FF" });
         //draw spin circle
         container.append("circle")
             .attr("cx", 0)
@@ -153,10 +153,10 @@ const initRoll = () => {
         //spin text
         container.append("text")
             .attr("x", 0)
-            .attr("y", 15)
+            .attr("y", 25)
             .attr("text-anchor", "middle")
-            .text("Lances")
-            .style({ "font-weight": "bold", "font-size": "30px" });
+            .text("👊")
+            .style({ "font-weight": "bold", "font-size": "60px" });
 
 
         function rotTween(to) {
