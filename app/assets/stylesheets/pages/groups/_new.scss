@@ -16,7 +16,7 @@
 }
 
 
-input:checked + label {
+#new_group input:checked + label {
   border: solid 5px black;
   opacity: 1;
 }

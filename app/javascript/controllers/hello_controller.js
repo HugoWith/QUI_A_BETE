@@ -2,7 +2,7 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
 
-    static targets = ["inprogress", "classement", "donebet"]
+    static targets = ["inprogress", "classement", "donebet", "winner"]
 
     inprogress() {
         this.inprogressTarget.classList.toggle('visible');
@@ -15,6 +15,10 @@ export default class extends Controller {
 
     donebet() {
         this.donebetTarget.classList.toggle('visible');
+    }
+
+    winner() {
+      this.winnerTarget.console.log('hello')
     }
 
 }
