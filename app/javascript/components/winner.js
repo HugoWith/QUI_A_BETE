@@ -4,13 +4,17 @@ let button = document.querySelector('.winner-btn')
 const animateWinner = () => {
   const winner = document.querySelector('.winner-selection').querySelector('input:checked + label img')
   const looser = document.querySelector('.winner-selection').querySelector('input:not(:checked) + label img')
+  const textWinner = document.querySelector('.winner-text')
   winner.classList.add('winner-selection-active')
-  looser.classList.add('looser-selection-active')
+  looser.classList.add('animated', 'bounceOutDown', 'looser-selection-active')
+  textWinner.classList.remove('winner-text')
+  textWinner.classList.add('animated', 'fadeInDown', 'slower')
   console.log("je lance l'animation du winner")
 }
 
-const changePage = () => {
-  console.log("je vais changer de page")
+const submitForm = () => {
+  console.log("je vais soumettre le formulaire")
+  document.querySelector('.edit_bet').submit()
 }
 
 const activeButtonChoice = () => {
@@ -20,15 +24,16 @@ const activeButtonChoice = () => {
 }
 
 const clickButtonChoice = (e) => {
+  console.log("je suis dans clickButtonChoice")
   e.preventDefault();
+
   animateWinner()
-  setTimeout(changePage, 2000)
+  // setTimeout(submitForm, 5000)
 }
 
-
-
-
 const initWinnerJS = () => {
+  console.log("je sus la")
+  console.log(button)
   if (button == null)
     return
 

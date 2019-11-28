@@ -5,7 +5,11 @@
     <h3 class = "text-center mb-4">Alors, qui a gagné <%= @bet.stake %>? </h3>
   </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-center">
+  <div class="winner-text">
+    <h2>WINNER 🎉</h2>
+  </div>
+
+    <div class="avatar-container-win d-flex flex-column align-items-center justify-content-center">
         <div class="d-flex justify-content-between mt-3">
         <%= simple_form_for @bet, url: save_winner_path(@bet), method: :post do |f| %>
         <div class=" d-flex justify-content-center winner-selection">
@@ -16,7 +20,7 @@
 
           <span>
             <input id="<%= @bet.beter.nickname %>" type="radio" class ="" name="bet[winner]" value="<%= @bet.beter.nickname %>" style="display: none">
-            <label for="<%= @bet.beter.nickname %>"> <%= cl_image_tag @bet.beter.pick_photo, class: "avatar-huge  winner-selection" %></label>
+            <label for="<%= @bet.beter.nickname %>"> <%= cl_image_tag @bet.beter.pick_photo, class: "avatar-huge  winner-selection " %></label>
           </span>
         </div>
 
