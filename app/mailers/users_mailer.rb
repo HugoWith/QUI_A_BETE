@@ -9,11 +9,11 @@ class UsersMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Tu es prêt à beter')
   end
 
-  def invite_member(user, owner, group_id)
-    @user = user
+  def invite_member(invited_user, owner, group_id)
+    @invited_user = invited_user
     @group_id = group_id
     @owner = owner # Instance variable => available in view
-    mail(to: @user.email, subject: "#{owner.first_name.capitalize} t'invite à beter dans son crew !")
+    mail(to: @invited_user.email, subject: "#{owner.first_name.capitalize} t'invite à beter dans son crew !")
   end
 
   def victime(user, group, bet)
