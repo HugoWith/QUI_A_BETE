@@ -31,6 +31,7 @@
             <div class="form-body new-bet-form">
               <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
                 <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
+              
                 <%= form.input :description, label: "Le bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
                     <h3 style="font-size: 18px">Target 🎯 :</h3>
                       <div class="d-flex justify-content-start">
@@ -42,6 +43,7 @@
                           </label>
                         <% end %>
                         </div>
+
                   <div class="d-flex align-items-center" style="margin-top: 10px" >
                   <%= form.input :stake, label: "Le bel enjeu", label_html: { class: "bet-label"}  %>
                     <div class= "d-flex align-items-center">
