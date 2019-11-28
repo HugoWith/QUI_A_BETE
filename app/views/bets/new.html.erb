@@ -40,15 +40,15 @@
                 <%#= form.association :beter, label_method: :nickname, collection: @users, selected: member.id %>
                 <%= form.input :description, label: "Ton bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
                 <%#= form.association :target, label_method: :nickname, collection: @users, include_blank: true, label: "Une victime ?", label_html: { class: "bet-label"} %>
-                    <h3 style="font-size: 18px">Target:</h3>
-                    <div class="d-flex justify-content-center">
-                  <% @group.users.each do |user| %>
-                    <input id="<%= user.id %>" type="radio" name="bet[target_id]" value="<%= user.id %>">
-                    <label for="<%= user.id %>">
-                      <%= cl_image_tag  user.pick_photo, class: "avatar-xl mr-4" %>
-                      <%= user.nickname %>
-                    </label>
-                  <% end %>
+                    <h3 style="font-size: 18px">Target 🎯 :</h3>
+                    <div class="d-flex justify-content-start">
+                    <% @group.users.each do |user| %>
+                      <input id="<%= user.id %>" type="radio" name="bet[target_id]" value="<%= user.id %>" style="display:none">
+                      <label for="<%= user.id %>">
+                        <%= cl_image_tag  user.pick_photo, class: "avatar-game", style:"margin-right: 6px"%>
+                        <%#= user.nickname %>
+                      </label>
+                    <% end %>
                   </div>
                   <div class="d-flex align-items-center" >
                   <%= form.input :stake, label: "Qu'est ce qu'on parie ? 🎁", label_html: { class: "bet-label"}  %>
