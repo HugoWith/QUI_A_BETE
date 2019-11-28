@@ -26,7 +26,7 @@ const initRoll = () => {
         // A remplir ici pour changer les cadeaux-----------------------------------------------------------------------------------
         var data = [
             { "color": "#70D6FF", "label": "Une partie de bowling 🎳", "value": 1, "question": "Une partie de bowling 🎳" }, // padding
-            { "color": "#F7D6E0", "label": "Un Mc Do 🍟", "value": 1, "question": "Un mac do 🍟" }, //font-family
+            { "color": "#F7D6E0", "label": "Un Mc Do 🍟", "value": 1, "question": "Un Mc Do 🍟" }, //font-family
             { "color": "#FF9770", "label": "Un escape game 🎮", "value": 1, "question": "Un escape game 🎮" }, //color
             { "color": "#FFD670", "label": "Un restaurant semi-gastro 😎", "value": 1, "question": "Un restaurant semi-gastro 😎" }, //font-weight
             { "color": "#F0C808", "label": "Une Chouffe 🍻", "value": 1, "question": "Une Chouffe 🍻" }, //font-size
