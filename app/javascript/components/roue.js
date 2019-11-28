@@ -33,7 +33,7 @@ const initRoll = () => {
             { "color": "#70D6FF", "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
             { "color": "#F7D6E0", "label": "5 € de don à une assoication 💶", "value": 1, "question": "5 € de don à une assoication 💶" }, //nesting
             { "color": "#FF9770", "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
-            { "color": "#F0C808", "label": "Un cinoche 🎬 ", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
+            { "color": "#F0C808", "label": "5 gifles à distribuer 👋", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
             { "color": "#70D6FF", "label": "1 café suspendu ☕️", "question": "1 café suspendu ☕️" }, //period
             { "color": "#F7D6E0", "label": "1 dîner presque parfat 🍝", "value": 1, "question": "1 dîner presque parfat 🍝" }, //pound sign
             // {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
@@ -143,7 +143,7 @@ const initRoll = () => {
             .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h / 2) + padding.top) + ")")
             .append("path")
             .attr("d", "M-" + (r * .15) + ",0L0," + (r * .05) + "L0,-" + (r * .05) + "Z")
-            .style({ "fill": "black" });
+            .style({ "fill": "#70D6FF" });
         //draw spin circle
         container.append("circle")
             .attr("cx", 0)
@@ -153,10 +153,10 @@ const initRoll = () => {
         //spin text
         container.append("text")
             .attr("x", 0)
-            .attr("y", 15)
+            .attr("y", 25)
             .attr("text-anchor", "middle")
-            .text("Lances")
-            .style({ "font-weight": "bold", "font-size": "30px" });
+            .text("👊")
+            .style({ "font-weight": "bold", "font-size": "60px" });
 
 
         function rotTween(to) {
