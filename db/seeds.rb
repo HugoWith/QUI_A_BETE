@@ -348,3 +348,15 @@ bet10 = Bet.create!(
   difficulty: 3,
   over: false
 )
+
+bet11 = Bet.create!(
+  description:"Alex démissionne avant Noël",
+  end_date: Date.new(2019,12,24),
+  creator_id: evan.id,
+  beter_id: alex.id,
+  group_id: frero.id,
+  stake: "un superbe cadeau de Noël",
+  difficulty: 9,
+  over: false
+)
+
