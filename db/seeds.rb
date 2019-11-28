@@ -72,8 +72,8 @@ evan = User.create!(
   last_name: "wichlarz",
   email: "evan@evan.com",
   password: "azerty",
-  # photo: File.open("app/assets/images/evan.png")
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271536/u4malxrdyoprfosonx8o.png")
+  # photo: File.open("app/assets/images/evan2.png")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574930440/morae2hvixxjbefvw4so.png")
   )
 
 simon = User.create!(
