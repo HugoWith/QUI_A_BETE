@@ -95,7 +95,7 @@
 }
 
 .nickname-img {
-  opacity: 0;
+  opacity: 1;
   font-weight: bold;
 }
 
@@ -140,6 +140,11 @@
   border: 3px solid $main-color;
 }
 
+.avatar-scoreboard-nul {
+    width: 50px;
+    height: 50px;
+}
+
 .img-scoreboard{
   img {
 
@@ -157,12 +162,12 @@
   margin-left: 30px;
 }
 
-.img-target-div:hover .nickname-img {
-  visibility: visible;
-  font-weight: bold;
-  transition: 0.4s ease-in-out;
-  opacity: 1;
-}
+// .img-target-div:hover .nickname-img {
+//   visibility: visible;
+//   font-weight: bold;
+//   transition: 0.4s ease-in-out;
+//   opacity: 1;
+// }
 
 
 
@@ -207,5 +212,22 @@
   margin-bottom: 20px;
   font-size: 20px;
   color: white !important;
+}
+
+.vs-img {
+  height: 50px;
+  width: 50px;
+  margin: 2px;
+
+}
+
+.infos-scoreboard-user {
+  line-height: 3px;
+  margin-left: 5px;
+  margin-top: 12px;
+}
+
+.infos-scoreboard {
+  margin-bottom: 15px;
 }
 
