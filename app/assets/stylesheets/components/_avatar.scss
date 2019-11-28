@@ -15,6 +15,12 @@
     width: 70px;
     height: 70px;
     border-radius: 50% !important;
+}
+
+.avatar-game {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% !important;
     -webkit-transition: -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
 }
@@ -41,7 +47,7 @@
     border: white 1px solid;
 }
 
-.avatar-xl:hover {
+.avatar-game:hover {
     opacity: 30%;
     width: 90px;
     height: 90px;
