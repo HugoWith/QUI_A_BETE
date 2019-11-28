@@ -18,7 +18,7 @@ const context = require.context("controllers", true, /.js$/)
 application.load(definitionsFromContext(context))
 
 initTypedJS();
-initCursorJS();
+// initCursorJS();
 initServiceWorkerJS();
 initRoll();
 initTippy()
