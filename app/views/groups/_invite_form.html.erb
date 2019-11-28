@@ -1,6 +1,6 @@
 <%= simple_form_for([@group, @invitation]) do |f| %>
   <%= f.simple_fields_for :invited_users do |form| %>
-    <%= form.input :email %>
+    <%= form.input :email, label: "📩  Email" %>
   <% end %>
-  <%= f.button :submit, class: "btn-home", value: "Envoyer l'invitation" %>
+  <%= f.button :submit, class: "btn-home", value: "In-crew-ste les" %>
 <% end %>

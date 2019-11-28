@@ -19,6 +19,7 @@
     &.visible {
         display: block;
     }
+    margin-top: 80px;
 }
 
 .bet_difficulty {
@@ -107,10 +108,14 @@
 
 .required {}
 
-.new-bet-form input {
-    margin-bottom: 35px;
-}
+.new-bet-form input {}
 
 .new-bet-form select {
     margin-bottom: 35px;
+}
+
+#new_bet input:checked+label {
+    border: 2px solid #F0C808;
+    opacity: 1;
+    border-radius: 50%;
 }
