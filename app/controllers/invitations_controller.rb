@@ -10,8 +10,8 @@ class InvitationsController < ApplicationController
     @owner = current_user
     @invitation = @group.invitations.build(invitation_params)
     if @invitation.save
-      @invitation.invited_users.each do |user|
-        mail = UsersMailer.invite_member(user, @owner, @group_id)
+      @invitation.invited_users.each do |invited_user|
+        mail = UsersMailer.invite_member(invited_user, @owner, @group_id)
         mail.deliver_later
       end
       redirect_to group_path(@group)

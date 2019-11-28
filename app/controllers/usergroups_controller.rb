@@ -1,6 +1,8 @@
 class UsergroupsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
+
   def create
-    @user = current_user
+    @user = User.find_by(email: InvitedUser.find(params[:invited_user_id]).email)
     @group = Group.find(params[:group_id])
     @usergroup = Usergroup.new(user_id: @user.id, group_id: @group.id)
     @usergroup.save
