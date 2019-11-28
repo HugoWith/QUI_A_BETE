@@ -27,7 +27,7 @@ initTypedJS();
 initServiceWorkerJS();
 initRoll();
 initTippy();
-initWinnerJS();
+// initWinnerJS();
 
 // initPushmanagerJS();
 // initTriggerWebPush();
