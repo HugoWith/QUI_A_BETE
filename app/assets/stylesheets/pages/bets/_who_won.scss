@@ -1,7 +1,40 @@
+.edit_bet {
 
-input:checked + label {
-  border: solid 7px black;
-  opacity: 1;
+  input:checked + label img{
+    border: solid 7px black;
+    opacity: 1;
+    border-radius: 50%
+  }
+
+
+
+  .winner-selection {
+
+     height: 168px;
+     width: 168px;
+     transition: 0.8s ease;
+     margin-bottom: 50px;
+
+  }
+
+  .winner-selection-active {
+    height: 200px;
+    width: 200px;
+    transition: 1s ease;
+
+  }
+
+.looser-selection-active{
+
+  height: 0px;
+  width: 0px;
+  transition: 1s ease;
 }
 
 
+
+  .winner-better {
+    margin: 5px;
+  }
+
+}
