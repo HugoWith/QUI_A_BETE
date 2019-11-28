@@ -1,6 +1,5 @@
 
 let button = document.querySelector('.winner-btn')
-button.disabled=true
 
 const animateWinner = () => {
   const winner = document.querySelector('.winner-selection').querySelector('input:checked + label img')
@@ -30,6 +29,10 @@ const clickButtonChoice = (e) => {
 
 
 const initWinnerJS = () => {
+  if (button == null)
+    return
+
+  button.disabled=true
   document.querySelector('.winner-selection').addEventListener('click', activeButtonChoice);
   document.querySelector('.winner-btn').addEventListener('click', clickButtonChoice);
 }
