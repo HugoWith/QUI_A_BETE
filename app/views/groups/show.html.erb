@@ -5,7 +5,7 @@
         <%# link_to "Retourne voir tes crews", groups_path, class: 'btn-home mt-2' %>
         <%# link_to "Quitter ce crew", group_usergroup_path(@group, @usergroup), class: 'btn-home mt-2', method: :delete %>
         <div>
-          <button class="btn-show-group " data-action="click->hello#classement">Voir le classement</button>
+          <button class="btn-show-group " data-action="click->hello#classement">Le classement</button>
 
           <button type="button" class="btn-show-group " data-toggle="modal" data-target="#exampleModalCenter">
             Invite des potes
@@ -45,7 +45,9 @@
                       <%= cl_image_tag bet.creator.pick_photo, class: "avatar-large dropdown-toggle avatar1 bet-creator", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                       <p class="nickname-img"><%= bet.creator.nickname %></p>
                     </div>
-
+                      <div class="vs-img">
+                        <%= image_tag 'flash.png', class: 'vs-img'%>
+                      </div>
                     <div class="img-wrap d-flex flex-column justify-content-center">
                       <%= cl_image_tag bet.beter.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                       <p class="nickname-img"><%= bet.beter.nickname %></p>
@@ -69,7 +71,7 @@
 
                   <div class = "d-flex flex-column justify-content-center">
                     <p> <strong><i class="fas fa-hourglass-half"></i> </strong> <%=bet.end_date.to_formatted_s(:rfc822) %></p>
-                    <p> <strong><i class="fas fa-theater-masks"></i></strong> <%=bet.difficulty%>/10</p>
+                    <p> <strong><i class="fas fa-dice"></i></i></strong> <%=bet.difficulty%>/10</p>
                     <p> <i class="fas fa-heart"></i> <%= bet.like_number  %></p>
                   </div>
                 </div>
@@ -97,13 +99,17 @@
             </div>
 
             <% @not_first_user.each do |user| %>
-              <div class = "d-flex justify-content-start">
-                <p>
-                  <%= cl_image_tag user.user.pick_photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <em><%= user.user.nickname %></em>
-                  <br>
+
+              <div class = "flex-wrap justify-content-start">
+                <div class="d-flex infos-scoreboard">
+                <%= cl_image_tag user.user.pick_photo, class: "avatar dropdown-toggle avatar-scoreboard-nul", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+               <div class="infos-scoreboard-user">
+                <p><em><%= user.user.nickname %></em></p>
                   <strong><%= user.score %> pts</strong>
-                </p>
+                  <br>
+                </div>
+              </div>
               </div>
             <% end %>
           </div>
@@ -122,6 +128,9 @@
                   <div class="img-wrap d-flex flex-column justify-content-center">
                     <%= cl_image_tag bet.creator.pick_photo, class: "avatar-large dropdown-toggle avatar1 bet-creator", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                     <p class="nickname-img"><%= bet.creator.nickname %></p>
+                  </div>
+                  <div class="vs-img">
+                    <%= image_tag 'flash.png'%>
                   </div>
                   <div class="img-wrap d-flex flex-column justify-content-center">
                     <%= cl_image_tag bet.beter.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
