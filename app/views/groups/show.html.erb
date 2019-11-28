@@ -55,15 +55,15 @@
                   </div>
 
                   <div class = "d-flex flex-column justify-content-center align-items-start mr-3">
-                    <p><strong>Le bet: </strong> <%=bet.description%></p>
-                    <p><strong>Le bel enjeu: </strong> <%=bet.stake%></p>
+                    <p id="lebet"><strong> <%=bet.description%> </strong></p>
+                    <p><strong><i class="fas fa-gift"></i> </strong> <%=bet.stake%></p>
 
                     <% if bet.target.present?  %>
-                      <div class="d-flex">
-                        <p><strong>La cible: </strong></p>
+                      <div class="d-flex" id="nickname-img-target-info">
+                        <p><strong></strong></p>
                         <div class="img-target-div">
                           <%= cl_image_tag bet.target.pick_photo, class: "avatar-large dropdown-toggle avatar2 target-img", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                          <p class="nickname-img"><%= bet.target.nickname %> 🎯 </p>
+                          <p class="nickname-img" id="nickname-img-target"><%= bet.target.nickname %> 🎯 </p>
                         </div>
                       </div>
                     <% end %>

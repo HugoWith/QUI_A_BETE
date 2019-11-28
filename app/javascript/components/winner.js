@@ -6,7 +6,7 @@ const animateWinner = () => {
   const looser = document.querySelector('.winner-selection').querySelector('input:not(:checked) + label img')
   const textWinner = document.querySelector('.winner-text')
   winner.classList.add('winner-selection-active')
-  looser.classList.add('animated', 'bounceOutDown', 'looser-selection-active')
+  looser.classList.add('animated', 'bounceOutDown', 'slower', 'looser-selection-active')
   textWinner.classList.remove('winner-text')
   textWinner.classList.add('animated', 'fadeInDown', 'slower')
   console.log("je lance l'animation du winner")
