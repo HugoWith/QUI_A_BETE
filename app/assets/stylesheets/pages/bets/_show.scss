@@ -11,6 +11,17 @@
     float: right;
 }
 
+.container-show-bet{
+  margin-top: 80px;
+}
+
+.heart-bet{
+  font-size: 16px;
+}
+.first-column {
+  border-right: solid 1px $fourth-color;
+}
+
 .trust {
   line-height: 1.5;
 }
@@ -25,12 +36,13 @@
     // margin-top: 80px;
     max-width: 800px;
     height: 450px;
-    box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 50px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px
 }
 
 .bet-buttons {
   max-width: 800px;
+  margin-top:: 50px;
   margin: 0 auto;
 }
 .A-2 {}
@@ -73,10 +85,12 @@
 // }
 .red {
   color: $red;
+  margin-left: 4px;
 }
 
 .last-column {
   min-width: 10%;
+  // max-height: 90%;
 }
 .I-2 {}
 
@@ -100,7 +114,6 @@
 .like-btn {}
 
 .grey-p {
-  color: #586261;
   font-size: 19px;
 }
 
@@ -131,6 +144,7 @@ a.like-bet:hover {
 
 .bet-desc-container {
   max-width: 70%;
+  // max-height: 80%;
   // height: 100%
 }
 

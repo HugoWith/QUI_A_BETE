@@ -1,105 +1,56 @@
-<div class="container-index">
 
-
-  <div class="A-1">
-    <div class="d-flex justify-content-between">
-      <h3 class="HZ"><%= @bet.description %></h3>
-      <div class="flex-shrink-1">
-      <%= link_to icon("far","trash-alt"), group_bet_path, class: "tippy", method: :delete, data: { confirm: 'Sûr sûr?', "tippy-content" => "Supprimer le bet","tippy-arrow" => true }, style:"margin-top: 20px; margin-left: 6px" %>
-      </div>
-    </div>
-    <div class="avatarcont">
-      <div class="I-1">
-        <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-x"%>
-        <br/>
-        <%= @bet.creator.nickname %>
-      </div>
-      <div class="I-2">
-        <%= cl_image_tag @bet.beter.pick_photo, crop: :fill, class:"avatar-x"%>
-        <br/>
-        <%= @bet.beter.nickname %>
-      </div>
-    </div>
-    <div class="A-2">
-      <div class="C-2">
-        <div class="d-flex justify-content-start" style="margin-right: 180px;margin-top: 30px;">
-          <%= image_tag @group.photo, class: 'group-index-image mr-2', style: "border-radius: 50%"%>
-            <div display-wrap>
-              <p><i class="fas fa-gift"></i><%= @bet.stake %></p>
-              <p><i class="fas fa-theater-masks"></i><%= @bet.difficulty %> / 10</p>
-              <p><i class="fas fa-hourglass-half"></i> <%=@bet.end_date.to_formatted_s(:rfc822)%> </p>
-              <p><strong><i class="fas fa-heart"></i><%= @bet.likes.count %></strong></p>
-              <div class="d-flex justify-content-center">
-
-                  <% pre_like = @bet.likes.find { |like| like.user_id == current_user.id} %>
-                  <% if pre_like %>
-                  <%= button_to 'Unlike',  group_bet_like_path(@group, @bet, pre_like), method: :delete, class: 'btn btn-home' %>
-                  <% else %>
-                  <%= button_to 'Like',  group_bet_likes_path(@group, @bet), method: :post, class: 'btn btn-home' %>
-                  <% end %>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="button_bets">
-  <%= link_to "Mets fin au bet" , end_bet_path , class:"btn btn-home"%>
-  <%= link_to "Modifie le bet" , edit_group_bet_path(@group, @bet) , class:"btn btn-home"%>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
+<div class="container-index container-show-bet">
 
 <div>
-    <div class="d-flex justify-content-end bet-buttons mb-2">
-      <%= link_to "Mets fin au bet" , end_bet_path , class:"like-bet mr-2"%>
-      <%= link_to "Modifie le bet" , edit_group_bet_path(@group, @bet) , class:"like-bet"%>
+    <div class="d-flex justify-content-end bet-buttons">
+      <%= link_to "Mets fin au bet" , end_bet_path , class:"btn-show-group"%>
+      <%= link_to "Modifie le bet" , edit_group_bet_path(@group, @bet) , class:"btn-show-group"%>
     </div>
-  <div class="A-1">
-    <div class="bet-infos d-flex justify-content-between p-4 m-0">
-      <div class="mr-4 d-flex flex-column justify-content-center">
-        <div class="I-1 mb-3">
-          <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-x"%>
-          <p class = "p-nickname text-center"> <%= @bet.creator.nickname %> </p>
-        </div>
-        <div>
-          <h3 class = "text-center font-weight-bold">VS</h3>
-        </div>
-        <div class="I-2 mt-2">
-          <%= cl_image_tag @bet.beter.pick_photo, crop: :fill, class:"avatar-x"%>
-          <p class = "p-nickname text-center"> <%= @bet.beter.nickname %></p>
+  <div class="A-1 p-4">
+    <div class="bet-infos d-flex justify-content-between">
+        <div class="mr-4 d-flex flex-column justify-content-center">
+      <div class="pr-4 first-column">
+
+          <div class="I-1 mb-3">
+            <%= cl_image_tag @bet.creator.pick_photo, crop: :fill, class:"avatar-x"%>
+            <p class = "p-nickname text-center"> <%= @bet.creator.nickname %> </p>
+          </div>
+          <div>
+            <h3 class = "text-center font-weight-bold"><i class="fas fa-bolt"></i></h3>
+          </div>
+          <div class="I-2 mt-2">
+            <%= cl_image_tag @bet.beter.pick_photo, crop: :fill, class:"avatar-x"%>
+            <p class = "p-nickname text-center"> <%= @bet.beter.nickname %></p>
+          </div>
         </div>
       </div>
-      <div class = "ml-3 d-flex flex-column justify-content-between mr-1 bet-desc-container">
-        <div class="d-flex justify-content-between">
-          <p class="grey-p"><i class="fas fa-heart grey-p"></i><%= @bet.likes.count %></p>
-          <p class="grey-p">Jusqu'au <%=@bet.end_date.to_formatted_s(:rfc822)%> </p>
-        </div>
+
+      <div class = "ml-3 d-flex flex-column justify-content-between mr-1 mt-4 bet-desc-container">
         <h3 class="text-left font-weight-bold"><%= @bet.description %></h3>
-        <% if @bet.target.present? %>
-        <div class="text-center">
-        <%= cl_image_tag @bet.target.pick_photo, crop: :fill, class:"avatar-x text-center"%>
-        <p class="p-nickname text-center"><%= @bet.target.nickname %> 🎯 </p>
-        </div>
-        <% end %>
+<!--         <div class="d-flex justify-content-between"> -->
+          <p class="grey-p"><i class="fas fa-hourglass-half"></i><%=@bet.end_date.to_formatted_s(:rfc822)%> </p>
+<!--         </div> -->
         <h4 class="text-left"><i class="fas fa-gift mr-1 "></i><%= @bet.stake %></h4>
         <h5 class="text-left mb-0 trust">Confiance à <%= @bet.difficulty * 10 %> %</h5>
+        <% if @bet.target.present? %>
+        <div class="text-center">
+        <%= cl_image_tag @bet.target.pick_photo, crop: :fill, class:"avatar text-center"%>
+        <p class="text-center mb-0"><%= @bet.target.nickname %> 🎯 </p>
+        </div>
+        <% end %>
       </div>
-      <div class=" d-flex flex-column align-items-end justify-content-between last-column">
-        <%= link_to icon("far","trash-alt"), group_bet_path, class: "tippy mb-2", method: :delete, data: { confirm: 'Sûr sûr?', "tippy-content" => "Supprimer le bet","tippy-arrow" => true } %>
+
+      <div class=" d-flex flex-column align-items-start justify-content-end last-column">
 
             <% pre_like = @bet.likes.find { |like| like.user_id == current_user.id} %>
+             <p class="grey-p"><i class="fas fa-heart heart-bet"></i> <%= @bet.likes.count %></p>
             <% if pre_like %>
-            <div class = "d-flex align-items-center">
+            <div class = "d-flex align-items-center justify-content-center">
             <i class="far fa-heart red"></i>
             <%= button_to 'Unlike',  group_bet_like_path(@group, @bet, pre_like), method: :delete, class: 'like-bet' %>
             </div>
             <% else %>
-            <div class = "d-flex align-items-center">
+            <div class = "d-flex align-items-center justify-content-center">
             <i class="far fa-heart red"></i>
             <%= button_to 'Like',  group_bet_likes_path(@group, @bet), method: :post, class: 'like-bet' %>
             </div>
@@ -108,10 +59,5 @@
     </div>
   </div>
   </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
 
 </div>
