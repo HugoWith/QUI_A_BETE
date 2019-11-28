@@ -31,11 +31,11 @@ const initRoll = () => {
             { "label": "Un restaurant semi gastro 😎", "value": 1, "question": "Un restaurant semi gastro 😎" }, //font-weight
             { "label": "Une chouffe 🍻", "value": 1, "question": "Une chouffe 🍻" }, //font-size
             { "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
-            { "label": "5 €", "value": 1, "question": "5 €" }, //nesting
+            { "label": "5 € de don à une assoication 💶", "value": 1, "question": "5 €" }, //nesting
             { "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
             { "label": "Un cinoche 🎬 ", "value": 1, "question": "Un cinoche 🎬" }, //sans-serif
-            // {"label":"BMW", "value":1, "question":"With CSS selectors, what character prefix should one use to specify a class?"}, //period
-            // {"label":"RANGE ROVER", "value":1, "question":"With CSS selectors, what character prefix should one use to specify an ID?"}, //pound sign
+            { "label": "1 café suspendu ☕️", "question": "With CSS selectors, what character prefix should one use to specify a class?" }, //period
+            { "label": "1 dîner presque parfat 🍝", "value": 1, "question": "With CSS selectors, what character prefix should one use to specify an ID?" }, //pound sign
             // {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
             // {"label":"HOTEL TICKET", "value":1, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
             // {"label":"PLANE", "value":1, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
