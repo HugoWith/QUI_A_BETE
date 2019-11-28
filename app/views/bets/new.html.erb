@@ -14,7 +14,7 @@
       <div class="d-flex justify-content-between mb-4" data-controller="tabs">
         <% @group.users.each do |member| %>
           <div class= "new_bet" data-action="click->tabs#showCorrespondingForm" data-id="<%= member.id %>">
-              <div class="avatar">
+              <div class="avatar d-flex flex-column align-items-center">
                 <%= cl_image_tag  member.pick_photo, class: "avatar-game", style:"cursor: pointer"%>
                 <p class='text-center font-weight-light'><%= member.nickname %></p>
               </div>
@@ -31,16 +31,20 @@
             <div class="form-body new-bet-form">
               <%= simple_form_for([ @group, @bet ], remote: false) do |form| %>
                 <%= form.input :beter_id, as: :hidden, input_html: { value: member.id } %>
-              
-                <%= form.input :description, label: "Le bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
-                    <h3 style="font-size: 18px">Target 🎯 :</h3>
-                      <div class="d-flex justify-content-start">
+
+                <%= form.input :description, class: "mb-4", label: "Le bet", placeholder: "Alex peut manger plus de 3 Petit Beurre en 1 min", label_html: { class: "bet-label"} %>
+                    <h3 style="font-size: 18px" class="mt-4 bet-label">Une victime ? 🎯 :</h3>
+                      <div class="d-flex justify-content-start mb-4">
                         <% @group.users.each do |user| %>
-                          <input id="<%= "#{user.id}#{member.id}" %>" type="radio" name="bet[target_id]" value="<%= user.id %>" style="display:none">
-                          <label for="<%= "#{user.id}#{member.id}" %>">
-                            <%= cl_image_tag  user.pick_photo, class: "avatar-game", style: "cursor: pointer" %>
-                            <%#= user.nickname %>
-                          </label>
+                        <div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                              <input id="<%= "#{user.id}#{member.id}" %>" type="radio" name="bet[target_id]" value="<%= user.id %>" style="display:none">
+                              <label for="<%= "#{user.id}#{member.id}" %>" class= "mr-2">
+                              <%= cl_image_tag  user.pick_photo, class: "avatar-game", style: "cursor: pointer" %></label>
+                              <%#= user.nickname %>
+<!--                               <p class=""><%= user.nickname %></p> -->
+                            </div>
+                          </div>
                         <% end %>
                         </div>
 
@@ -48,12 +52,12 @@
                   <%= form.input :stake, label: "Le bel enjeu", label_html: { class: "bet-label"}  %>
                     <div class= "d-flex align-items-center">
                       <%= link_to image_tag('wheel.svg', id:"wheelsvg"), '#', id: "wheel_link", data: { toggle: 'modal', target: "#modal" }, class: "mr-1" %>
-                      <p style="margin: auto 20px;">Tu sais pas quoi parier ? Lance la roue de l'infortune !</p>
+                      <p style="margin: auto 20px;" class="bet-label">Tu sais pas quoi parier ? Lance la roue de l'infortune !</p>
                     </div>
                   </div>
                 <div class="d-flex justify-content-start" style="margin-top: 5px">
-                  <%= form.input :end_date, label: icon('fas', 'hourglass-half'), label_html: { class: "bet-label"}, class: "mr-2" %>
-                  <%= form.input :difficulty, label_html: { class: "bet-label"}, label: icon('fas','theater-masks'), collection: 1..10%>
+                  <%= form.input :end_date, label: "Vous avez jusqu'à quand ?", label_html: { class: "bet-label"}, class: "mr-2" %>
+                  <%= form.input :difficulty, label_html: { class: "bet-label"}, label: "Ta confiance en la faisabilité du pari ?", collection: 1..10%>
                 </div>
             </div>
             <div class="d-flex">
