@@ -115,3 +115,9 @@
 .new-bet-form select {
     margin-bottom: 35px;
 }
+
+#new_bet input:checked+label {
+    border: solid 5px red;
+    opacity: 1;
+    border-radius: 50%;
+}
