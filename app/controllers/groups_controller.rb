@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @bets = @group.bets
+    @bets = @group.bets.order(end_date: :asc)
     @user = @group.users
 
     @group = Group.find(params[:id])
