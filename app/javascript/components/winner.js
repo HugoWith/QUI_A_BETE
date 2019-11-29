@@ -28,7 +28,7 @@ const clickButtonChoice = (e) => {
   e.preventDefault();
 
   animateWinner()
-  // setTimeout(submitForm, 5000)
+  setTimeout(submitForm, 5000)
 }
 
 const initWinnerJS = () => {

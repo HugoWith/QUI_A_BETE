@@ -1,6 +1,6 @@
 <div class="AAA" align="center" style="background-image: url(''); background-size: cover; font-family: 'Helvetica';">
 
-  <img src="http://localhost:3000/images/logoqabweb.png" alt="" width="250" height="250">
+  <img src="www.quiabete.co/images/logoqabweb.png" alt="" width="250" height="250">
 
   <h2>Salut beteur,</h2>
 
@@ -19,6 +19,6 @@
   </br>
   Rejoins-nous !
   </br>
-  <%= link_to "Crée ton compte", new_member_url(@group_id) %></br>
+  <%= link_to "Crée ton compte", new_member_url(@group_id, params:{invited_user_id: @invited_user.id}) %></br>
   <%= link_to "J'ai déjà un compte, rejoindre le crew", new_member_url(@group_id, params:{invited_user_id: @invited_user.id}) %></p>
 </div>

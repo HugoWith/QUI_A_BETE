@@ -3,6 +3,7 @@
 
 <div>
     <div class="d-flex justify-content-end bet-buttons">
+      <%= link_to "Retour au crew", group_path(@group), class:"btn-show-group" %>
       <%= link_to "Mets fin au bet" , end_bet_path , class:"btn-show-group"%>
       <%= link_to "Modifie le bet" , edit_group_bet_path(@group, @bet) , class:"btn-show-group"%>
     </div>
