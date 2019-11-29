@@ -1,11 +1,10 @@
 class UsergroupsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create]
+
+  before_action :set_group, only: [:create]
+  before_action :check_invitation, only: [:create]
 
   def create
-    @user = User.find_by(email: InvitedUser.find(params[:invited_user_id]).email)
-    @group = Group.find(params[:group_id])
-    @usergroup = Usergroup.new(user_id: @user.id, group_id: @group.id)
-    @usergroup.save
+    @usergroup = Usergroup.create!(user: current_user, group: @group)
     redirect_to group_path(@group)
   end
 
@@ -15,5 +14,15 @@ class UsergroupsController < ApplicationController
     # p @usergroup
     @usergroup.destroy
     redirect_to groups_path
+  end
+
+  private
+
+  def set_group
+    @group = Group.find(params[:group_id])
+  end
+
+  def check_invitation
+    head :forbidden unless InvitedUser.find(params[:invited_user_id]).email == current_user.email && @group.usergroups.find_by(user_id: current_user.id).nil?
   end
 end
