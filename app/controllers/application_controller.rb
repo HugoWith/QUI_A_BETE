@@ -19,4 +19,8 @@ class ApplicationController < ActionController::Base
       groups_path
     # return the path based on resource
   end
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
