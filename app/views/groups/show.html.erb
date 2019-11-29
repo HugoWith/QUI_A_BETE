@@ -130,7 +130,7 @@
                     <p class="nickname-img"><%= bet.creator.nickname %></p>
                   </div>
                   <div class="vs-img">
-                    <%= image_tag 'flash.png'%>
+                    <%= image_tag 'flash.png', class: 'vs-img'%>
                   </div>
                   <div class="img-wrap d-flex flex-column justify-content-center">
                     <%= cl_image_tag bet.beter.pick_photo, class: "avatar-large dropdown-toggle avatar2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
