@@ -15,7 +15,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
     "image/upload/v1574271538/ln4p2snia2t1bd5czjfa.jpg",
     "image/upload/v1574930440/morae2hvixxjbefvw4so.png",
     "image/upload/v1574271535/lekgu29n86puqbwjbxa5.png",
-    "image/upload/v1574271534/jwz6hdwrozu8rjwycaam.jpg"
+    "image/upload/v1574271534/jwz6hdwrozu8rjwycaam.jpg",
+    "image/upload/v1574271538/ln4p2snia2t1bd5czjfa.jpg",
+    "image/upload/v1575032033/j7pbqav2aunaca8aecgr.png",
+    "image/upload/v1575032034/oz7d5nb4jhjuk3xqo76o.jpg"
   ]
 
   def remove!
