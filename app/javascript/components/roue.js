@@ -25,17 +25,17 @@ const initRoll = () => {
         //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
         // A remplir ici pour changer les cadeaux-----------------------------------------------------------------------------------
         var data = [
-            { "color": "#70D6FF", "label": "Une partie de bowling 🎳", "value": 1, "question": "Une partie de bowling 🎳" }, // padding
-            { "color": "#F7D6E0", "label": "Un Mc Do 🍟", "value": 1, "question": "Un Mc Do 🍟" }, //font-family
-            { "color": "#FF9770", "label": "Un escape game 🎮", "value": 1, "question": "Un escape game 🎮" }, //color
-            { "color": "#FFD670", "label": "Un restaurant semi-gastro 😎", "value": 1, "question": "Un restaurant semi-gastro 😎" }, //font-weight
+            { "color": "#70D6FF", "label": "Des vacances à Givors 🏝 ", "value": 1, "question": "Des vacances à Givors 🏝" }, // padding
+            { "color": "#F7D6E0", "label": "Un gros Mc Do 🍟", "value": 1, "question": "Un gros Mc Do 🍟" }, //font-family
+            { "color": "#FF9770", "label": "Un menu chez Bocuse 😎", "value": 1, "question": "Un menu chez Bocuse 😎" }, //color
+            { "color": "#FFD670", "label": "Une carte pokemon 🎮", "value": 1, "question": "Une carte pokemon 🎮" }, //font-weight
             { "color": "#F0C808", "label": "Une Chouffe 🍻", "value": 1, "question": "Une Chouffe 🍻" }, //font-size
-            { "color": "#70D6FF", "label": "Une bonne bouteille de vin 🍷", "value": 1, "question": "Une bonne bouteille de vin 🍷" }, //background-color
-            { "color": "#F7D6E0", "label": "5 € de don à une association 💶", "value": 1, "question": "5 € de don à une association 💶" }, //nesting
-            { "color": "#FF9770", "label": "Un ticket à gratter 🍀", "value": 1, "question": "Un ticket à gratter 🍀" }, //bottom
-            { "color": "#F0C808", "label": "5 gifles à distribuer 👋", "value": 1, "question": "5 gifles à distribuer 👋" }, //sans-serif
+            { "color": "#70D6FF", "label": "Une bon Petrus 93 🍷", "value": 1, "question": "Une bon Petrus 93 🍷" }, //background-color
+            { "color": "#F7D6E0", "label": "5 € à une association 💶", "value": 1, "question": "5 € à une association 💶" }, //nesting
+            { "color": "#FF9770", "label": "Un Euromillion (gagnant) 🍀", "value": 1, "question": "Un Euromillion (gagnant) 🍀" }, //bottom
+            { "color": "#F0C808", "label": "5 gifles gratos à vie 👋", "value": 1, "question": "5 gifles gratos à vie 👋" }, //sans-serif
             { "color": "#70D6FF", "label": "1 café suspendu ☕️", "question": "1 café suspendu ☕️" }, //period
-            { "color": "#F7D6E0", "label": "1 dîner presque parfait 🍝", "value": 1, "question": "1 dîner presque parfait 🍝" }, //pound sign
+            { "color": "#F7D6E0", "label": "Une soirée Netflix&chill 🍆", "value": 1, "question": "Une soirée Netflix&chill 🍆" }, //pound sign
             // {"label":"FREE VISA", "value":1, "question":"In an HTML document, which tag holds all of the content people see?"}, //<body>
             // {"label":"HOTEL TICKET", "value":1, "question":"In an HTML document, which tag indicates an unordered list?"}, //<ul>
             // {"label":"PLANE", "value":1, "question":"In an HTML document, which tag indicates the most important heading of your document?"}, //<h1>
@@ -148,15 +148,16 @@ const initRoll = () => {
         container.append("circle")
             .attr("cx", 0)
             .attr("cy", 0)
-            .attr("r", 60)
+            .attr("r", 35)
             .style({ "fill": "white", "cursor": "pointer" });
         //spin text
         container.append("text")
             .attr("x", 0)
-            .attr("y", 25)
+            .attr("y", 18)
             .attr("text-anchor", "middle")
             .text("👊")
-            .style({ "font-weight": "bold", "font-size": "60px" });
+            .style({ "font-weight": "bold", "font-size": "40px", 'cursor': 'pointer' });
+
 
 
         function rotTween(to) {
