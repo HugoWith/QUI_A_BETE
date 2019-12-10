@@ -118,9 +118,12 @@
 
       <div class="flex-wrap done-bet-container">
         <div class="justify-content-center container">
+          <% if @bet_over %>
+          <h2><%= @group.name  %> - Les paris terminés 💤 </h2>
+          <% end %>
           <% @bets.each do |bet|%>
             <% if bet.over == true %>
-              <h2><%= @group.name  %> - Les paris terminés 💤 </h2>
+
               <div class="card-bet-infos-done justify-content-between p-4">
 
                 <!-- image_tag 'Batman.png', class: 'img-group-show'-->
