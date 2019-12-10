@@ -11,6 +11,10 @@
   text-align: center;
   background-color: white;
 
+  a {
+    cursor: none;
+  }
+
   h1 {
     font-family: $main-font;
     font-size: 100px;
@@ -54,6 +58,7 @@
 }
 
 .card-category-home{
+  cursor: none;
   h4 {
     font-size: 19px;
   }
@@ -62,6 +67,7 @@
 a {
   text-decoration: none;
   color: $second-color;
+  cursor: none;
 }
 
 .cards-category-title{
@@ -75,11 +81,14 @@ a {
   object-fit: cover;
 }
 
+
+//CURSOR ANIMATION
+
 // .pointer {
 //   position: absolute;
 //   top: 50%;
 //   left: 50%;
-//   transform: translate(-50%, -50%);
+//   transform: translate(0%, 0%);
 //   width: 30px;
 //   height: 30px;
 // background-color: rgba(112,214,255, 0.2);
@@ -93,6 +102,30 @@ a {
 // .pointer:active {
 //  background-color: rgba(112,214,255, 0.8);
 // }
+
+.context {
+  cursor: none;
+}
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: $fifth-color;
+}
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
 
 
 
@@ -117,7 +150,7 @@ a {
     list-style: none;
     width: 20px;
     height: 20px;
-    animation: animate 25s linear infinite;
+    animation: animated 25s linear infinite;
     bottom: -150px;
     z-index: 1;
 
@@ -220,7 +253,7 @@ a {
 }
 
 
-@keyframes animate {
+@keyframes animated {
 
     0%{
         transform: translateY(0) rotate(0deg);
