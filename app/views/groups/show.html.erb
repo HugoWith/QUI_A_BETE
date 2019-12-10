@@ -37,7 +37,7 @@
           <%= link_to "Crée un bet 👊", new_group_bet_path(@group), class:"btn-home create-bet" %>
 
           <% @bets.each do |bet|%>
-            <% if bet.end_date > DateTime.now || bet.over = false  %>
+            <% if bet.end_date > DateTime.now && bet.over == false  %>
               <%= link_to group_bet_path(@group, bet), class: 'card-link' do %>
                 <div class="card-bet-infos justify-content-between p-4">
                   <div class="avatar-bet d-flex flex-column justify-content-center mr-3">
@@ -119,7 +119,7 @@
       <div class="flex-wrap done-bet-container">
         <div class="justify-content-center container">
           <% @bets.each do |bet|%>
-            <% if bet.over = true  %>
+            <% if bet.over == true %>
               <h2><%= @group.name  %> - Les paris terminés 💤 </h2>
               <div class="card-bet-infos-done justify-content-between p-4">
 
