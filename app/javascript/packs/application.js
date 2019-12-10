@@ -3,8 +3,9 @@ require('jquery')
 
 import "bootstrap";
 import { initTypedJS } from '../components/typed';
-import { initCursorJS } from '../components/cursor';
-
+import { initCursor } from '../components/cursor';
+import { initCanvas } from '../components/cursor';
+import { initHovers } from '../components/cursor';
 import { initServiceWorkerJS } from '../components/serviceWorker';
 
 import { initRoll } from '../components/roue';
@@ -23,7 +24,10 @@ const context = require.context("controllers", true, /.js$/)
 application.load(definitionsFromContext(context))
 
 initTypedJS();
-// initCursorJS();
+
+initCursor();
+initCanvas();
+initHovers();
 initServiceWorkerJS();
 initRoll();
 initTippy();
