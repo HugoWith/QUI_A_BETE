@@ -30,11 +30,16 @@
 .scoreboard {
   transition: 1s ease;
   width: 0%;
+  visibility: hidden;
+  width: 0%;
+  height: 0%;
 
 }
 
 .scoreboard-actived {
   flex-grow: 1;
+  padding: 20px;
+  visibility: visible;
   padding: 20px;
 
 
