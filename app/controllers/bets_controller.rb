@@ -63,6 +63,8 @@ class BetsController < ApplicationController
     @bet = Bet.find(params[:id])
     @group = @bet.group
     @bet.winner = User.find_by(nickname: params["bet"]["winner"])
+    # @bet.winner.send_notification_with("Est ce que #{@bet.winner.nickname} a bien gagné?")
+    @bet.over = true
     @bet.save
     ug = Usergroup.where(user_id: @bet.winner.id, group_id: @group.id).first
     case @bet.difficulty
