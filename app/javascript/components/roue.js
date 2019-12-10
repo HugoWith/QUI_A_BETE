@@ -30,7 +30,7 @@ const initRoll = () => {
             { "color": "#FF9770", "label": "Un menu chez Bocuse 😎", "value": 1, "question": "Un menu chez Bocuse 😎" }, //color
             { "color": "#FFD670", "label": "Une carte pokemon 🎮", "value": 1, "question": "Une carte pokemon 🎮" }, //font-weight
             { "color": "#F0C808", "label": "Une Chouffe 🍻", "value": 1, "question": "Une Chouffe 🍻" }, //font-size
-            { "color": "#70D6FF", "label": "Une bon Petrus 93 🍷", "value": 1, "question": "Une bon Petrus 93 🍷" }, //background-color
+            { "color": "#70D6FF", "label": "Un bon Petrus 93 🍷", "value": 1, "question": "Un bon Petrus 93 🍷" }, //background-color
             { "color": "#F7D6E0", "label": "5 € à une association 💶", "value": 1, "question": "5 € à une association 💶" }, //nesting
             { "color": "#FF9770", "label": "Un Euromillion (gagnant) 🍀", "value": 1, "question": "Un Euromillion (gagnant) 🍀" }, //bottom
             { "color": "#F0C808", "label": "5 gifles gratos à vie 👋", "value": 1, "question": "5 gifles gratos à vie 👋" }, //sans-serif

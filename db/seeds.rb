@@ -27,13 +27,13 @@ marin = User.create!(
   )
 
 hugo = User.create!(
-  nickname: "Hugoxxx",
-  first_name: "Hugo",
-  last_name: "Valla",
-  email: "hugo@hugo.com",
+  nickname: "Schlarz",
+  first_name: "Evan",
+  last_name: "Wichlarz",
+  email: "evan@evan.com",
   password: "azerty",
   # photo: File.open("app/assets/images/hugo.jpeg")
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185423/alpwntqhsjyfux6oazus.jpg")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574930440/morae2hvixxjbefvw4so.png")
 )
 
 alex = User.create!(
@@ -67,13 +67,13 @@ lea = User.create!(
   )
 
 evan = User.create!(
-  nickname: "Schlarz",
-  first_name: "evan",
-  last_name: "wichlarz",
-  email: "evan@evan.com",
+  nickname: "Rouxby",
+  first_name: "Hugo",
+  last_name: "Valla",
+  email: "hugo@hugo.com",
   password: "azerty",
   # photo: File.open("app/assets/images/evan2.png")
-  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574930440/morae2hvixxjbefvw4so.png")
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574185423/alpwntqhsjyfux6oazus.jpg")
   )
 
 simon = User.create!(
@@ -116,11 +116,31 @@ john = User.create!(
   photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271538/ln4p2snia2t1bd5czjfa.jpg")
   )
 
-haris = User.create!(
-  nickname: "Pain moelleux",
-  first_name: "haris",
-  last_name: "haris",
+marco = User.create!(
+  nickname: "Onglets man",
+  first_name: "Marco",
+  last_name: "Texeira",
   email: "haris@haris.com",
+  # photo: File.open("app/assets/images/Marco.jpeg"),
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1574271538/ln4p2snia2t1bd5czjfa.jpg"),
+  password: "azerty")
+
+benj = User.create!(
+  nickname: "Seum man",
+  first_name: "Benjamin",
+  last_name: "Jolivot",
+  email: "benj@benj.com",
+  # photo: File.open("app/assets/images/prejent.png"),
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1575032033/j7pbqav2aunaca8aecgr.png"),
+  password: "azerty")
+
+matt = User.create!(
+  nickname: "Cartosnet",
+  first_name: "Matthieu",
+  last_name: "Cartillier",
+  email: "matt@matt.com",
+  # photo: File.open("app/assets/images/matt.jpeg"),
+  photo: Cloudinary::CarrierWave::StoredFile.new("image/upload/v1575032034/oz7d5nb4jhjuk3xqo76o.jpg"),
   password: "azerty")
 
 
@@ -135,9 +155,8 @@ axel = User.create!(
   )
 
 
-
  batch = Group.create!(
-  name: "Batch 308",
+  name: "Wagon alumni",
   # remote_photo_url: "https://images.unsplash.com/photo-1551623063-6adb5b1f487f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
   photo: "fire.png"
   )
@@ -168,28 +187,29 @@ family = Group.create!(
 ug1 = Usergroup.create!(
   user: marin,
   group: batch,
-  score: 10)
+  score: 65)
 
 ug2 = Usergroup.create!(
-  user: hugo,
+  user: evan,
   group: batch,
   is_owner: false,
-  score: 70)
+  score: 60)
 
 ug3 = Usergroup.create!(
   user: alex,
   group: batch,
   is_owner: true,
-  score: 40)
+  score: 70)
 
 ug4 = Usergroup.create!(
   user: marine,
   group: batch,
-  score: 60)
+  score: 0)
 
 ug5 = Usergroup.create!(
   user: lea,
-  group: batch)
+  group: batch,
+  score: 35)
 
 ug6 = Usergroup.create!(
   user: simon,
@@ -197,7 +217,7 @@ ug6 = Usergroup.create!(
   score: 50)
 
 ugx = Usergroup.create!(
-  user: evan,
+  user: hugo,
   group: batch,
   is_owner: false,
   score: 5)
@@ -224,7 +244,7 @@ ug11 = Usergroup.create!(
   group: family)
 
 ug12 = Usergroup.create!(
-  user: haris,
+  user: marco,
   group: family)
 
 ug13 = Usergroup.create!(
@@ -239,6 +259,19 @@ ug14= Usergroup.create!(
   user: evan,
   group: family,
   is_owner: false)
+
+ug15 = Usergroup.create!(
+  user: marco,
+  group: batch)
+
+ug16 = Usergroup.create!(
+  user: benj,
+  group: batch)
+
+ug17 = Usergroup.create!(
+  user: matt,
+  group: batch)
+
 
 bet = Bet.create!(
   description:"John va perdre 4-0 à Fifa",
@@ -262,35 +295,35 @@ bet2 = Bet.create!(
 )
 
 bet3 = Bet.create!(
-  description:"Axel ne demandera pas d'aide pendant une journée",
-  end_date: Date.new(2019,12,15),
-  creator_id: hugo.id,
-  beter_id: alex.id,
+  description:"Arthur sera au casting de la saison 6 des Peaky Blinders",
+  end_date: Date.new(2019,12,10),
+  creator_id: evan.id,
+  beter_id: marin.id,
   group_id: batch.id,
   target_id: axel.id,
   stake: "3 mois d'abonnement Netflix",
-  difficulty: 6
-)
-
-bet4 = Bet.create!(
-  description:"Evan sera super poli pendant 24 heures",
-  end_date: Date.new(2019,12,15),
-  creator_id: lea.id,
-  beter_id: marine.id,
-  group_id: batch.id,
-  stake: "une pizza",
   difficulty: 2
 )
 
+bet4 = Bet.create!(
+  description:"Benji et Matthieu vont finir ensemble",
+  end_date: Date.new(2019,12,15),
+  creator_id: lea.id,
+  beter_id: simon.id,
+  group_id: batch.id,
+  target_id: benj.id,
+  stake: "une partie de laser-game 🔫",
+  difficulty: 5
+)
+
 bet5 = Bet.create!(
-  description:"Le garçon d'Alex va naitre le 6 décembre",
-  end_date: Date.new(2019,12,06),
+  description:"Le garçon d'Alex va naitre le 12 décembre",
+  end_date: Date.new(2019,12,12),
   creator_id: evan.id,
   beter_id: alex.id,
   group_id: batch.id,
   stake: "une chouffe 🍺",
-  difficulty: 1,
-  over: true
+  difficulty: 1
 )
 
 bet6 = Bet.create!(
@@ -305,15 +338,27 @@ bet6 = Bet.create!(
 )
 
 bet7 = Bet.create!(
-  description:"John ne fera pas tomber de plante en jouant au ping-pong",
-  end_date: Date.new(2019,12,12),
-  creator_id: lea.id,
+  description:"Marco a plus de 154 onglets ouverts sur son ordi",
+  end_date: Date.new(2019,11,28),
+  creator_id: hugo.id,
   beter_id: axel.id,
   group_id: batch.id,
-  stake: "une chouffe 🍺",
-  difficulty: 1,
-  over: false
+  stake: "un tour chez le barbier 💈",
+  difficulty: 9,
+  target_id: marco.id,
+  over: true
 )
+
+bet15 = Bet.create!(
+  description:"L'OL finira derrière l'ASSE en L1",
+  end_date: Date.new(2020,06,10),
+  creator_id: evan.id,
+  beter_id: axel.id,
+  group_id: batch.id,
+  stake: "une place en tribune présidentielle ⚽",
+  difficulty: 3,
+)
+
 
 bet8 = Bet.create!(
   description:"John refera tomber le tableau",
