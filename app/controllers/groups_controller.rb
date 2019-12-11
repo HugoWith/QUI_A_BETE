@@ -38,6 +38,10 @@ class GroupsController < ApplicationController
       bet.like_number = bet.likes.count
     end
 
+    @bet_over = @bets.each do |bet|
+      bet.over == true
+    end
+
   end
 
   def new
